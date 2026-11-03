@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>PixelForge Gallery — curated runs</title>
+<style>
+body{margin:0;font-family:system-ui,sans-serif;background:#0b0b10;color:#e8e8ef;line-height:1.5}
+a{color:#9ad} .wrap{max-width:880px;margin:0 auto;padding:28px 18px}
+.card{border:1px solid #2a2a36;border-radius:12px;padding:16px;margin:14px 0;background:#12121a}
+.meta{font-size:13px;color:#9a9ab0} code{font-size:12px;background:#1c1c28;padding:2px 6px;border-radius:4px}
+h1{font-size:28px;margin:0 0 8px} .top a{color:#9a9ab0;text-decoration:none;margin-right:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><a href="../">← Landing</a><a href="https://starcloud530.github.io/pixelforge-ai/">Docs</a></div>
+  <h1>Curated runs</h1>
+  <p class="meta">路径 <code>output/&lt;task&gt;/&lt;version&gt;/&lt;harness&gt;/</code> · 含 <code>final/</code> + <code>trajectory.jsonl</code> · 默认 <code>aestheticApproval:false</code></p>
+  <div class="card"><p class="meta">尚无已发布 run。好的结果提交到仓库 <code>output/</code> 后在此展示。</p></div>
+  <div class="card">
+    <strong>目录约定</strong>
+    <pre class="meta" style="white-space:pre-wrap">output/&lt;task-slug&gt;/&lt;version&gt;/&lt;harness&gt;/
+  meta.json
+  trajectory.jsonl
+  final/
+  README.md
+
+harness: grok-bot | codex | claude-code | …
+version: v1, v2, …</pre>
+  </div>
+</div>
+</body>
+</html>

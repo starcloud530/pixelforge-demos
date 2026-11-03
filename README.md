@@ -1,24 +1,28 @@
 # pixelforge-demos
 
-官方 / 社区案例与真实评测任务仓，配套主项目 [pixelforge-ai](https://github.com/starcloud530/pixelforge-ai)。
+Companion to [pixelforge-ai](https://github.com/starcloud530/pixelforge-ai): marketing site, replayable demos, curated Agent runs, and eval task packs.
 
-- **本仓**：可重放的工程层（`*.pxf.json`、sheet、atlas、脚本、`eval/tasks`）
-- **展示媒体**：CDN `https://resources.pixelforge.torzsi.com/`（不进本仓）
-- **演示站**：主仓 GitHub Pages（静态宣传页，链到 CDN）
+- **Marketing Pages:** https://starcloud530.github.io/pixelforge-demos/
+- **Docs (product):** https://starcloud530.github.io/pixelforge-ai/
+- **CDN media:** https://resources.pixelforge.torzsi.com/
 
-## 目录约定
+## Layout
 
 ```
-demos/<slug>/     # 可重放案例，如 demo-zombie
-eval/tasks/       # 真实任务评测（task.md + eval.md）
+site/                 # GitHub Pages (landing + gallery)
+demos/<slug>/         # replayable packs (e.g. demo-zombie)
+eval/tasks/           # Agent eval briefs
+eval/runs/            # scratch — gitignored
+output/<task>/<ver>/<harness>/   # curated finals + trajectory
 ```
 
-代码许可随主仓脚本（MIT OR Apache-2.0）；示例美术默认 CC BY 4.0，见各案例说明。
+### Curated `output/`
 
-## 评测约定
+`output/<task>/<version>/<harness>/` with `meta.json`, `trajectory.jsonl`, `final/`.
+Harness: `grok-bot`, `codex`, `claude-code`, …
 
-见 [`eval/README.md`](eval/README.md)。任务目录：`eval/tasks/<tier>-<slug>/`（至少 `task.md` + `eval.md`）。运行产物在 `eval/runs/`（不进 Git）。
+Do **not** put demo packs into `pixelforge-ai` (`examples/` is banned there).
 
-## 当前案例
+## License
 
-- [`demos/demo-zombie`](demos/demo-zombie/)：港口守灯人（四向 / 换装 / 道具 / 局部迭代）
+Demo art: [LICENSE-ASSETS.md](LICENSE-ASSETS.md) (CC BY 4.0).
