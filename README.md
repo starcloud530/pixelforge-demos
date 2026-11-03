@@ -15,6 +15,10 @@ eval/tasks/       # 真实任务评测（task.md + eval.md）
 
 代码许可随主仓脚本（MIT OR Apache-2.0）；示例美术默认 CC BY 4.0，见各案例说明。
 
+## 评测约定
+
+见 [`eval/README.md`](eval/README.md)。任务目录：`eval/tasks/<tier>-<slug>/`（至少 `task.md` + `eval.md`）。运行产物在 `eval/runs/`（不进 Git）。
+
 ## 当前案例
 
 - [`demos/demo-zombie`](demos/demo-zombie/)：港口守灯人（四向 / 换装 / 道具 / 局部迭代）
