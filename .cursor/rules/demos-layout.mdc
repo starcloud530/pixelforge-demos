@@ -1,0 +1,14 @@
+---
+description: pixelforge-demos 目录与提交约束（题面 / 跑分 / 精选 output / 宣传站）
+alwaysApply: true
+---
+
+# demos layout
+
+- Formal tasks live in `eval/tasks/<tier>-<slug>/` with `task.md` + `eval.md`. `task_id` is that directory name.
+- Scratch eval artifacts go to `eval/runs/` only — never commit them.
+- Curated public results go to `output/<task_id>/<version>/<harness>/` with `meta.json`, `trajectory.jsonl`, `final/`. Keep `aestheticApproval: false` unless a human aesthetic pass says otherwise.
+- Replayable project packs: `demos/<slug>/`. Marketing static site: `site/`.
+- Never add or restore `examples/` in pixelforge-ai. Large videos stay on the CDN, not this repo.
+- Do not leak `eval.md` scoring into the agent-facing prompt; agents get `task.md` only.
+- Do not invent pixelforge CLI subcommands; use main-repo agent-skill docs.
