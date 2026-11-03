@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>PixelForge — 给 Agent 的真像素 CLI</title>
+<style>
+:root{--bg:#fff;--ink:#111;--muted:#555;--line:#e8e8e8;--brand:#111;--soft:#f6f6f4;}
+*{box-sizing:border-box}body{margin:0;font-family:Georgia,"Songti SC","Noto Serif SC",serif;color:var(--ink);background:var(--bg);line-height:1.55}
+.sans{font-family:system-ui,-apple-system,Segoe UI,sans-serif}
+a{color:var(--ink)}
+.top{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid var(--line);font-family:system-ui,sans-serif;font-size:14px}
+.top a{text-decoration:none;color:var(--muted)}.top .brand{font-weight:700;color:var(--ink)}
+.hero{max-width:720px;margin:0 auto;padding:56px 20px 28px;text-align:center}
+.hero h1{font-size:clamp(32px,5vw,48px);line-height:1.15;margin:0 0 16px;letter-spacing:-.02em}
+.hero p{font-size:18px;color:var(--muted);margin:0 auto 24px;max-width:38ch;font-family:system-ui,sans-serif}
+.btn{display:inline-block;background:#111;color:#fff!important;text-decoration:none;padding:14px 22px;border-radius:8px;font-family:system-ui,sans-serif;font-weight:600;font-size:15px}
+.btn:hover{background:#333}
+.proof-row{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:28px;font-family:system-ui,sans-serif;font-size:12px;color:var(--muted)}
+.hero-art{margin:28px auto 0;width:min(280px,70vw)}
+.hero-art img{width:100%;image-rendering:pixelated;background:#0b0b0b;border-radius:12px}
+section{max-width:720px;margin:0 auto;padding:36px 20px;border-top:1px solid var(--line)}
+h2{font-size:26px;margin:0 0 12px;letter-spacing:-.01em}
+p.lead,section p{font-family:system-ui,sans-serif;font-size:16px;color:#333}
+.pain{background:var(--soft);border-radius:12px;padding:18px;font-family:system-ui,sans-serif}
+.benefits{display:grid;gap:14px}
+.b{padding:14px 0;border-bottom:1px solid var(--line);font-family:system-ui,sans-serif}
+.b strong{display:block;font-size:16px;margin-bottom:4px}
+.b span{color:var(--muted);font-size:15px}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;font-family:system-ui,sans-serif}
+.steps li{counter-increment:s;padding:14px 0 14px 48px;position:relative;border-bottom:1px solid var(--line)}
+.steps li::before{content:counter(s);position:absolute;left:0;top:14px;width:32px;height:32px;border-radius:50%;background:#111;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700}
+.steps code{font-size:13px;background:#f0f0f0;padding:2px 6px;border-radius:4px}
+.evidence{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:560px){.evidence{grid-template-columns:1fr}}
+.evidence figure{margin:0;font-family:system-ui,sans-serif;font-size:12px;color:var(--muted)}
+.evidence img{width:100%;image-rendering:pixelated;background:#111;border-radius:8px;margin-bottom:6px}
+.faq details{font-family:system-ui,sans-serif;border-bottom:1px solid var(--line);padding:12px 0}
+.faq summary{cursor:pointer;font-weight:600}
+.final{text-align:center;padding-bottom:48px}
+.final .btn{margin-top:8px}
+.honest{max-width:720px;margin:0 auto;padding:24px 20px 48px;border-top:1px solid var(--line);font-family:system-ui,sans-serif;font-size:13px;color:var(--muted)}
+.honest ul{padding-left:18px}
+</style>
+</head>
+<body>
+<div class="top sans">
+  <span class="brand">PixelForge</span>
+  <nav style="display:flex;gap:16px;align-items:center">
+    <a href="./gallery/">Gallery</a>
+    <a href="https://starcloud530.github.io/pixelforge-ai/">Docs</a>
+    <a href="https://github.com/starcloud530/pixelforge-ai">Code</a>
+  </nav>
+</div>
+
+<section class="hero" style="border:0;padding-top:48px">
+  <h1>你的 Agent 改的是格子，不是一张不可编辑的「像素风」图。</h1>
+  <p>PixelForge 把索引色项目放在本地：网格、调色板、图层。外部 Agent 调 CLI，检查 diff，再导出引擎能吃的 sheet。</p>
+  <a class="btn" href="https://github.com/starcloud530/pixelforge-ai/releases/tag/v0.1.0-rc.2">Install CLI v0.1.0-rc.2</a>
+  <p class="sans" style="margin-top:12px;font-size:14px;color:#555"><a href="https://starcloud530.github.io/pixelforge-ai/">文档 Docs</a> · <a href="./gallery/">案例 Gallery</a></p>
+  <div class="proof-row"><span>开源</span><span>CLI prerelease</span><span>无内置一键生图主路径</span></div>
+  <div class="hero-art"><img src="assets/slime-bounce.gif" alt="Neon Slime Courier bounce"/></div>
+</section>
+
+<section>
+  <h2>痛点</h2>
+  <div class="pain">
+    Agent 画完一张「像像素」的 PNG 之后，你没法按调色板换色、对两帧做索引 diff，也没法带着 frame delay 导出 atlas。软边缘的假像素进引擎还要重做。
+  </div>
+</section>
+
+<section>
+  <h2>你得到什么</h2>
+  <div class="benefits">
+    <div class="b"><strong>真索引项目</strong><span>每个格子存 palette index。换色、图层、预览都落在同一份工程文件上。</span></div>
+    <div class="b"><strong>Agent 先、GUI 后</strong><span>主路径是外部 Agent 调本地 <code>pixelforge</code>。应用内一键只是 demo。</span></div>
+    <div class="b"><strong>导出能进引擎</strong><span>PNG 序列、sprite sheet、atlas JSON，再用 validate-atlas 做结构校验。</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>怎么用</h2>
+  <ol class="steps">
+    <li>安装 CLI（当前建议标签 <code>v0.1.0-rc.2</code>）。</li>
+    <li>让 Agent 对 <code>.json</code> 工程执行 paint / replace-index / frame 等命令。</li>
+    <li>用 <code>preview</code> 与 <code>diff</code> 检查改动，再 <code>export sheet</code>。</li>
+  </ol>
+</section>
+
+<section>
+  <h2>证明：一次本地改色</h2>
+  <p>样例角色「霓虹史莱姆快递员」。包裹颜色从黄到青，只替换了 24 个索引格。</p>
+  <div class="evidence">
+    <figure><img src="assets/slime-before.png" alt="before"/><figcaption>before · index 6</figcaption></figure>
+    <figure><img src="assets/slime-after.png" alt="after"/><figcaption>after · index 11</figcaption></figure>
+  </div>
+  <figure style="margin:12px 0 0;font-family:system-ui,sans-serif;font-size:12px;color:var(--muted)">
+    <img src="assets/slime-diff.png" alt="diff" style="width:100%;image-rendering:pixelated;background:#111;border-radius:8px"/>
+    <figcaption>pixelforge diff 输出（可检查）</figcaption>
+  </figure>
+</section>
+
+<section class="faq">
+  <h2>你会犹豫的点</h2>
+  <details open><summary>这是成熟产品吗？</summary><p>不是。Early / WIP，CLI 为 prerelease。适合试用与 Agent 工作流验证。</p></details>
+  <details><summary>能替代 Aseprite 吗？</summary><p>不能按完整克隆承诺。它解决的是 Agent 可编辑的真像素工程与导出。</p></details>
+  <details><summary>图好看吗？谁拍板？</summary><p>结构校验通过不等于好看。<code>aestheticApproval: false</code>，需画师盲评才改写。</p></details>
+  <details><summary>会不会是 diffusion 假像素？</summary><p>不会按假像素售卖。工程存的是索引网格；本页样例由 CLI 绘制。</p></details>
+</section>
+
+<section class="final" style="border-top:1px solid var(--line)">
+  <h2>下一步只有一个</h2>
+  <p style="font-family:system-ui,sans-serif;color:var(--muted)">装 CLI，让你的 Agent 改第一格。</p>
+  <a class="btn" href="https://github.com/starcloud530/pixelforge-ai/releases/tag/v0.1.0-rc.2">Install CLI v0.1.0-rc.2</a>
+  <p style="margin-top:14px;font-family:system-ui,sans-serif;font-size:14px"><a href="https://starcloud530.github.io/pixelforge-ai/">Docs</a></p>
+</section>
+
+
+<footer class="honest">
+  <p><strong>诚实边界</strong> · Early / WIP · CLI <code>v0.1.0-rc.2</code> prerelease</p>
+  <ul>
+    <li>不是完整 Aseprite 克隆</li>
+    <li>不是 diffusion 假像素</li>
+    <li>不是完整游戏引擎 / 无人值守 L4 / 内置一键生图</li>
+  </ul>
+  <p><code>aestheticApproval: false</code> — 结构校验 ≠ 画师盲评。霓虹史莱姆快递员由本地 CLI 制作，未经盲评。</p>
+  <p class="links"><a href="https://github.com/starcloud530/pixelforge-ai">GitHub</a> · <a href="https://starcloud530.github.io/pixelforge-ai/">Docs</a> · <a href="./gallery/">Gallery</a></p>
+</footer>
+
+</body></html>

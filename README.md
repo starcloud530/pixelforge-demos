@@ -1,24 +1,59 @@
 # pixelforge-demos
 
-官方 / 社区案例与真实评测任务仓，配套主项目 [pixelforge-ai](https://github.com/starcloud530/pixelforge-ai)。
+Companion to [pixelforge-ai](https://github.com/starcloud530/pixelforge-ai): marketing site, replayable demos, curated Agent runs, and eval task packs.
 
-- **本仓**：可重放的工程层（`*.pxf.json`、sheet、atlas、脚本、`eval/tasks`）
-- **展示媒体**：CDN `https://resources.pixelforge.torzsi.com/`（不进本仓）
-- **演示站**：主仓 GitHub Pages（静态宣传页，链到 CDN）
+| Surface | URL |
+| --- | --- |
+| Marketing Pages | https://starcloud530.github.io/pixelforge-demos/ |
+| Product docs | https://starcloud530.github.io/pixelforge-ai/ |
+| CDN media | https://resources.pixelforge.torzsi.com/ |
 
-## 目录约定
+Agent / tool layout rules: **[AGENTS.md](AGENTS.md)** (also mirrored for Claude as [CLAUDE.md](CLAUDE.md) and Cursor as [`.cursor/rules/`](.cursor/rules/)).
+
+## 什么放哪 What goes where
+
+| 路径 | 放什么 | 进 Git？ |
+| --- | --- | --- |
+| `site/` | 宣传落地页 + Gallery（GitHub Pages 根） | 是 |
+| `demos/<slug>/` | 可重放工程包（如 `demo-zombie`：工程 + 脚本 + 小图） | 是 |
+| `eval/tasks/<tier>-<slug>/` | **正式题**：`task.md` + `eval.md`（+ 可选 `start/`、`check.py`） | 是 |
+| `eval/runs/` | 草稿跑分：`trajectory.jsonl`、`output/`、`score.json` | **否**（gitignore） |
+| `output/<task>/<version>/<harness>/` | **精选对照**：`final/` + `trajectory.jsonl` + `meta.json` | 是（仅 curated） |
+
+**`task_id`** = `eval/tasks/` 下的目录名，形如 `t5-ferrari-neon`（`<tier>-<slug>`）。精选包里的 `meta.json.task` 必须等于该 id。
+
+### 禁止 / 不要
+
+- 不要在 [pixelforge-ai](https://github.com/starcloud530/pixelforge-ai) 写 `examples/`（已 ban）。
+- 不要把草稿 `eval/runs/` 提交进仓。
+- 不要把大体积宣传视频塞进本仓；走 CDN。
+- 不要把未人工过目的跑分直接当 `output/` 发布；默认 `aestheticApproval: false`。
+- 不要把产品文档 MkDocs 放进本仓 Pages（docs 只在 pixelforge-ai）。
+
+### Curated `output/` 形状
 
 ```
-demos/<slug>/     # 可重放案例，如 demo-zombie
-eval/tasks/       # 真实任务评测（task.md + eval.md）
+output/<task_id>/<version>/<harness>/
+  meta.json           # task, version, harness, cliVersion, aestheticApproval
+  trajectory.jsonl    # 每行一次 pixelforge 进程调用
+  final/              # 访客应看到的 PNG / GIF / sheet / 工程
+  README.md
 ```
 
-代码许可随主仓脚本（MIT OR Apache-2.0）；示例美术默认 CC BY 4.0，见各案例说明。
+`version`: `v1`, `v2`, … · `harness`: `grok-bot` | `codex` | `claude-code` | …
 
-## 评测约定
+模板：[`output/_template/v1/grok-bot/`](output/_template/v1/grok-bot/) · 题面模板：[`eval/tasks/_template/`](eval/tasks/_template/) · 详解：[`eval/README.md`](eval/README.md)
 
-见 [`eval/README.md`](eval/README.md)。任务目录：`eval/tasks/<tier>-<slug>/`（至少 `task.md` + `eval.md`）。运行产物在 `eval/runs/`（不进 Git）。
+## Layout (tree)
 
-## 当前案例
+```
+site/                 # GitHub Pages
+demos/<slug>/         # replayable packs
+eval/tasks/           # formal task briefs
+eval/runs/            # scratch — gitignored
+output/<task>/<ver>/<harness>/
+```
 
-- [`demos/demo-zombie`](demos/demo-zombie/)：港口守灯人（四向 / 换装 / 道具 / 局部迭代）
+## License
+
+Demo art: [LICENSE-ASSETS.md](LICENSE-ASSETS.md) (CC BY 4.0). Scripts follow pixelforge-ai dual license when copied from there.

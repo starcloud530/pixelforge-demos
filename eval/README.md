@@ -1,5 +1,7 @@
 # Agent 评测约定 Eval harness conventions
 
+> **task_id** = `tasks/<tier>-<slug>/` 目录名。精选结果进仓根 `output/<task_id>/<version>/<harness>/`；草稿在 `runs/`（不进 Git）。总约束见根 [AGENTS.md](../AGENTS.md)。
+
 用真实任务评估外部 Agent（Codex、Claude Code，或其它能跑本地命令的模型）在调用 `pixelforge` CLI 时的**轨迹**与**最终输出**是否达到预期，并探测能力边界。本目录当前只约定任务写法、产物格式与评分口径；**运行器后续补，当前仅约定，不提供执行脚本。**
 
 *Evaluate external agents (Codex, Claude Code, or any model that can run local commands) on real `pixelforge` CLI tasks: trajectory quality and whether the final output meets the brief, plus where capability ends. This tree documents task layout, run artifacts, and scoring. A runner comes later; there is no harness script in this change.*

@@ -1,0 +1,10 @@
+{
+  "task": "_template",
+  "version": "v1",
+  "harness": "grok-bot",
+  "model": "",
+  "date": "YYYY-MM-DD",
+  "cliVersion": "0.1.0-rc.2",
+  "aestheticApproval": false,
+  "notes": "Copy this folder to output/<task>/<version>/<harness>/."
+}
