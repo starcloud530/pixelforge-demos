@@ -22,6 +22,7 @@ https://starcloud530.github.io/pixelforge-ai/agent-skill/ · https://starcloud53
 7. **大媒体** → `https://resources.pixelforge.torzsi.com/`，不要塞爆本仓。
 8. **不要编造** `pixelforge` 子命令；以主仓 agent-skill 为准。
 9. 主仓 skill 在 pixelforge-ai 的 `.cursor/skills/`；本仓**不**复制一份 skill 树，需要时打开主仓或已安装的 CLI + 主仓文档。
+10. **UI / layout**：Avoid unnecessary secondary labels and descriptions. Let the layout do the explaining.
 
 ## 放哪里（速查）
 
