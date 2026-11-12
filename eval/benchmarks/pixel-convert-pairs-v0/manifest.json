@@ -1,0 +1,283 @@
+{
+  "dataset_id": "pixel-convert-pairs-v0",
+  "cli_commit": "9fc35888aad9a5b8c4edfeeeab4bfc8e49ab9b1d",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "provenance": "Original geometry in generate.py; no external images or protocol-v1 inputs",
+  "characters": [
+    {
+      "character_id": "pf-pair-001-antenna-bot",
+      "source_kind": "original-program-art",
+      "style": "geometric-flat-proxy",
+      "license": "CC-BY-4.0",
+      "attribution": "PixelForge / starcloud530 (AI-assisted original program art)",
+      "split": "seed-unreviewed",
+      "intended_split": "test",
+      "training_eligible": false,
+      "target_status": "procedural-proxy-not-artist-corrected",
+      "features_to_keep": [
+        "single-pixel antenna",
+        "separate feet",
+        "two eyes"
+      ],
+      "images": [
+        {
+          "role": "source",
+          "file": "png/pf-pair-001-antenna-bot-source.png",
+          "width": 256,
+          "height": 256,
+          "sha256": "10a3e3162ab0cf5268a5412c14d942f7ca6949f3bd1666ee00945fbf6b5ae798"
+        },
+        {
+          "role": "target-64",
+          "file": "png/pf-pair-001-antenna-bot-target-64.png",
+          "width": 64,
+          "height": 64,
+          "sha256": "7da41963ebd20b215a00dd9eb4e0b6d6f30a11f67d54f111e7eeafeb9d02c6bc"
+        },
+        {
+          "role": "target-128",
+          "file": "png/pf-pair-001-antenna-bot-target-128.png",
+          "width": 128,
+          "height": 128,
+          "sha256": "b9c3a460193880d6505aaea365bcbe9c3f9ba6d42c975663a5e09d709e115491"
+        }
+      ],
+      "failure_samples": [
+        {
+          "file": "failures/pf-pair-001-antenna-bot-center-sample-64.png",
+          "width": 64,
+          "height": 64,
+          "sha256": "c2f7c965c99c934d92a5fbafb919046a7114f0fcf982f6fafc05857de7c4897b",
+          "method": "center-sample",
+          "observation": {
+            "pixel": [
+              31,
+              12
+            ],
+            "candidate_alpha": 0,
+            "proxy_target_alpha": 255,
+            "feature": "antenna"
+          },
+          "human_severity": null
+        },
+        {
+          "file": "failures/pf-pair-001-antenna-bot-center-sample-128.png",
+          "width": 128,
+          "height": 128,
+          "sha256": "8a6eb5b1ca946443658f7f53bfe636347547b0253f8894aaa564e8b4e5a1f177",
+          "method": "center-sample",
+          "observation": {
+            "pixel": [
+              62,
+              24
+            ],
+            "candidate_alpha": 0,
+            "proxy_target_alpha": 255,
+            "feature": "antenna"
+          },
+          "human_severity": null
+        }
+      ]
+    },
+    {
+      "character_id": "pf-pair-002-pennant-keeper",
+      "source_kind": "original-program-art",
+      "style": "geometric-flat-proxy",
+      "license": "CC-BY-4.0",
+      "attribution": "PixelForge / starcloud530 (AI-assisted original program art)",
+      "split": "seed-unreviewed",
+      "intended_split": "train",
+      "training_eligible": false,
+      "target_status": "procedural-proxy-not-artist-corrected",
+      "features_to_keep": [
+        "pennant and pole",
+        "arm joins pole",
+        "leg gap"
+      ],
+      "images": [
+        {
+          "role": "source",
+          "file": "png/pf-pair-002-pennant-keeper-source.png",
+          "width": 256,
+          "height": 256,
+          "sha256": "a8e0de6f735d6cb286fce3fe12e12196d1cb9d5f0ff1f955d3f438cb857a337c"
+        },
+        {
+          "role": "target-64",
+          "file": "png/pf-pair-002-pennant-keeper-target-64.png",
+          "width": 64,
+          "height": 64,
+          "sha256": "f2339babe7ce940c2f1118535ca43047981205cfe1bb0e6ae98fb3f1f0ed5ad6"
+        },
+        {
+          "role": "target-128",
+          "file": "png/pf-pair-002-pennant-keeper-target-128.png",
+          "width": 128,
+          "height": 128,
+          "sha256": "9e3056187c41275b9b46ae9f67d749acf3be774b342dcfb49c0b486cf20628ee"
+        }
+      ],
+      "failure_samples": []
+    },
+    {
+      "character_id": "pf-pair-003-ring-diver",
+      "source_kind": "original-program-art",
+      "style": "geometric-flat-proxy",
+      "license": "CC-BY-4.0",
+      "attribution": "PixelForge / starcloud530 (AI-assisted original program art)",
+      "split": "seed-unreviewed",
+      "intended_split": "train",
+      "training_eligible": false,
+      "target_status": "procedural-proxy-not-artist-corrected",
+      "features_to_keep": [
+        "visor rim",
+        "torso window",
+        "wide fins"
+      ],
+      "images": [
+        {
+          "role": "source",
+          "file": "png/pf-pair-003-ring-diver-source.png",
+          "width": 256,
+          "height": 256,
+          "sha256": "2ba0cfd04206a2a172c5bdc249736f9d0f8f3ea0f7bf3dff6d837eb30a006356"
+        },
+        {
+          "role": "target-64",
+          "file": "png/pf-pair-003-ring-diver-target-64.png",
+          "width": 64,
+          "height": 64,
+          "sha256": "43a830351a9fa5e15b330c30bf8b397398f2d66cc807ccfa8e509d72e23afc02"
+        },
+        {
+          "role": "target-128",
+          "file": "png/pf-pair-003-ring-diver-target-128.png",
+          "width": 128,
+          "height": 128,
+          "sha256": "11d110f6cb552713d99e412e3e7e54d82530d3d87a631823b70f2d383b06bd46"
+        }
+      ],
+      "failure_samples": []
+    },
+    {
+      "character_id": "pf-pair-004-lantern-moth",
+      "source_kind": "original-program-art",
+      "style": "geometric-flat-proxy",
+      "license": "CC-BY-4.0",
+      "attribution": "PixelForge / starcloud530 (AI-assisted original program art)",
+      "split": "seed-unreviewed",
+      "intended_split": "train",
+      "training_eligible": false,
+      "target_status": "procedural-proxy-not-artist-corrected",
+      "features_to_keep": [
+        "paired antennae",
+        "two wing panels",
+        "body between wings"
+      ],
+      "images": [
+        {
+          "role": "source",
+          "file": "png/pf-pair-004-lantern-moth-source.png",
+          "width": 256,
+          "height": 256,
+          "sha256": "05e220be78895fb03de138aca380fd8e220106ec02fd97fc38bc2e097b48fa6e"
+        },
+        {
+          "role": "target-64",
+          "file": "png/pf-pair-004-lantern-moth-target-64.png",
+          "width": 64,
+          "height": 64,
+          "sha256": "70e40e37abbf81efa2f39693e87f7536ae3e62aef7b0226ffe19d82f685cc854"
+        },
+        {
+          "role": "target-128",
+          "file": "png/pf-pair-004-lantern-moth-target-128.png",
+          "width": 128,
+          "height": 128,
+          "sha256": "5498ea572bdd3039fbb952597cc2aaf391b750425dc5ef3caa2cf097248952e1"
+        }
+      ],
+      "failure_samples": []
+    },
+    {
+      "character_id": "pf-pair-005-twin-ear-scout",
+      "source_kind": "original-program-art",
+      "style": "geometric-flat-proxy",
+      "license": "CC-BY-4.0",
+      "attribution": "PixelForge / starcloud530 (AI-assisted original program art)",
+      "split": "seed-unreviewed",
+      "intended_split": "train",
+      "training_eligible": false,
+      "target_status": "procedural-proxy-not-artist-corrected",
+      "features_to_keep": [
+        "two long ears",
+        "thin side tool",
+        "separated boots"
+      ],
+      "images": [
+        {
+          "role": "source",
+          "file": "png/pf-pair-005-twin-ear-scout-source.png",
+          "width": 256,
+          "height": 256,
+          "sha256": "b184de395b197cd1121bd57a961132be7f3c4343ee485d6ed59bc4a92602ec2c"
+        },
+        {
+          "role": "target-64",
+          "file": "png/pf-pair-005-twin-ear-scout-target-64.png",
+          "width": 64,
+          "height": 64,
+          "sha256": "441145ae8b313ad69205ea7a5435cf374a089d42dbeb794216b1f3bf92b60c79"
+        },
+        {
+          "role": "target-128",
+          "file": "png/pf-pair-005-twin-ear-scout-target-128.png",
+          "width": 128,
+          "height": 128,
+          "sha256": "4e1caa3f2bf3725c06cce0b6dad25145953616d060bf9b5f8cac557457e2f3dc"
+        }
+      ],
+      "failure_samples": []
+    },
+    {
+      "character_id": "pf-pair-006-fork-crab",
+      "source_kind": "original-program-art",
+      "style": "geometric-flat-proxy",
+      "license": "CC-BY-4.0",
+      "attribution": "PixelForge / starcloud530 (AI-assisted original program art)",
+      "split": "seed-unreviewed",
+      "intended_split": "dev",
+      "training_eligible": false,
+      "target_status": "procedural-proxy-not-artist-corrected",
+      "features_to_keep": [
+        "forked claws",
+        "eye stalks",
+        "four leg gaps"
+      ],
+      "images": [
+        {
+          "role": "source",
+          "file": "png/pf-pair-006-fork-crab-source.png",
+          "width": 256,
+          "height": 256,
+          "sha256": "026bfe2ba56d343715560d817f879b65bd87ff86296e1ce25aead0c37b8e690a"
+        },
+        {
+          "role": "target-64",
+          "file": "png/pf-pair-006-fork-crab-target-64.png",
+          "width": 64,
+          "height": 64,
+          "sha256": "19fd164484eb3de54d22c8e7d8015fba989a5f62fe6a5dcf0b26b41a3ef75f4e"
+        },
+        {
+          "role": "target-128",
+          "file": "png/pf-pair-006-fork-crab-target-128.png",
+          "width": 128,
+          "height": 128,
+          "sha256": "b73407af1d5f822f9e9960879d55a273a9c7bb4bf5e8553f34e77873ee13f9c1"
+        }
+      ],
+      "failure_samples": []
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+name: Conversion benchmark checks
+
+on:
+  pull_request:
+    paths:
+      - 'eval/benchmarks/**'
+      - '.github/workflows/convert-benchmark.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'eval/benchmarks/**'
+      - '.github/workflows/convert-benchmark.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  frozen-protocol-and-seed:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Offline contracts, provenance and corruption rejection
+        run: |
+          python3 eval/benchmarks/pixel-convert-v1/check.py
+          python3 eval/benchmarks/pixel-convert-pairs-v0/check.py
+      - name: Checkout pinned CLI source (no engine code in demos)
+        uses: actions/checkout@v4
+        with:
+          repository: starcloud530/pixelforge-ai
+          ref: 9fc35888aad9a5b8c4edfeeeab4bfc8e49ab9b1d
+          path: .benchmark-cli
+          persist-credentials: false
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Build pinned CLI
+        run: cargo build --manifest-path .benchmark-cli/Cargo.toml --release --locked -p pixelforge-cli
+      - name: Exact CLI output replay (no timings or human-score comparison)
+        env:
+          PIXELFORGE_BIN: ${{ github.workspace }}/.benchmark-cli/target/release/pixelforge
+        run: |
+          python3 eval/benchmarks/pixel-convert-v1/check.py --with-cli
+          python3 eval/benchmarks/pixel-convert-pairs-v0/check.py --with-cli

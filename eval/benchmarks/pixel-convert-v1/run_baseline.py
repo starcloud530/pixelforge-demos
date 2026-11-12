@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Run the center-sample baseline and write the v1 record table.
+"""Run a fixed v1 method and write its separate record table.
 
 Projects land in eval/runs/pixel-convert-v1/ (gitignored). The record table
-is written under records/v1/center-sample/.
+is written under records/v1/<method>/.
 """
 
 from __future__ import annotations
@@ -32,11 +32,28 @@ from lib.record import aggregate_from_rows, dumps, rows_to_csv, sha256_bytes
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Record the center-sample baseline")
-    parser.add_argument("--cli-commit", required=True, help="pixelforge-ai commit the binary was built from")
-    parser.add_argument("--work-dir", type=Path, default=REPO_ROOT / "eval" / "runs" / "pixel-convert-v1")
-    parser.add_argument("--record-dir", type=Path, default=RECORD_DIR)
+    parser = argparse.ArgumentParser(description="Record a fixed v1 baseline method")
+    parser.add_argument(
+        "--method", choices=["center-sample", "traditional"], default="center-sample"
+    )
+    parser.add_argument(
+        "--cli-commit",
+        required=True,
+        help="pixelforge-ai commit the binary was built from",
+    )
+    parser.add_argument(
+        "--work-dir",
+        type=Path,
+        default=REPO_ROOT / "eval" / "runs" / "pixel-convert-v1",
+    )
+    parser.add_argument("--record-dir", type=Path, default=None)
     args = parser.parse_args()
+    engine_id = {"center-sample": "center-sample", "traditional": "dominant"}[
+        args.method
+    ]
+    if args.cli_commit != "9fc35888aad9a5b8c4edfeeeab4bfc8e49ab9b1d":
+        raise SystemExit("this record runner requires the v1 CLI pin")
+    args.record_dir = args.record_dir or RECORD_DIR.parent / args.method
     spec = protocol()
     if int(spec["timing_runs"]) != 3:
         raise SystemExit("v1 timing_runs must stay 3")
@@ -50,20 +67,25 @@ def main() -> int:
         raise SystemExit(engines_err.strip() or "pixelforge engine list failed")
     engines = parse_result(engines_out)
     ids = [item.get("id") for item in engines.get("engines", [])]
-    if "center-sample" not in ids:
-        raise SystemExit(f"center-sample is not in engine list: {ids}")
+    if engine_id not in ids:
+        raise SystemExit(f"{engine_id} is not in engine list: {ids}")
     rows = []
-    commands = [{
-        "row_id": "",
-        "run": 0,
-        "argv": ["pixelforge", "engine", "list"],
-        "exit_code": code,
-        "duration_ms": engines_ms,
-    }]
+    commands = [
+        {
+            "row_id": "",
+            "run": 0,
+            "argv": ["pixelforge", "engine", "list"],
+            "exit_code": code,
+            "duration_ms": engines_ms,
+        }
+    ]
     for fixture in manifest()["fixtures"]:
         src_w, src_h, rgba = load_rgba(fixture)
         for target in spec["targets"]:
-            print(f"convert {fixture['id']} {target['width']}x{target['height']}", file=sys.stderr)
+            print(
+                f"convert {fixture['id']} {target['width']}x{target['height']}",
+                file=sys.stderr,
+            )
             row, cell_commands = run_target(
                 binary,
                 fixture,
@@ -74,13 +96,15 @@ def main() -> int:
                 target["height"],
                 args.work_dir,
                 spec["timing_runs"],
+                method=args.method,
+                engine_id=engine_id,
             )
             row["cli_version"] = cli_version
             rows.append(row)
             commands.extend(cell_commands)
     table = {
         "benchmark_id": spec["benchmark_id"],
-        "method_id": "center-sample",
+        "method_id": args.method,
         "canonical": "this JSON table; table.csv is a projection",
         "rows": rows,
     }
@@ -88,11 +112,11 @@ def main() -> int:
     meta = {
         "benchmark_id": spec["benchmark_id"],
         "record_version": "v1",
-        "method_id": "center-sample",
+        "method_id": args.method,
         "cli_version": cli_version,
         "cli_commit": args.cli_commit,
         "cli_repo": "https://github.com/starcloud530/pixelforge-ai",
-        "engine_id": "center-sample",
+        "engine_id": engine_id,
         "engine_version": rows[0]["engine_version"],
         "engines": ids,
         "palette_strategy": "limit",
@@ -108,6 +132,11 @@ def main() -> int:
         "fields_sha256": sha256_bytes(FIELDS_PATH.read_bytes()),
         "hashes_sha256": sha256_bytes(HASHES_PATH.read_bytes()),
     }
+    if args.method == "traditional":
+        meta["cli_binary_sha256"] = sha256_bytes(Path(binary).read_bytes())
+        meta["method_spec"] = (
+            "TRADITIONAL.md (supplement; frozen protocol.json unchanged)"
+        )
     args.record_dir.mkdir(parents=True, exist_ok=True)
     (args.record_dir / "meta.json").write_text(dumps(meta), encoding="utf-8")
     (args.record_dir / "table.json").write_text(dumps(table), encoding="utf-8")
@@ -117,7 +146,7 @@ def main() -> int:
         "".join(json.dumps(item, ensure_ascii=False) + "\n" for item in commands),
         encoding="utf-8",
     )
-    print(f"wrote {len(rows)} rows to {args.record_dir.relative_to(BENCH_DIR)}")
+    print(f"wrote {len(rows)} rows to {args.record_dir}")
     return 0
 
 
