@@ -1,0 +1,177 @@
+{
+  "benchmark_id": "pixel-convert-v1",
+  "frozen": "Geometry and colors are fixed constants. They are not fitted to a converter output.",
+  "categories_required": ["character", "equipment-line", "transparent-edge"],
+  "fixtures": [
+    {
+      "id": "pf-cv-001-mass",
+      "character_id": "pf-cv-001-mass",
+      "title": "单个人形色块，硬边透明背景",
+      "source_kind": "procedural",
+      "style": "flat-hard",
+      "categories": ["character", "transparent-edge"],
+      "license": "original-procedural",
+      "split": "protocol-v1",
+      "file": "fixtures/png/pf-cv-001-mass.png",
+      "root": "benchmark",
+      "width": 512,
+      "height": 512,
+      "human_checklist": [
+        "能看出一个站立人形，而不是散开的色块",
+        "两腿之间的空隙仍然是空的",
+        "形体以外没有色晕"
+      ],
+      "scene": {
+        "shapes": [
+          {"op": "rect", "x": 206, "y": 340, "w": 40, "h": 100, "rgba": [40, 48, 64, 255]},
+          {"op": "rect", "x": 266, "y": 340, "w": 40, "h": 100, "rgba": [40, 48, 64, 255]},
+          {"op": "rect", "x": 194, "y": 180, "w": 124, "h": 160, "rgba": [32, 96, 200, 255]},
+          {"op": "ellipse", "cx": 256, "cy": 140, "rx": 52, "ry": 48, "rgba": [240, 196, 120, 255]}
+        ],
+        "holes": [{"id": "leg-gap", "x": 256, "y": 390}],
+        "lines": []
+      }
+    },
+    {
+      "id": "pf-cv-002-line",
+      "character_id": "pf-cv-002-line",
+      "title": "色块身体加两条装备线",
+      "source_kind": "procedural",
+      "style": "flat-hard",
+      "categories": ["character", "equipment-line"],
+      "license": "original-procedural",
+      "split": "protocol-v1",
+      "file": "fixtures/png/pf-cv-002-line.png",
+      "root": "benchmark",
+      "width": 512,
+      "height": 512,
+      "human_checklist": [
+        "身体色块还在",
+        "细的竖向装备线还看得出是线，而不是消失或糊成一块",
+        "较粗的横向装备条还在，并且和身体不是同一种颜色"
+      ],
+      "scene": {
+        "shapes": [
+          {"op": "rect", "x": 80, "y": 120, "w": 180, "h": 280, "rgba": [32, 96, 200, 255]},
+          {"op": "rect", "x": 60, "y": 204, "w": 280, "h": 12, "rgba": [180, 190, 200, 255]},
+          {"op": "rect", "x": 369, "y": 100, "w": 3, "h": 300, "rgba": [220, 48, 48, 255]}
+        ],
+        "holes": [],
+        "lines": [
+          {"id": "crossbar", "x0": 60.5, "y0": 210, "x1": 339.5, "y1": 210, "reach": 6},
+          {"id": "hairline", "x0": 370.5, "y0": 100.5, "x1": 370.5, "y1": 399.5, "reach": 1.5}
+        ]
+      }
+    },
+    {
+      "id": "pf-cv-003-fringe",
+      "character_id": "pf-cv-003-fringe",
+      "title": "带覆盖率边缘的环，中间是透明孔",
+      "source_kind": "procedural",
+      "style": "coverage-aa",
+      "categories": ["transparent-edge"],
+      "license": "original-procedural",
+      "split": "protocol-v1",
+      "file": "fixtures/png/pf-cv-003-fringe.png",
+      "root": "benchmark",
+      "width": 512,
+      "height": 512,
+      "human_checklist": [
+        "环的中间孔还是空的",
+        "外缘没有明显的色晕铺到背景上",
+        "环没有碎成互不相连的点"
+      ],
+      "scene": {
+        "shapes": [
+          {
+            "op": "ring",
+            "cx": 256,
+            "cy": 256,
+            "outer": 140,
+            "inner": 36,
+            "rgba": [32, 160, 96, 255],
+            "samples": 4
+          }
+        ],
+        "holes": [{"id": "center-hole", "x": 256, "y": 256}],
+        "lines": []
+      }
+    },
+    {
+      "id": "pf-cv-004-budget",
+      "character_id": "pf-cv-004-budget",
+      "title": "一块超过 16 色的扁平色带",
+      "source_kind": "procedural",
+      "style": "flat-stripes",
+      "categories": ["character", "palette-budget"],
+      "license": "original-procedural",
+      "split": "protocol-v1",
+      "file": "fixtures/png/pf-cv-004-budget.png",
+      "root": "benchmark",
+      "width": 512,
+      "height": 512,
+      "human_checklist": [
+        "色带仍然是一整块，没有裂开或跑出原来的范围",
+        "不透明色数没有超过约定的 16",
+        "合并是把相近的色带收进预算，而不是把整块涂成背景"
+      ],
+      "scene": {
+        "shapes": [
+          {"op": "stripes", "x": 64, "y": 96, "w": 384, "h": 320, "count": 24}
+        ],
+        "holes": [],
+        "lines": []
+      }
+    },
+    {
+      "id": "pf-cv-005-gap",
+      "character_id": "pf-cv-005-gap",
+      "title": "身体和装备之间有空隙，中间一条细连接",
+      "source_kind": "procedural",
+      "style": "flat-hard",
+      "categories": ["character", "equipment-line", "transparent-edge"],
+      "license": "original-procedural",
+      "split": "protocol-v1",
+      "file": "fixtures/png/pf-cv-005-gap.png",
+      "root": "benchmark",
+      "width": 512,
+      "height": 512,
+      "human_checklist": [
+        "身体和旁边的装备块都还在",
+        "两者之间、细连接以外的空隙没有被填上",
+        "细连接还看得出是连接，而不是消失"
+      ],
+      "scene": {
+        "shapes": [
+          {"op": "rect", "x": 70, "y": 150, "w": 120, "h": 230, "rgba": [32, 96, 200, 255]},
+          {"op": "rect", "x": 330, "y": 160, "w": 90, "h": 110, "rgba": [180, 190, 200, 255]},
+          {"op": "rect", "x": 190, "y": 200, "w": 140, "h": 4, "rgba": [220, 48, 48, 255]}
+        ],
+        "holes": [{"id": "open-gap", "x": 260, "y": 300}],
+        "lines": [
+          {"id": "strap", "x0": 190.5, "y0": 202, "x1": 329.5, "y1": 202, "reach": 2}
+        ]
+      }
+    },
+    {
+      "id": "pf-cv-006-slime",
+      "character_id": "pf-cv-006-slime",
+      "title": "仓内已有的透明背景角色",
+      "source_kind": "in-repo",
+      "style": "in-repo-pixel",
+      "categories": ["character", "transparent-edge"],
+      "license": "repository-asset-cc-by-4.0",
+      "split": "protocol-v1",
+      "file": "site/assets/slime-before.png",
+      "root": "repo",
+      "width": 256,
+      "height": 256,
+      "human_checklist": [
+        "仍然能看出一个单独的角色",
+        "角色以外的透明区域没有被填上颜色",
+        "没有大块色晕，也没有碎到无法辨认"
+      ],
+      "scene": null
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "benchmark_id": "pixel-convert-v1",
+  "ballot_id": "",
+  "reviewer_id": "",
+  "fixture_id": "",
+  "character_id": "",
+  "target_width": null,
+  "target_height": null,
+  "display_scale": 4,
+  "backdrop_rgb": [128, 128, 128],
+  "pair": [
+    {"label": "A", "sheet": ""},
+    {"label": "B", "sheet": ""}
+  ],
+  "preference": null,
+  "preference_values": ["A", "B", "tie"],
+  "feature_retained": {"A": null, "B": null},
+  "severe_defect": {"A": null, "B": null},
+  "severe_codes": {"A": null, "B": null},
+  "severe_code_values": ["S1", "S2", "S3", "S4", "S5"],
+  "notes": "",
+  "method_ids_hidden_from_reviewer": true
+}

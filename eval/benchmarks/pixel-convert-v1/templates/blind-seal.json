@@ -1,0 +1,10 @@
+{
+  "benchmark_id": "pixel-convert-v1",
+  "ballot_id": "",
+  "seed": "",
+  "labels": {
+    "A": {"method_id": "", "row_id": ""},
+    "B": {"method_id": "", "row_id": ""}
+  },
+  "reviewer_must_not_see_this_file": true
+}

@@ -2,17 +2,17 @@
 
 > **task_id** = `tasks/<tier>-<slug>/` 目录名。精选结果进仓根 `output/<task_id>/<version>/<harness>/`；草稿在 `runs/`（不进 Git）。总约束见根 [AGENTS.md](../AGENTS.md)。
 
-用真实任务评估外部 Agent（Codex、Claude Code，或其它能跑本地命令的模型）在调用 `pixelforge` CLI 时的**轨迹**与**最终输出**是否达到预期，并探测能力边界。本目录当前只约定任务写法、产物格式与评分口径；**运行器后续补，当前仅约定，不提供执行脚本。**
+用真实任务评估外部 Agent（Codex、Claude Code，或其它能跑本地命令的模型）在调用 `pixelforge` CLI 时的**轨迹**与**最终输出**是否达到预期，并探测能力边界。Agent 题这一支只约定任务写法、产物格式与评分口径；**Agent 运行器后续补，当前不提供拉起外部 Agent 的执行脚本。** 转换质量基准在 `benchmarks/`，与 Agent 题分开。
 
-*Evaluate external agents (Codex, Claude Code, or any model that can run local commands) on real `pixelforge` CLI tasks: trajectory quality and whether the final output meets the brief, plus where capability ends. This tree documents task layout, run artifacts, and scoring. A runner comes later; there is no harness script in this change.*
+*Evaluate external agents (Codex, Claude Code, or any model that can run local commands) on real `pixelforge` CLI tasks: trajectory quality and whether the final output meets the brief, plus where capability ends. The agent-task side documents layout and scoring. An agent runner comes later. Conversion benchmarks live under `benchmarks/` and are separate.*
 
 产品路径不变：仓库外的 Agent → 本地 `pixelforge` CLI → Rust 内核 Tool API。命令语义以 [docs/agent-skill.md](../docs/agent-skill.md) 与 [docs/tool-api.md](../docs/tool-api.md) 为准。Skill 在 `.cursor/skills/`（见 [AGENTS.md](../AGENTS.md)）。不要手改工程 JSON 塞颜色，不要发明 CLI 子命令。
 
 *Same product path: agent outside the repo → local `pixelforge` CLI → Tool API. Command semantics: [docs/agent-skill.md](../docs/agent-skill.md) and [docs/tool-api.md](../docs/tool-api.md). Skills live under `.cursor/skills/` (see [AGENTS.md](../AGENTS.md)). Do not hand-edit project JSON to plant colors, and do not invent CLI subcommands.*
 
-本目录不改引擎、不加评测运行脚本。`check.py` 只作为某道题在 `eval.md` 里声明的可选机判入口；模板目录不附带可执行检查脚本。
+本目录不改引擎。Agent 题的 `check.py` 只作为某道题在 `eval.md` 里声明的可选机判入口；模板目录不附带可执行检查脚本。转换基准自己的校验脚本放在对应 `benchmarks/<id>/` 下，不充当 Agent 运行器。
 
-*This tree does not change the engine and does not add a runner. An optional `check.py` is only the machine-check entry a task's `eval.md` may name; the template does not ship an executable checker.*
+*This tree does not change the engine. An optional task `check.py` is only the machine-check entry a task's `eval.md` may name; the template does not ship an executable checker. A conversion benchmark keeps its own checker beside its protocol.*
 
 ## 目录约定 Layout
 
@@ -25,7 +25,9 @@ eval/
       eval.md        # 必需：给评审看的验收标准
       start/         # 可选：初始工程 / 色板 / 参考图
       check.py       # 可选：eval.md 中可机判部分
-  runs/              # 不进 Git：trajectory.jsonl、output/、score.json
+  benchmarks/
+    <id>/            # 转换质量基准，不是 Agent 题。见 benchmarks/README.md
+  runs/              # 不进 Git：trajectory.jsonl、output/、score.json，以及基准重跑工程
 ```
 
 - `tasks/<tier>-<slug>/`：一道题一个目录。`<tier>` 是下面的分档前缀；`<slug>` 用小写短横线，例如 `t1-recolor-coat`。
@@ -179,10 +181,18 @@ Agent 交卷时的最终文件树。至少包含题面要求的工程文件（�
 
 *Boundary tasks state expected failure points only in `eval.md`. `task.md` must not spoil them.*
 
+## 转换质量基准 Conversion benchmarks
+
+`benchmarks/` 与 `tasks/` 并列，不占用 `<tier>-<slug>` 题号。里面是固定源图、目标尺寸和色数的转换协议、记录模板和可复核基线表。Agent 不读这些说明来做题。`benchmarks/pixel-convert-v1/check.py` 只校验这一套基准，不是下面说的 Agent 运行器。
+
+草稿转换工程仍写入 `runs/`，不进 Git。进 Git 的是协议、固件、模板和记录表。
+
+*Conversion benchmarks sit beside agent tasks. They are not tiered task briefs, and their checker is not the agent runner.*
+
 ## 当前范围 Scope
 
-- **有**：目录约定、模板、`runs/` 忽略规则、本说明。
-- **无**：自动拉起 Codex / Claude Code 的运行器、批量打分入口、CI 里跑 eval、具体 t1–t5 题目正文（除 `_template`）。
+- **有**：目录约定、模板、`runs/` 忽略规则、本说明，以及 `benchmarks/` 下的转换质量基准（与 Agent 题分开）。
+- **无**：自动拉起 Codex / Claude Code 的运行器、批量打分入口、CI 里跑 Agent eval、具体 t1–t5 题目正文（除 `_template` 与另行入库的题面）。
 
 运行器补上之后，应读取 `tasks/<id>/task.md` 与可选 `start/`，把 Agent 的命令记进 `trajectory.jsonl`，把交付物收进 `output/`，再按 `eval.md` / `check.py` 写 `score.json`。在此之前，人工按同一约定落盘即可。
 

@@ -10,6 +10,7 @@ https://starcloud530.github.io/pixelforge-ai/agent-skill/ · https://starcloud53
 
 1. **目录职责（强制）**
    - 题面 → `eval/tasks/<task_id>/`（`task.md` + `eval.md`）
+   - 转换质量基准 → `eval/benchmarks/<id>/`（协议、测试集、基线表；不是 Agent 题）
    - 草稿跑分 → `eval/runs/<run-id>/`（**勿 commit**）
    - 精选对照 → `output/<task_id>/<version>/<harness>/`
    - 可重放工程包 → `demos/<slug>/`
@@ -29,6 +30,7 @@ https://starcloud530.github.io/pixelforge-ai/agent-skill/ · https://starcloud53
 | 要存的东西 | 路径 |
 | --- | --- |
 | 新评测题 | `eval/tasks/<tier>-<slug>/` |
+| 转换质量基准（协议、测试集、基线表） | `eval/benchmarks/<id>/` |
 | 某次草稿轨迹 / 机判 | `eval/runs/<run-id>/` |
 | 对外可看的好结果（分 harness） | `output/<task_id>/vN/<harness>/` |
 | 官方可重放 demo 包 | `demos/<slug>/` |
