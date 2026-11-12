@@ -1,0 +1,15 @@
+{
+  "benchmark_id": "pixel-convert-v1",
+  "row_id": "",
+  "editor_id": "",
+  "started_from": "converted pixelforge-project",
+  "minutes": null,
+  "deliverable_checklist": [
+    {"id": "silhouette_readable", "pass": null},
+    {"id": "declared_features_present", "pass": null},
+    {"id": "no_severe_defect", "pass": null},
+    {"id": "palette_within_budget", "pass": null}
+  ],
+  "tool": "",
+  "notes": ""
+}

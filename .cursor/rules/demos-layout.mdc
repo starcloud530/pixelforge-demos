@@ -6,6 +6,7 @@ alwaysApply: true
 # demos layout
 
 - Formal tasks live in `eval/tasks/<tier>-<slug>/` with `task.md` + `eval.md`. `task_id` is that directory name.
+- Conversion-quality benchmarks live in `eval/benchmarks/<id>/` (protocol, fixtures, record table). They are not agent tasks.
 - Scratch eval artifacts go to `eval/runs/` only — never commit them.
 - Curated public results go to `output/<task_id>/<version>/<harness>/` with `meta.json`, `trajectory.jsonl`, `final/`. Keep `aestheticApproval: false` unless a human aesthetic pass says otherwise.
 - Replayable project packs: `demos/<slug>/`. Marketing static site: `site/`.

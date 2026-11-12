@@ -1,0 +1,59 @@
+{
+  "benchmark_id": "pixel-convert-v1",
+  "files": {
+    "pf-cv-001-mass": {
+      "path": "fixtures/png/pf-cv-001-mass.png",
+      "root": "benchmark",
+      "width": 512,
+      "height": 512,
+      "png_sha256": "679bf9dbe35052e079d616e3b728f1c6f59c4e5681eeb55d4a20e1d801fb90a5",
+      "rgba_sha256": "a649d633e1bc91a631adc1533d55451704a79cbab4791e8f1b87cfc0e1a817a9",
+      "png_bytes": 2274
+    },
+    "pf-cv-002-line": {
+      "path": "fixtures/png/pf-cv-002-line.png",
+      "root": "benchmark",
+      "width": 512,
+      "height": 512,
+      "png_sha256": "0f7433e3b08641d18a66b40879c679f78a254846fc9e2a177c9527bc6fdb25d1",
+      "rgba_sha256": "a6630c51dc782884640cdc870a023787d7198f6e26bcb8742800ad6af6fef568",
+      "png_bytes": 2463
+    },
+    "pf-cv-003-fringe": {
+      "path": "fixtures/png/pf-cv-003-fringe.png",
+      "root": "benchmark",
+      "width": 512,
+      "height": 512,
+      "png_sha256": "a173a0cc1312a949b2da208ba5a9160e6d04b2a14e174a81432560539aef6b1d",
+      "rgba_sha256": "8f92f96dee1fde551f6f807c4235919ace26a9dc8fc281d6bed46a052b106d11",
+      "png_bytes": 3929
+    },
+    "pf-cv-004-budget": {
+      "path": "fixtures/png/pf-cv-004-budget.png",
+      "root": "benchmark",
+      "width": 512,
+      "height": 512,
+      "png_sha256": "2a1f79876c8fbbc9f8fc143be3771c575cad0193c6f7c5f33cc470df6dd77a80",
+      "rgba_sha256": "5b8b1d63feb40808a6080ba352d87a1e9d344d877061b4ead502136f6a1d916c",
+      "png_bytes": 4244
+    },
+    "pf-cv-005-gap": {
+      "path": "fixtures/png/pf-cv-005-gap.png",
+      "root": "benchmark",
+      "width": 512,
+      "height": 512,
+      "png_sha256": "01b4db69294ed2691eb7d296cc9259f65ec895ad950583407f9f4bb8ee29c9e9",
+      "rgba_sha256": "d082fea9528b6dcd7a965b71658f62be088979f6f96e98f897d034bb24b7eb86",
+      "png_bytes": 2127
+    },
+    "pf-cv-006-slime": {
+      "path": "site/assets/slime-before.png",
+      "root": "repo",
+      "width": 256,
+      "height": 256,
+      "png_sha256": "3f85083cb1c387b02a45184737d7e80d585a486f93253ef834f4ee0f46e0070b",
+      "rgba_sha256": "4524e84fa6b2196285faa1e2b0348b2142a94dc2ac3e7f0a70f7646e7fb8a9da",
+      "png_bytes": 6471
+    }
+  }
+}

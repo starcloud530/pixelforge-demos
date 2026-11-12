@@ -17,7 +17,8 @@ Agent / tool layout rules: **[AGENTS.md](AGENTS.md)** (also mirrored for Claude 
 | `site/` | 宣传落地页 + Gallery（GitHub Pages 根） | 是 |
 | `demos/<slug>/` | 可重放工程包（如 `demo-zombie`：工程 + 脚本 + 小图） | 是 |
 | `eval/tasks/<tier>-<slug>/` | **正式题**：`task.md` + `eval.md`（+ 可选 `start/`、`check.py`） | 是 |
-| `eval/runs/` | 草稿跑分：`trajectory.jsonl`、`output/`、`score.json` | **否**（gitignore） |
+| `eval/benchmarks/<id>/` | **转换质量基准**：协议、测试集、记录模板、可复核基线表 | 是 |
+| `eval/runs/` | 草稿跑分：`trajectory.jsonl`、`output/`、`score.json`，以及基准重跑的工程 | **否**（gitignore） |
 | `output/<task>/<version>/<harness>/` | **精选对照**：`final/` + `trajectory.jsonl` + `meta.json` | 是（仅 curated） |
 
 **`task_id`** = `eval/tasks/` 下的目录名，形如 `t5-ferrari-neon`（`<tier>-<slug>`）。精选包里的 `meta.json.task` 必须等于该 id。
@@ -50,6 +51,7 @@ output/<task_id>/<version>/<harness>/
 site/                 # GitHub Pages
 demos/<slug>/         # replayable packs
 eval/tasks/           # formal task briefs
+eval/benchmarks/      # conversion-quality protocols and baseline tables
 eval/runs/            # scratch — gitignored
 output/<task>/<ver>/<harness>/
 ```

@@ -1,0 +1,34 @@
+{
+  "benchmark_id": "pixel-convert-v1",
+  "record_version": "v1",
+  "method_id": "center-sample",
+  "cli_version": "pixelforge 0.1.0-rc.2",
+  "cli_commit": "9fc35888aad9a5b8c4edfeeeab4bfc8e49ab9b1d",
+  "cli_repo": "https://github.com/starcloud530/pixelforge-ai",
+  "engine_id": "center-sample",
+  "engine_version": "1",
+  "engines": [
+    "center-sample",
+    "dominant",
+    "kmeans",
+    "contrast-outline",
+    "grid-snap",
+    "pixelforge-native"
+  ],
+  "palette_strategy": "limit",
+  "max_opaque_colors": 16,
+  "display_scale": 4,
+  "review_backdrop_rgb": [
+    128,
+    128,
+    128
+  ],
+  "timing_runs": 3,
+  "aestheticApproval": false,
+  "human_fields": "pending",
+  "projects": "eval/runs/pixel-convert-v1/projects/ (not committed)",
+  "protocol_sha256": "61685fb276aef00704a93177d5eec43a7adccdc766e9491cb154104c397d4571",
+  "manifest_sha256": "dce053df31ea5ee485641216743985cef00c0fab6165398a522712ac7aa60235",
+  "fields_sha256": "544a09aeb1d443253ee735de808e1ecd94df2025159829184246c186d65c537c",
+  "hashes_sha256": "674b6819d3ec13118be0cae79bf48b3a90ea87aa20ff0ea801dd6cf02860c888"
+}

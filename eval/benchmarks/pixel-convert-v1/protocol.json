@@ -1,0 +1,51 @@
+{
+  "benchmark_id": "pixel-convert-v1",
+  "version": "v1",
+  "targets": [
+    {"width": 64, "height": 64},
+    {"width": 128, "height": 128}
+  ],
+  "max_opaque_colors": 16,
+  "palette_strategy": "limit",
+  "baseline_engine": "center-sample",
+  "engine_params": {},
+  "display_scale": 4,
+  "review_backdrop_rgb": [128, 128, 128],
+  "alpha_transparent_below": 128,
+  "line_hit_radius_px": 1,
+  "line_hit_pass": 0.5,
+  "solid_empty_pass": 0.99,
+  "severe_solid_empty_below": 0.9,
+  "timing_runs": 3,
+  "wilson_z": 1.959963984540054,
+  "ssim_window": 11,
+  "ssim_sigma": 1.5,
+  "ssim_k1": 0.01,
+  "ssim_k2": 0.03,
+  "comparison_methods": [
+    {
+      "id": "center-sample",
+      "role": "baseline",
+      "kind": "builtin-engine",
+      "status": "recorded"
+    },
+    {
+      "id": "traditional",
+      "role": "better-traditional",
+      "kind": "slot",
+      "status": "not-run"
+    },
+    {
+      "id": "service",
+      "role": "external-service",
+      "kind": "slot",
+      "status": "not-run"
+    },
+    {
+      "id": "model",
+      "role": "in-house-model",
+      "kind": "slot",
+      "status": "not-run"
+    }
+  ]
+}
