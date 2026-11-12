@@ -21,10 +21,12 @@ def run_target(
     dst_h: int,
     work: Path,
     runs: int,
+    method: str = "center-sample",
+    engine_id: str = "center-sample",
 ) -> tuple[dict, list[dict]]:
     spec = protocol()
     max_colors = int(spec["max_opaque_colors"])
-    row_id = f"{fixture['id']}-{dst_w}x{dst_h}-center-sample"
+    row_id = f"{fixture['id']}-{dst_w}x{dst_h}-{method}"
     source = _source_path(fixture)
     durations = []
     hashes = []
@@ -36,14 +38,20 @@ def run_target(
         output.parent.mkdir(parents=True, exist_ok=True)
         if output.exists():
             output.unlink()
-        code, stdout, stderr, elapsed = run_cli(binary, convert_argv(source, output, dst_w, dst_h, max_colors))
-        commands.append({
-            "row_id": row_id,
-            "run": run,
-            "argv": portable_argv(fixture["file"], row_id, dst_w, dst_h, max_colors),
-            "exit_code": code,
-            "duration_ms": elapsed,
-        })
+        code, stdout, stderr, elapsed = run_cli(
+            binary, convert_argv(source, output, dst_w, dst_h, max_colors, engine_id)
+        )
+        commands.append(
+            {
+                "row_id": row_id,
+                "run": run,
+                "argv": portable_argv(
+                    fixture["file"], row_id, dst_w, dst_h, max_colors, engine_id
+                ),
+                "exit_code": code,
+                "duration_ms": elapsed,
+            }
+        )
         if code != 0:
             raise CliError(f"{row_id} run {run} exited {code}: {stderr.strip()}")
         durations.append(elapsed)
@@ -66,14 +74,18 @@ def run_target(
     if not isinstance(report, dict):
         raise CliError(f"{row_id} has no paletteReport")
     engine = result.get("engine") or {}
-    if engine.get("id") != "center-sample":
+    if engine.get("id") != engine_id:
         raise CliError(f"{row_id} engine is {engine.get('id')}")
     bg = spec["review_backdrop_rgb"]
     reference = reference_rgb(rgba, src_w, src_h, dst_w, dst_h, bg)
     rendered = output_rgb(indices, palette, bg)
     image_psnr = psnr(reference, rendered)
-    probes = measure_probes(rgba, src_w, src_h, indices, dst_w, dst_h, fixture.get("scene"))
-    opaque_colors = sum(1 for entry in palette if entry["a"] >= spec["alpha_transparent_below"])
+    probes = measure_probes(
+        rgba, src_w, src_h, indices, dst_w, dst_h, fixture.get("scene")
+    )
+    opaque_colors = sum(
+        1 for entry in palette if entry["a"] >= spec["alpha_transparent_below"]
+    )
     for index in indices:
         if index < 0 or index >= len(palette):
             raise CliError(f"{row_id} index {index} is outside the palette")
@@ -95,7 +107,7 @@ def run_target(
         "target_height": dst_h,
         "max_colors": max_colors,
         "display_scale": spec["display_scale"],
-        "method_id": "center-sample",
+        "method_id": method,
         "method_hidden_label": None,
         "engine_id": engine.get("id"),
         "engine_version": engine.get("version"),
@@ -126,8 +138,12 @@ def run_target(
         "solid_empty_pass": probes["solid_empty_pass"],
         "bleed_cells": probes["bleed_cells"],
         "partial_cells": probes["partial_cells"],
-        "lines_json": json.dumps(probes["lines"], ensure_ascii=False, separators=(",", ":")),
-        "holes_json": json.dumps(probes["holes"], ensure_ascii=False, separators=(",", ":")),
+        "lines_json": json.dumps(
+            probes["lines"], ensure_ascii=False, separators=(",", ":")
+        ),
+        "holes_json": json.dumps(
+            probes["holes"], ensure_ascii=False, separators=(",", ":")
+        ),
         "feature_probes_passed": probes["feature_probes_passed"],
         "feature_probes_total": probes["feature_probes_total"],
         "feature_retention_auto": probes["feature_retention_auto"],

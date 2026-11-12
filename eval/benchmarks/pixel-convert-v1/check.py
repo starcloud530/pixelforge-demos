@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Check the v1 protocol, fixtures, templates, and center-sample record.
+"""Check frozen v1 artifacts and both separately recorded classical methods.
 
-Offline checks do not need pixelforge. `--with-cli` re-runs center sampling
+Offline checks do not need pixelforge. `--with-cli` re-runs both methods
 and compares index hashes and derived metrics to the committed record.
 """
 
@@ -80,7 +80,7 @@ def check_contract(errors: list[str]) -> None:
         errors.append("future_split drifted")
     if future_split("example-character") != future_split("example-character"):
         errors.append("future_split unstable")
-    if wilson(1, 1) != (round(1 / (1 + 1.959963984540054 ** 2), 6), 1.0):
+    if wilson(1, 1) != (round(1 / (1 + 1.959963984540054**2), 6), 1.0):
         errors.append(f"wilson(1,1) = {wilson(1, 1)}")
     if wilson(0, 1)[0] != 0.0:
         errors.append("wilson(0,1) lower bound")
@@ -100,7 +100,10 @@ def check_contract(errors: list[str]) -> None:
     project = {
         "width": 1,
         "height": 1,
-        "palette": [{"r": 0, "g": 0, "b": 0, "a": 0}, {"r": 1, "g": 2, "b": 3, "a": 255}],
+        "palette": [
+            {"r": 0, "g": 0, "b": 0, "a": 0},
+            {"r": 1, "g": 2, "b": 3, "a": 255},
+        ],
         "frames": [{"layers": [{"pixels": [1]}]}],
     }
     sw, sh, sheet = review_sheet_rgba(project, 4, [128, 128, 128])
@@ -109,17 +112,55 @@ def check_contract(errors: list[str]) -> None:
     for name in ("PROTOCOL.md", "METRICS.md", "DATASET.md", "README.md"):
         if not (BENCH_DIR / name).is_file():
             errors.append(f"missing {name}")
-    check_text(BENCH_DIR / "PROTOCOL.md", ["盲评", "平局", "精修", "center-sample", "traditional", "64", "128", "16"], errors)
-    check_text(BENCH_DIR / "METRICS.md", ["PSNR", "SSIM", "LPIPS", "Wilson", "pending_human", "S1", "S2", "S3", "S4", "S5", "0.99", "0.5"], errors)
-    check_text(BENCH_DIR / "DATASET.md", ["100", "200", "protocol-v1", "character_id", "泄漏"], errors)
-    check_text(BENCH_DIR / "README.md", ["PIXELFORGE_BIN", "check.py", "run_baseline.py"], errors)
-    for name in ("blind-ballot.json", "blind-seal.json", "retouch-log.json", "fields.json"):
+    check_text(
+        BENCH_DIR / "PROTOCOL.md",
+        ["盲评", "平局", "精修", "center-sample", "traditional", "64", "128", "16"],
+        errors,
+    )
+    check_text(
+        BENCH_DIR / "METRICS.md",
+        [
+            "PSNR",
+            "SSIM",
+            "LPIPS",
+            "Wilson",
+            "pending_human",
+            "S1",
+            "S2",
+            "S3",
+            "S4",
+            "S5",
+            "0.99",
+            "0.5",
+        ],
+        errors,
+    )
+    check_text(
+        BENCH_DIR / "DATASET.md",
+        ["100", "200", "protocol-v1", "character_id", "泄漏"],
+        errors,
+    )
+    check_text(
+        BENCH_DIR / "README.md",
+        ["PIXELFORGE_BIN", "check.py", "run_baseline.py"],
+        errors,
+    )
+    for name in (
+        "blind-ballot.json",
+        "blind-seal.json",
+        "retouch-log.json",
+        "fields.json",
+    ):
         if not (BENCH_DIR / "templates" / name).is_file():
             errors.append(f"missing template {name}")
-    ballot = json.loads((BENCH_DIR / "templates" / "blind-ballot.json").read_text(encoding="utf-8"))
+    ballot = json.loads(
+        (BENCH_DIR / "templates" / "blind-ballot.json").read_text(encoding="utf-8")
+    )
     if ballot["preference"] is not None or "tie" not in ballot["preference_values"]:
         errors.append("ballot template")
-    retouch = json.loads((BENCH_DIR / "templates" / "retouch-log.json").read_text(encoding="utf-8"))
+    retouch = json.loads(
+        (BENCH_DIR / "templates" / "retouch-log.json").read_text(encoding="utf-8")
+    )
     if retouch["minutes"] is not None:
         errors.append("retouch template minutes")
 
@@ -139,11 +180,17 @@ def check_fixtures(errors: list[str]) -> None:
         if sha256_bytes(blob) != info["png_sha256"]:
             errors.append(f"{fixture['id']} png bytes drifted")
         width, height, rgba = read_rgba(fixture_path(fixture))
-        if sha256_bytes(rgba) != info["rgba_sha256"] or (width, height) != (info["width"], info["height"]):
+        if sha256_bytes(rgba) != info["rgba_sha256"] or (width, height) != (
+            info["width"],
+            info["height"],
+        ):
             errors.append(f"{fixture['id']} rgba drifted")
         if fixture["source_kind"] == "procedural" and render_fixture(fixture) != rgba:
             errors.append(f"{fixture['id']} renderer does not match the committed png")
-        if fixture["source_kind"] == "procedural" and sha256_bytes(encode_rgba(width, height, rgba)) != info["png_sha256"]:
+        if (
+            fixture["source_kind"] == "procedural"
+            and sha256_bytes(encode_rgba(width, height, rgba)) != info["png_sha256"]
+        ):
             errors.append(f"{fixture['id']} encoder does not match the committed png")
 
 
@@ -155,14 +202,22 @@ def _loads(text: str, label: str, errors: list[str]):
         return None
 
 
-def check_record(errors: list[str]) -> dict | None:
-    table_path = RECORD_DIR / "table.json"
+def check_record(errors: list[str], method: str = "center-sample") -> dict | None:
+    record_dir = RECORD_DIR.parent / method
+    engine_id = {"center-sample": "center-sample", "traditional": "dominant"}[method]
+    table_path = record_dir / "table.json"
     if not table_path.is_file():
-        errors.append("missing records/v1/center-sample/table.json")
+        errors.append(f"missing records/v1/{method}/table.json")
         return None
     table = _loads(table_path.read_text(encoding="utf-8"), "table.json", errors)
-    meta = _loads((RECORD_DIR / "meta.json").read_text(encoding="utf-8"), "meta.json", errors)
-    aggregate = _loads((RECORD_DIR / "aggregate.json").read_text(encoding="utf-8"), "aggregate.json", errors)
+    meta = _loads(
+        (record_dir / "meta.json").read_text(encoding="utf-8"), "meta.json", errors
+    )
+    aggregate = _loads(
+        (record_dir / "aggregate.json").read_text(encoding="utf-8"),
+        "aggregate.json",
+        errors,
+    )
     if not table or not meta or not aggregate:
         return None
     for path, key in (
@@ -173,19 +228,30 @@ def check_record(errors: list[str]) -> dict | None:
     ):
         if meta.get(key) != sha256_bytes(path.read_bytes()):
             errors.append(f"meta {key} does not match the current file")
-    if meta.get("aestheticApproval") is not False or meta.get("human_fields") != "pending":
+    if (
+        meta.get("aestheticApproval") is not False
+        or meta.get("human_fields") != "pending"
+    ):
         errors.append("meta human/aesthetic flags")
     if meta.get("cli_commit") != "9fc35888aad9a5b8c4edfeeeab4bfc8e49ab9b1d":
-        errors.append("v1 record is pinned to pixelforge-ai 9fc35888aad9a5b8c4edfeeeab4bfc8e49ab9b1d")
+        errors.append(
+            "v1 record is pinned to pixelforge-ai 9fc35888aad9a5b8c4edfeeeab4bfc8e49ab9b1d"
+        )
     rows = table["rows"]
     expected_ids = []
     for fixture in manifest()["fixtures"]:
         for target in protocol()["targets"]:
-            expected_ids.append(f"{fixture['id']}-{target['width']}x{target['height']}-center-sample")
+            expected_ids.append(
+                f"{fixture['id']}-{target['width']}x{target['height']}-{method}"
+            )
     if [row["row_id"] for row in rows] != expected_ids:
-        errors.append("record rows are not fixture × 64/128 × center-sample")
+        errors.append(f"record rows are not fixture × 64/128 × {method}")
+    if meta.get("method_id") != method or meta.get("engine_id") != engine_id:
+        errors.append(f"{method} meta method/engine")
+    if table.get("method_id") != method:
+        errors.append(f"{method} table method")
     spec_fields = fields()
-    csv_text = (RECORD_DIR / "table.csv").read_text(encoding="utf-8")
+    csv_text = (record_dir / "table.csv").read_text(encoding="utf-8")
     if csv_text != rows_to_csv(rows):
         errors.append("table.csv is not the projection of table.json")
     if aggregate != aggregate_from_rows(rows):
@@ -200,20 +266,21 @@ def check_record(errors: list[str]) -> dict | None:
         for name, value in spec_fields["status"].items():
             if row[name] != value:
                 errors.append(f"{row['row_id']} {name} is {row[name]!r}")
-        if row["method_id"] != "center-sample" or row["palette_strategy"] != "limit":
+        if row["method_id"] != method or row["palette_strategy"] != "limit":
             errors.append(f"{row['row_id']} method")
+        if row["engine_id"] != engine_id:
+            errors.append(f"{row['row_id']} engine")
         if row["exit_code"] != 0 or row["deterministic"] is not True:
             errors.append(f"{row['row_id']} did not complete a deterministic convert")
         if row["max_colors"] != 16 or row["display_scale"] != 4:
             errors.append(f"{row['row_id']} budget or scale")
         if "S4" in row["auto_severe_flags"]:
             errors.append(f"{row['row_id']} auto flag S4 is human-only")
-        within = (
-            row["opaque_colors"] <= 16
-            and row["palette_colors"] <= 16
-        )
+        within = row["opaque_colors"] <= 16 and row["palette_colors"] <= 16
         if row["palette_within_budget"] is not within:
-            errors.append(f"{row['row_id']} palette_within_budget disagrees with the counts")
+            errors.append(
+                f"{row['row_id']} palette_within_budget disagrees with the counts"
+            )
         lines = json.loads(row["lines_json"])
         holes = json.loads(row["holes_json"])
         flags = set(row["auto_severe_flags"])
@@ -227,13 +294,22 @@ def check_record(errors: list[str]) -> dict | None:
             errors.append(f"{row['row_id']} S1")
         if row["auto_severe"] is not bool(flags):
             errors.append(f"{row['row_id']} auto_severe")
-        passed = int(row["solid_empty_pass"]) + sum(item["pass"] for item in holes) + sum(item["pass"] for item in lines)
+        passed = (
+            int(row["solid_empty_pass"])
+            + sum(item["pass"] for item in holes)
+            + sum(item["pass"] for item in lines)
+        )
         total = 1 + len(holes) + len(lines)
-        if passed != row["feature_probes_passed"] or total != row["feature_probes_total"]:
+        if (
+            passed != row["feature_probes_passed"]
+            or total != row["feature_probes_total"]
+        ):
             errors.append(f"{row['row_id']} probe counts")
         if total and row["feature_retention_auto"] != round(passed / total, 6):
             errors.append(f"{row['row_id']} feature_retention_auto")
-        if row["solid_empty_total"] and row["solid_empty_rate"] != round(row["solid_empty_matched"] / row["solid_empty_total"], 6):
+        if row["solid_empty_total"] and row["solid_empty_rate"] != round(
+            row["solid_empty_matched"] / row["solid_empty_total"], 6
+        ):
             errors.append(f"{row['row_id']} solid_empty_rate")
         if row["psnr_box_exact"] is not (row["psnr_box"] is None):
             errors.append(f"{row['row_id']} psnr exact flag")
@@ -241,13 +317,19 @@ def check_record(errors: list[str]) -> dict | None:
             errors.append(f"{row['row_id']} missing ssim")
     commands = [
         json.loads(line)
-        for line in (RECORD_DIR / "commands.jsonl").read_text(encoding="utf-8").splitlines()
+        for line in (record_dir / "commands.jsonl")
+        .read_text(encoding="utf-8")
+        .splitlines()
         if line.strip()
     ]
-    converts = [item for item in commands if item["argv"][:2] == ["pixelforge", "convert"]]
+    converts = [
+        item for item in commands if item["argv"][:2] == ["pixelforge", "convert"]
+    ]
     if len(converts) != len(rows) * 3:
         errors.append("commands.jsonl should have 3 converts per row")
-    listed = [item for item in commands if item["argv"] == ["pixelforge", "engine", "list"]]
+    listed = [
+        item for item in commands if item["argv"] == ["pixelforge", "engine", "list"]
+    ]
     if len(listed) != 1 or listed[0]["exit_code"] != 0:
         errors.append("commands.jsonl engine list")
     allowed = {"pixelforge"}
@@ -256,15 +338,37 @@ def check_record(errors: list[str]) -> dict | None:
             errors.append("unexpected binary in commands.jsonl")
         if item["argv"][1] not in {"convert", "engine"}:
             errors.append(f"unexpected subcommand {item['argv'][1]}")
+    from lib.cli import portable_argv
+
+    fixture_by_id = {fixture["id"]: fixture for fixture in manifest()["fixtures"]}
+    for row in rows:
+        cell = [item for item in converts if item["row_id"] == row["row_id"]]
+        expected = portable_argv(
+            fixture_by_id[row["fixture_id"]]["file"],
+            row["row_id"],
+            row["target_width"],
+            row["target_height"],
+            16,
+            engine_id,
+        )
+        if (
+            len(cell) != 3
+            or [item["run"] for item in cell] != [1, 2, 3]
+            or any(item["argv"] != expected or item["exit_code"] != 0 for item in cell)
+        ):
+            errors.append(f"{row['row_id']} command drift")
     return {"rows": rows, "meta": meta}
 
 
-def check_cli(rows: list[dict], errors: list[str]) -> None:
+def check_cli(
+    rows: list[dict], errors: list[str], method: str = "center-sample"
+) -> None:
     try:
         binary = resolve_bin()
     except CliError as exc:
         errors.append(str(exc))
         return
+    engine_id = {"center-sample": "center-sample", "traditional": "dominant"}[method]
     by_id = {row["row_id"]: row for row in rows}
     spec = protocol()
     with tempfile.TemporaryDirectory(prefix="pixel-convert-v1-") as temp:
@@ -272,10 +376,22 @@ def check_cli(rows: list[dict], errors: list[str]) -> None:
         for fixture in manifest()["fixtures"]:
             src_w, src_h, rgba = load_rgba(fixture)
             for target in spec["targets"]:
-                row_id = f"{fixture['id']}-{target['width']}x{target['height']}-center-sample"
+                row_id = (
+                    f"{fixture['id']}-{target['width']}x{target['height']}-{method}"
+                )
                 try:
                     fresh, _commands = run_target(
-                        binary, fixture, rgba, src_w, src_h, target["width"], target["height"], work, spec["timing_runs"]
+                        binary,
+                        fixture,
+                        rgba,
+                        src_w,
+                        src_h,
+                        target["width"],
+                        target["height"],
+                        work,
+                        spec["timing_runs"],
+                        method=method,
+                        engine_id=engine_id,
                     )
                 except CliError as exc:
                     errors.append(str(exc))
@@ -300,12 +416,18 @@ def check_cli(rows: list[dict], errors: list[str]) -> None:
                     "bleed_cells",
                 ):
                     if fresh[key] != saved[key]:
-                        errors.append(f"{row_id} {key} reproduced {fresh[key]!r}, record has {saved[key]!r}")
+                        errors.append(
+                            f"{row_id} {key} reproduced {fresh[key]!r}, record has {saved[key]!r}"
+                        )
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Check the pixel-convert v1 benchmark")
-    parser.add_argument("--with-cli", action="store_true", help="re-run center-sample and compare hashes")
+    parser.add_argument(
+        "--with-cli",
+        action="store_true",
+        help="re-run both fixed methods and compare hashes",
+    )
     args = parser.parse_args()
     if not (REPO_ROOT / "README.md").is_file():
         print("repo root was not found from the benchmark path", file=sys.stderr)
@@ -313,9 +435,10 @@ def main() -> int:
     errors: list[str] = []
     check_contract(errors)
     check_fixtures(errors)
-    record = check_record(errors)
-    if args.with_cli and record:
-        check_cli(record["rows"], errors)
+    for method in ("center-sample", "traditional"):
+        record = check_record(errors, method)
+        if args.with_cli and record:
+            check_cli(record["rows"], errors, method)
     if errors:
         print(f"{len(errors)} check(s) failed:")
         for error in errors:

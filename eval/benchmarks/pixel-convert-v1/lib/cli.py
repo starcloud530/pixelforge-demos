@@ -22,11 +22,15 @@ def resolve_bin() -> str:
         return chosen
     found = shutil.which("pixelforge")
     if not found:
-        raise CliError("pixelforge is not on PATH; set PIXELFORGE_BIN to a CLI that has convert")
+        raise CliError(
+            "pixelforge is not on PATH; set PIXELFORGE_BIN to a CLI that has convert"
+        )
     return found
 
 
-def run_cli(binary: str, args: list[str], timeout: int = 60) -> tuple[int, str, str, int]:
+def run_cli(
+    binary: str, args: list[str], timeout: int = 60
+) -> tuple[int, str, str, int]:
     started = time.perf_counter()
     proc = subprocess.run(
         [binary, *args],
@@ -50,7 +54,14 @@ def parse_result(stdout: str) -> dict:
     raise CliError("convert stdout has no JSON result")
 
 
-def convert_argv(source: Path, output: Path, width: int, height: int, max_colors: int) -> list[str]:
+def convert_argv(
+    source: Path,
+    output: Path,
+    width: int,
+    height: int,
+    max_colors: int,
+    engine: str = "center-sample",
+) -> list[str]:
     return [
         "convert",
         "--file",
@@ -62,7 +73,7 @@ def convert_argv(source: Path, output: Path, width: int, height: int, max_colors
         "--height",
         str(height),
         "--engine",
-        "center-sample",
+        engine,
         "--palette-strategy",
         "limit",
         "--max-colors",
@@ -70,7 +81,14 @@ def convert_argv(source: Path, output: Path, width: int, height: int, max_colors
     ]
 
 
-def portable_argv(fixture_file: str, row_id: str, width: int, height: int, max_colors: int) -> list[str]:
+def portable_argv(
+    fixture_file: str,
+    row_id: str,
+    width: int,
+    height: int,
+    max_colors: int,
+    engine: str = "center-sample",
+) -> list[str]:
     project = f"eval/runs/pixel-convert-v1/projects/{row_id}.json"
     return [
         "pixelforge",
@@ -84,7 +102,7 @@ def portable_argv(fixture_file: str, row_id: str, width: int, height: int, max_c
         "--height",
         str(height),
         "--engine",
-        "center-sample",
+        engine,
         "--palette-strategy",
         "limit",
         "--max-colors",

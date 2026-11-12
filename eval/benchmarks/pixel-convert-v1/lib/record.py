@@ -32,7 +32,11 @@ def frame_indices(document: dict) -> tuple[list[int], list[dict]]:
     frame = document["frames"][0]
     if "pixels" in frame:
         indices = [int(v) for v in frame["pixels"]]
-    elif frame.get("layers") and len(frame["layers"]) == 1 and "pixels" in frame["layers"][0]:
+    elif (
+        frame.get("layers")
+        and len(frame["layers"]) == 1
+        and "pixels" in frame["layers"][0]
+    ):
         indices = [int(v) for v in frame["layers"][0]["pixels"]]
     else:
         raise ValueError("converted frame has no single pixel buffer")
@@ -45,7 +49,9 @@ def project_index_sha(document: dict) -> tuple[str, list[int], list[dict]]:
     blob += int(document["width"]).to_bytes(4, "big")
     blob += int(document["height"]).to_bytes(4, "big")
     for entry in palette:
-        blob += bytes((int(entry["r"]), int(entry["g"]), int(entry["b"]), int(entry["a"])))
+        blob += bytes(
+            (int(entry["r"]), int(entry["g"]), int(entry["b"]), int(entry["a"]))
+        )
     blob += b"\xff"
     blob += bytes(indices)
     return sha256_bytes(bytes(blob)), indices, palette
@@ -84,15 +90,19 @@ def aggregate_from_rows(rows: list[dict]) -> dict:
     scored = [row["psnr_box"] for row in rows if row["psnr_box"] is not None]
     return {
         "benchmark_id": "pixel-convert-v1",
-        "method_id": "center-sample",
+        "method_id": rows[0]["method_id"],
         "rows": len(rows),
         "timing_runs_each": 3,
         "deterministic_rows": sum(1 for row in rows if row["deterministic"]),
-        "palette_within_budget_rows": sum(1 for row in rows if row["palette_within_budget"]),
+        "palette_within_budget_rows": sum(
+            1 for row in rows if row["palette_within_budget"]
+        ),
         "feature_probes_passed": probes_passed,
         "feature_probes_total": probes_total,
         "feature_retention_auto": round6(probes_passed / probes_total),
-        "feature_retention_auto_wilson95": list(feature_interval) if feature_interval else None,
+        "feature_retention_auto_wilson95": (
+            list(feature_interval) if feature_interval else None
+        ),
         "feature_retention_auto_wilson_note": "binomial interval on probe counts inside this protocol set, not a clustered interval for a future character sample",
         "auto_severe_rows": severe_rows,
         "auto_severe_rate": round6(severe_rows / len(rows)),
@@ -103,7 +113,9 @@ def aggregate_from_rows(rows: list[dict]) -> dict:
         "psnr_box_mean_note": "mean of rows whose box-filter PSNR is defined; exact rows are excluded",
         "ssim_box_mean": round6(sum(row["ssim_box"] for row in rows) / len(rows)),
         "duration_ms_min": min(row["duration_ms_min"] for row in rows),
-        "duration_ms_median_of_row_medians": median_int([row["duration_ms_median"] for row in rows]),
+        "duration_ms_median_of_row_medians": median_int(
+            [row["duration_ms_median"] for row in rows]
+        ),
         "duration_ms_max": max(row["duration_ms_max"] for row in rows),
         "blind_win_rate": None,
         "blind_win_rate_status": "pending_human",

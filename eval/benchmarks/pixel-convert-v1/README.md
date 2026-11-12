@@ -83,3 +83,10 @@ python3 eval/benchmarks/pixel-convert-v1/review_sheet.py \
 - `lpips`
 
 人工填写用 [templates/](templates/) 里的票和精修日志，再按 [METRICS.md](METRICS.md) 汇总。汇总前胜率、人工特征保留率、人工严重缺陷率和精修时间保持 `null`。
+
+## #131 first-slice supplement
+
+The original v1 snapshot remains frozen. An additional `traditional` record now
+lives beside center-sample; see [TRADITIONAL.md](TRADITIONAL.md). The checker
+validates/replays both methods. The paired seed is separate from these fixtures:
+[paired-seed](../pixel-convert-pairs-v0/README.md). No model is trained here.
