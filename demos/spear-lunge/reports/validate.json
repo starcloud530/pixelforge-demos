@@ -8,11 +8,11 @@
     -0.5185185185185185,
     -1.4814814814814814,
     -2.0,
-    0.5,
-    3.0,
-    4.5,
-    6.0,
-    6.5,
+    -0.5,
+    1.0,
+    4.0,
+    7.0,
+    7.0,
     7.0,
     6.481481481481482,
     5.518518518518519,
@@ -26,14 +26,14 @@
     1.037037037037037,
     2.962962962962963,
     4.0,
-    3.5,
     3.0,
     2.0,
-    1.0,
-    0.5,
-    0.0,
-    0.0,
-    0.0,
+    2.0,
+    2.0,
+    2.5,
+    3.0,
+    2.2222222222222223,
+    0.7777777777777777,
     0.0,
     0.0,
     0.0,
@@ -44,14 +44,14 @@
     -2.592592592592593,
     -7.4074074074074066,
     -10.0,
-    -5.0,
-    0.0,
-    6.0,
-    12.0,
-    9.0,
-    6.0,
-    5.222222222222221,
-    3.777777777777778,
+    -4.5,
+    1.0,
+    8.0,
+    15.0,
+    12.5,
+    10.0,
+    8.185185185185185,
+    4.814814814814815,
     3.0,
     2.740740740740741,
     2.259259259259259,
@@ -64,12 +64,12 @@
     -14.0,
     -8.0,
     -2.0,
-    8.0,
+    10.0,
+    22.0,
+    20.0,
     18.0,
-    16.0,
-    14.0,
-    12.444444444444445,
-    9.555555555555555,
+    15.407407407407408,
+    10.592592592592592,
     8.0,
     7.481481481481482,
     6.518518518518518,
@@ -77,26 +77,87 @@
   ],
   "tasselTipRotation": [
     0.0,
-    0.0,
-    0.0,
-    0.0,
-    -1.59,
-    -5.52,
-    -9.54,
-    -9.41,
-    -6.71,
-    -0.66,
-    7.46,
-    11.61,
-    13.32,
-    11.62,
-    8.57,
+    -2.666666666666666,
+    -5.333333333333332,
+    -8.0,
+    -1.5,
+    5.0,
+    25.0,
+    45.0,
+    60.0,
+    75.0,
+    53.33333333333334,
+    31.66666666666667,
+    10.0,
+    8.666666666666668,
+    7.333333333333334,
     6.0
   ],
-  "thrustTasselLagDegrees": 27.41,
+  "thrustTasselLagDegrees": 23.0,
   "settleTasselLagDegrees": 0.0,
-  "thrustRibbonTipMinusRootDegrees": 13.89,
+  "thrustRibbonTipMinusRootDegrees": 52.0,
   "frontStepPx": 18,
+  "frameDelaysMs": [
+    150,
+    80,
+    70,
+    100,
+    45,
+    40,
+    40,
+    55,
+    85,
+    60,
+    65,
+    70,
+    80,
+    90,
+    100,
+    160
+  ],
+  "mediaTiming": {
+    "apngDelaysMs": [
+      150.0,
+      80.0,
+      70.0,
+      100.0,
+      45.0,
+      40.0,
+      40.0,
+      55.0,
+      85.0,
+      60.0,
+      65.0,
+      70.0,
+      80.0,
+      90.0,
+      100.0,
+      160.0
+    ],
+    "gifDelaysMs": [
+      150,
+      80,
+      70,
+      100,
+      50,
+      40,
+      40,
+      50,
+      90,
+      60,
+      60,
+      70,
+      80,
+      90,
+      100,
+      160
+    ],
+    "mp4Frames": 49,
+    "mp4DurationSeconds": 3.871,
+    "visualPlayback": "not established by metadata checks"
+  },
+  "totalDurationMs": 1290,
+  "independentFeet": "sole attachments match solved shin IK endpoints on every frame",
   "rows": [
     {
       "frame": 0,
@@ -241,11 +302,11 @@
         116
       ],
       "frontLocal": [
-        -12,
-        14
+        -11,
+        16
       ],
       "gripForeCanvas": [
-        82,
+        81,
         61
       ],
       "gripForeLocal": [
@@ -274,12 +335,12 @@
         116
       ],
       "frontLocal": [
-        -9,
-        16
+        -7,
+        17
       ],
       "gripForeCanvas": [
-        87,
-        62
+        85,
+        61
       ],
       "gripForeLocal": [
         14,
@@ -311,12 +372,12 @@
         18
       ],
       "gripForeCanvas": [
-        92,
+        91,
         64
       ],
       "gripForeLocal": [
         15,
-        -5
+        -4
       ],
       "restGripForeLocal": [
         14,
@@ -340,16 +401,16 @@
         116
       ],
       "frontLocal": [
-        -2,
+        -3,
         19
       ],
       "gripForeCanvas": [
-        95,
-        66
+        97,
+        67
       ],
       "gripForeLocal": [
-        15,
-        -2
+        16,
+        -1
       ],
       "restGripForeLocal": [
         14,
@@ -373,16 +434,16 @@
         116
       ],
       "frontLocal": [
-        -3,
-        19
+        -4,
+        18
       ],
       "gripForeCanvas": [
-        95,
-        64
+        96,
+        67
       ],
       "gripForeLocal": [
-        15,
-        -3
+        16,
+        -2
       ],
       "restGripForeLocal": [
         14,
@@ -406,16 +467,16 @@
         116
       ],
       "frontLocal": [
-        -2,
-        19
+        -4,
+        18
       ],
       "gripForeCanvas": [
         94,
-        63
+        68
       ],
       "gripForeLocal": [
         15,
-        -3
+        -2
       ],
       "restGripForeLocal": [
         14,
@@ -439,16 +500,16 @@
         116
       ],
       "frontLocal": [
-        -1,
+        -3,
         19
       ],
       "gripForeCanvas": [
         93,
-        62
+        66
       ],
       "gripForeLocal": [
         15,
-        -4
+        -3
       ],
       "restGripForeLocal": [
         14,
@@ -472,16 +533,16 @@
         116
       ],
       "frontLocal": [
-        -1,
+        -2,
         19
       ],
       "gripForeCanvas": [
         91,
-        61
+        63
       ],
       "gripForeLocal": [
         15,
-        -5
+        -4
       ],
       "restGripForeLocal": [
         14,
@@ -630,138 +691,90 @@
   "clothBottomY": [
     {
       "frame": 0,
-      "ribbon-tip": 90,
-      "ribbon-mid": 86,
-      "ribbon-root": 83,
-      "tassel-tip": 70,
-      "tassel-root": 63
+      "ribbon-finish": 90,
+      "tassel-finish": 69
     },
     {
       "frame": 1,
-      "ribbon-tip": 91,
-      "ribbon-mid": 87,
-      "ribbon-root": 84,
-      "tassel-tip": 69,
-      "tassel-root": 62
+      "ribbon-finish": 90,
+      "tassel-finish": 68
     },
     {
       "frame": 2,
-      "ribbon-tip": 93,
-      "ribbon-mid": 89,
-      "ribbon-root": 86,
-      "tassel-tip": 70,
-      "tassel-root": 63
+      "ribbon-finish": 90,
+      "tassel-finish": 69
     },
     {
       "frame": 3,
-      "ribbon-tip": 94,
-      "ribbon-mid": 90,
-      "ribbon-root": 88,
-      "tassel-tip": 69,
-      "tassel-root": 62
+      "ribbon-finish": 91,
+      "tassel-finish": 68
     },
     {
       "frame": 4,
-      "ribbon-tip": 92,
-      "ribbon-mid": 88,
-      "ribbon-root": 86,
-      "tassel-tip": 70,
-      "tassel-root": 63
+      "ribbon-finish": 91,
+      "tassel-finish": 69
     },
     {
       "frame": 5,
-      "ribbon-tip": 90,
-      "ribbon-mid": 88,
-      "ribbon-root": 86,
-      "tassel-tip": 72,
-      "tassel-root": 65
+      "ribbon-finish": 91,
+      "tassel-finish": 68
     },
     {
       "frame": 6,
-      "ribbon-tip": 91,
-      "ribbon-mid": 88,
-      "ribbon-root": 86,
-      "tassel-tip": 77,
-      "tassel-root": 70
+      "ribbon-finish": 94,
+      "tassel-finish": 72
     },
     {
       "frame": 7,
-      "ribbon-tip": 92,
-      "ribbon-mid": 89,
-      "ribbon-root": 85,
-      "tassel-tip": 81,
-      "tassel-root": 74
+      "ribbon-finish": 95,
+      "tassel-finish": 74
     },
     {
       "frame": 8,
-      "ribbon-tip": 95,
-      "ribbon-mid": 91,
-      "ribbon-root": 86,
-      "tassel-tip": 78,
-      "tassel-root": 72
+      "ribbon-finish": 95,
+      "tassel-finish": 75
     },
     {
       "frame": 9,
-      "ribbon-tip": 97,
-      "ribbon-mid": 91,
-      "ribbon-root": 85,
-      "tassel-tip": 76,
-      "tassel-root": 70
+      "ribbon-finish": 89,
+      "tassel-finish": 74
     },
     {
       "frame": 10,
-      "ribbon-tip": 98,
-      "ribbon-mid": 92,
-      "ribbon-root": 85,
-      "tassel-tip": 75,
-      "tassel-root": 68
+      "ribbon-finish": 87,
+      "tassel-finish": 75
     },
     {
       "frame": 11,
-      "ribbon-tip": 99,
-      "ribbon-mid": 92,
-      "ribbon-root": 85,
-      "tassel-tip": 73,
-      "tassel-root": 67
+      "ribbon-finish": 87,
+      "tassel-finish": 74
     },
     {
       "frame": 12,
-      "ribbon-tip": 98,
-      "ribbon-mid": 91,
-      "ribbon-root": 85,
-      "tassel-tip": 73,
-      "tassel-root": 67
+      "ribbon-finish": 86,
+      "tassel-finish": 73
     },
     {
       "frame": 13,
-      "ribbon-tip": 98,
-      "ribbon-mid": 91,
-      "ribbon-root": 85,
-      "tassel-tip": 73,
-      "tassel-root": 66
+      "ribbon-finish": 86,
+      "tassel-finish": 72
     },
     {
       "frame": 14,
-      "ribbon-tip": 97,
-      "ribbon-mid": 90,
-      "ribbon-root": 85,
-      "tassel-tip": 73,
-      "tassel-root": 66
+      "ribbon-finish": 87,
+      "tassel-finish": 72
     },
     {
       "frame": 15,
-      "ribbon-tip": 96,
-      "ribbon-mid": 90,
-      "ribbon-root": 85,
-      "tassel-tip": 73,
-      "tassel-root": 66
+      "ribbon-finish": 88,
+      "tassel-finish": 72
     }
   ],
   "observation": "Sole, grip, and cloth-root cells are constraint-solve canvas positions. restGripForeLocal is the authored rest offset. gripForeLocal on later frames is the anchor after rotation, and it is not used as the contact cell.",
   "bake": {
-    "dropped": 610,
-    "sealed": 610,
-    "breaks": 36,
-    "note": "sealed counts coverage fill. breaks are diagonal joins left after that fill. No polish layer was painted."
+    "dropped": 796,
+    "sealed": 795,
+    "breaks": 60,
+    "note": "sealed counts coverage fill. breaks are diagonal joins left after that fill. Curved cloth is authored from evaluated guide anchors into per-frame polish layers after bake."
   }
 }

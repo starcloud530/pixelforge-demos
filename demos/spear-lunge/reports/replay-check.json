@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "scope": "fresh build; source, motion, baked project, sheet, atlas, and APNG",
+  "sha256": {
+    "source/rest.pxf.json": "5221aba8adbfc85d5446e9534ed9d90956119d410270e59b9a989ba5898e53ab",
+    "source/motion.json": "e8a2e214aef24dcbfb6f658e429a2bd139b1f5b5ce5cf681101eb3abcedddea0",
+    "final/spear-lunge.pxf.json": "6591ffec0440d70146452384c7bdc23c6f71aaa9210c49ef0c165397509a8294",
+    "final/spear-lunge-sheet.png": "5acbb7f2041e81370fabb1daab5336653be9227874fe1e7f75981e005d508a13",
+    "final/spear-lunge-sheet.atlas.json": "3f01060a96636572f29f7e1116a92b1caa3f5abf997f2568431177d776d8de3b",
+    "final/spear-lunge.apng": "b2700caa67b2edd9e7eb7edd85d8aa32d79be99ad41d9bf2a6c521630b36b427"
+  }
+}

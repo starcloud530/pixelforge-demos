@@ -14,7 +14,7 @@ import hashlib
 import json
 import os
 import subprocess
-import sys
+import struct
 import tempfile
 from pathlib import Path
 
@@ -27,8 +27,10 @@ LAYERS = [
     "ribbon-tip",
     "ribbon-mid",
     "ribbon-root",
+    "ribbon-finish",
     "thigh-far",
     "shin-far",
+    "foot-far",
     "upper-far",
     "fore-far",
     "hand-far",
@@ -36,9 +38,11 @@ LAYERS = [
     "torso",
     "thigh-near",
     "shin-near",
+    "foot-near",
     "spear",
     "tassel-root",
     "tassel-tip",
+    "tassel-finish",
     "flame",
     "upper-near",
     "fore-near",
@@ -86,6 +90,100 @@ def anchor(part: dict, name: str) -> dict:
     raise AssertionError
 
 
+def media_timing(root: Path, expected: list[int]) -> dict:
+    """Read animation control blocks; do not infer timing from average FPS."""
+    final = root / "final"
+    png = (final / "spear-lunge.apng").read_bytes()
+    position = 8
+    apng = []
+    while position < len(png):
+        length = struct.unpack_from(">I", png, position)[0]
+        kind = png[position + 4 : position + 8]
+        data = png[position + 8 : position + 8 + length]
+        if kind == b"fcTL":
+            numerator, denominator = struct.unpack_from(">HH", data, 20)
+            apng.append(numerator * 1000 / (denominator or 100))
+        position += length + 12
+    if apng != expected:
+        fail(f"APNG frame timing differs from project: {apng}")
+    gif = (final / "spear-lunge.gif").read_bytes()
+    position = 13 + (3 * (2 ** ((gif[10] & 7) + 1)) if gif[10] & 128 else 0)
+    delays = []
+    pending = 0
+
+    def skip_blocks(pos):
+        while gif[pos]:
+            pos += gif[pos] + 1
+        return pos + 1
+
+    while position < len(gif):
+        marker = gif[position]
+        position += 1
+        if marker == 0x3B:
+            break
+        if marker == 0x21:
+            label = gif[position]
+            position += 1
+            if label == 0xF9:
+                if gif[position] != 4:
+                    fail("bad GIF graphic-control block")
+                pending = int.from_bytes(gif[position + 2 : position + 4], "little") * 10
+            position = skip_blocks(position)
+        elif marker == 0x2C:
+            packed = gif[position + 8]
+            position += 9
+            if packed & 128:
+                position += 3 * (2 ** ((packed & 7) + 1))
+            position += 1
+            position = skip_blocks(position)
+            delays.append(pending)
+            pending = 0
+        else:
+            fail(f"unexpected GIF block {marker:#x}")
+    if (
+        len(delays) != len(expected)
+        or any(abs(a - b) > 10 for a, b in zip(delays, expected))
+        or abs(sum(delays) - sum(expected)) > 10
+    ):
+        fail(
+            f"GIF frame timing does not preserve authored cadence within centisecond precision: {delays}"
+        )
+    probe = json.loads(
+        subprocess.check_output(
+            [
+                "ffprobe",
+                "-v",
+                "error",
+                "-select_streams",
+                "v:0",
+                "-show_entries",
+                "frame=best_effort_timestamp_time:format=duration",
+                "-of",
+                "json",
+                str(final / "spear-lunge-review.mp4"),
+            ],
+            text=True,
+        )
+    )
+    timestamps = [float(f["best_effort_timestamp_time"]) for f in probe["frames"]]
+    cumulative = [sum(expected[:i]) / 1000 for i in range(len(expected))]
+    target = [repeat * sum(expected) / 1000 + t for repeat in range(3) for t in cumulative]
+    target.append(sum(expected) * 3 / 1000)  # terminal frame preserves the final hold
+    if len(timestamps) != len(target) or any(
+        abs(a - b) > 0.002 for a, b in zip(timestamps, target)
+    ):
+        fail("review MP4 presentation times differ from the three authored action repetitions")
+    if abs(float(probe["format"]["duration"]) - sum(expected) * 3 / 1000) > 0.002:
+        fail("review MP4 truncates the final pose hold")
+    return {
+        "apngDelaysMs": apng,
+        "gifDelaysMs": delays,
+        "mp4Frames": len(timestamps),
+        "mp4DurationSeconds": float(probe["format"]["duration"]),
+        "visualPlayback": "not established by metadata checks",
+    }
+
+
 def main() -> None:
     binary = os.environ.get("PIXELFORGE") or ""
     if not binary:
@@ -102,7 +200,9 @@ def main() -> None:
     )
     if skill.returncode != 0 or "跨步刺击" not in skill.stdout:
         fail("PIXELFORGE is not the pinned action-motion CLI")
-    version = subprocess.run([binary, "--version"], check=False, capture_output=True, text=True).stdout.strip()
+    version = subprocess.run(
+        [binary, "--version"], check=False, capture_output=True, text=True
+    ).stdout.strip()
 
     solves = run_batch(
         binary,
@@ -139,7 +239,9 @@ def main() -> None:
         ("ribbon-tip", "rotation"),
         ("ribbon-root", "rotation"),
     ):
-        grouped[f"{part}.{channel}"] = [float(item["value"]) for item in samples[index : index + FRAMES]]
+        grouped[f"{part}.{channel}"] = [
+            float(item["value"]) for item in samples[index : index + FRAMES]
+        ]
         index += FRAMES
 
     rows = []
@@ -157,11 +259,30 @@ def main() -> None:
         hip_ribbon = anchor(parts["pelvis"], "ribbon")
         tassel = anchor(parts["tassel-root"], "root")
         spear_tassel = anchor(parts["spear"], "tassel")
+        for side, solved_sole in [("near", front), ("far", rear)]:
+            foot = anchor(parts["foot-" + side], "sole")
+            if (foot["canvasX"], foot["canvasY"]) != (
+                solved_sole["canvasX"],
+                solved_sole["canvasY"],
+            ):
+                fail(f"foot-{side} detached from shin IK on frame {frame}")
         constraints = {item["name"]: item for item in report["constraints"]}
-        near_grip = (hand_near["canvasX"], hand_near["canvasY"]) == (grip_fore["canvasX"], grip_fore["canvasY"])
-        far_grip = (hand_far["canvasX"], hand_far["canvasY"]) == (grip_rear["canvasX"], grip_rear["canvasY"])
-        ribbon_held = (ribbon["canvasX"], ribbon["canvasY"]) == (hip_ribbon["canvasX"], hip_ribbon["canvasY"])
-        tassel_held = (tassel["canvasX"], tassel["canvasY"]) == (spear_tassel["canvasX"], spear_tassel["canvasY"])
+        near_grip = (hand_near["canvasX"], hand_near["canvasY"]) == (
+            grip_fore["canvasX"],
+            grip_fore["canvasY"],
+        )
+        far_grip = (hand_far["canvasX"], hand_far["canvasY"]) == (
+            grip_rear["canvasX"],
+            grip_rear["canvasY"],
+        )
+        ribbon_held = (ribbon["canvasX"], ribbon["canvasY"]) == (
+            hip_ribbon["canvasX"],
+            hip_ribbon["canvasY"],
+        )
+        tassel_held = (tassel["canvasX"], tassel["canvasY"]) == (
+            spear_tassel["canvasX"],
+            spear_tassel["canvasY"],
+        )
         if not near_grip or not far_grip:
             grip_errors.append(frame)
         if not ribbon_held or not tassel_held:
@@ -233,10 +354,27 @@ def main() -> None:
 
     local_diff = rows[7]["gripForeLocal"] != rows[0]["gripForeLocal"]
     if not local_diff:
-        fail("spear grip local anchor did not change after rotation; rest and posed would be the same")
+        fail(
+            "spear grip local anchor did not change after rotation; rest and posed would be the same"
+        )
+
+    # Read kernel state to verify the published timing and presentation layers.
+    scene = run_batch(binary, project, [{"tool": "scene"}])[0]
+    if scene["activeFrame"] != 0:
+        fail("review project must reopen on source frame 0 before constraint resampling")
+    expected_delays = [150, 80, 70, 100, 45, 40, 40, 55, 85, 60, 65, 70, 80, 90, 100, 160]
+    if [frame["delayMs"] for frame in scene["frames"]] != expected_delays:
+        fail("published timing differs from the authored anticipation/thrust/recovery timing")
+    for name in ("ribbon-finish", "tassel-finish"):
+        layer = scene["layers"][LAYERS.index(name)]
+        if layer["role"] != "polish" or layer["visible"] is not True:
+            fail(f"{name} should be a visible, unbound per-frame polish layer")
+    for name in ("ribbon-root", "ribbon-mid", "ribbon-tip", "tassel-root", "tassel-tip"):
+        if scene["layers"][LAYERS.index(name)]["visible"] is not False:
+            fail(f"rigid guide {name} should not be rendered over the curved finish")
 
     pixel_requests = []
-    watched = ("ribbon-tip", "ribbon-mid", "ribbon-root", "tassel-tip", "tassel-root")
+    watched = ("ribbon-finish", "tassel-finish")
     for frame in range(FRAMES):
         for name in watched:
             pixel_requests.append(
@@ -260,8 +398,36 @@ def main() -> None:
             if lowest is None:
                 fail(f"{name} is empty on frame {frame}")
             if lowest > 112:
-                fail(f"{name} reaches y={lowest} on frame {frame}; that is too close to the sole at y=116")
+                fail(
+                    f"{name} reaches y={lowest} on frame {frame}; that is too close to the sole at y=116"
+                )
         cloth_bottom.append({"frame": frame, **bottoms})
+
+    # Verify the rendered boot, not only an abstract IK point, meets the floor.
+    feet = run_batch(
+        binary,
+        project,
+        [
+            {
+                "tool": "previewFrame",
+                "params": {"frame": frame, "layer": LAYERS.index("foot-" + side)},
+            }
+            for frame in range(FRAMES)
+            for side in ("near", "far")
+        ],
+    )
+    for frame in range(FRAMES):
+        for offset, side in enumerate(("near", "far")):
+            pixels = feet[frame * 2 + offset]["pixels"]
+            x, y = rows[frame]["frontSole" if side == "near" else "rearSole"]
+            if pixels[y * WIDTH + x] == 0:
+                fail(f"rendered {side} sole is empty on frame {frame}")
+            if side == "far" or frame not in (4, 5, 6):
+                lowest = max(n // WIDTH for n, v in enumerate(pixels) if v)
+                if lowest != 116:
+                    fail(
+                        f"rendered support boot {side} floats or penetrates the floor on frame {frame}: y={lowest}"
+                    )
 
     sheet = root / "final" / "spear-lunge-sheet.png"
     atlas = root / "final" / "spear-lunge-sheet.atlas.json"
@@ -281,6 +447,7 @@ def main() -> None:
     if stamp.get("engineSha") != ENGINE_SHA:
         fail("stamp SHA is not the pinned engine")
 
+    media = media_timing(root, expected_delays)
     report = {
         "engineSha": ENGINE_SHA,
         "versionString": version,
@@ -295,6 +462,10 @@ def main() -> None:
         "settleTasselLagDegrees": round(settle_lag, 2),
         "thrustRibbonTipMinusRootDegrees": round(ribbon_gap, 2),
         "frontStepPx": 74 - 56,
+        "frameDelaysMs": expected_delays,
+        "mediaTiming": media,
+        "totalDurationMs": sum(expected_delays),
+        "independentFeet": "sole attachments match solved shin IK endpoints on every frame",
         "rows": rows,
         "clothBottomY": cloth_bottom,
         "observation": "Sole, grip, and cloth-root cells are constraint-solve canvas positions. restGripForeLocal is the authored rest offset. gripForeLocal on later frames is the anchor after rotation, and it is not used as the contact cell.",
@@ -302,14 +473,20 @@ def main() -> None:
             "dropped": stamp.get("dropped"),
             "sealed": stamp.get("sealed"),
             "breaks": stamp.get("breaks"),
-            "note": "sealed counts coverage fill. breaks are diagonal joins left after that fill. No polish layer was painted.",
+            "note": "sealed counts coverage fill. breaks are diagonal joins left after that fill. Curved cloth is authored from evaluated guide anchors into per-frame polish layers after bake.",
         },
     }
     out = root / "reports" / "validate.json"
     out.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"static checks passed; pelvis x {min(pelvis_x):.2f}..{max(pelvis_x):.2f}, y {min(pelvis_y):.2f}..{max(pelvis_y):.2f}")
-    print(f"torso {min(torso):.2f}..{max(torso):.2f} deg, spear {min(spear):.2f}..{max(spear):.2f} deg")
-    print(f"tassel lag thrust {thrust_lag:.2f} deg, settle {settle_lag:.2f} deg; ribbon gap {ribbon_gap:.2f} deg")
+    print(
+        f"static checks passed; pelvis x {min(pelvis_x):.2f}..{max(pelvis_x):.2f}, y {min(pelvis_y):.2f}..{max(pelvis_y):.2f}"
+    )
+    print(
+        f"torso {min(torso):.2f}..{max(torso):.2f} deg, spear {min(spear):.2f}..{max(spear):.2f} deg"
+    )
+    print(
+        f"tassel lag thrust {thrust_lag:.2f} deg, settle {settle_lag:.2f} deg; ribbon gap {ribbon_gap:.2f} deg"
+    )
     print(f"wrote {out}")
 
 

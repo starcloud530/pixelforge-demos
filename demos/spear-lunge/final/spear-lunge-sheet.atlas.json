@@ -5,7 +5,7 @@
   "frameWidth": 128,
   "frames": [
     {
-      "delayMs": 83,
+      "delayMs": 150,
       "height": 128,
       "index": 0,
       "width": 128,
@@ -13,7 +13,7 @@
       "y": 0
     },
     {
-      "delayMs": 83,
+      "delayMs": 80,
       "height": 128,
       "index": 1,
       "width": 128,
@@ -21,7 +21,7 @@
       "y": 0
     },
     {
-      "delayMs": 83,
+      "delayMs": 70,
       "height": 128,
       "index": 2,
       "width": 128,
@@ -29,7 +29,7 @@
       "y": 0
     },
     {
-      "delayMs": 83,
+      "delayMs": 100,
       "height": 128,
       "index": 3,
       "width": 128,
@@ -37,7 +37,7 @@
       "y": 0
     },
     {
-      "delayMs": 83,
+      "delayMs": 45,
       "height": 128,
       "index": 4,
       "width": 128,
@@ -45,7 +45,7 @@
       "y": 0
     },
     {
-      "delayMs": 83,
+      "delayMs": 40,
       "height": 128,
       "index": 5,
       "width": 128,
@@ -53,7 +53,7 @@
       "y": 0
     },
     {
-      "delayMs": 83,
+      "delayMs": 40,
       "height": 128,
       "index": 6,
       "width": 128,
@@ -61,7 +61,7 @@
       "y": 0
     },
     {
-      "delayMs": 83,
+      "delayMs": 55,
       "height": 128,
       "index": 7,
       "width": 128,
@@ -69,7 +69,7 @@
       "y": 0
     },
     {
-      "delayMs": 83,
+      "delayMs": 85,
       "height": 128,
       "index": 8,
       "width": 128,
@@ -77,7 +77,7 @@
       "y": 128
     },
     {
-      "delayMs": 83,
+      "delayMs": 60,
       "height": 128,
       "index": 9,
       "width": 128,
@@ -85,7 +85,7 @@
       "y": 128
     },
     {
-      "delayMs": 83,
+      "delayMs": 65,
       "height": 128,
       "index": 10,
       "width": 128,
@@ -93,7 +93,7 @@
       "y": 128
     },
     {
-      "delayMs": 83,
+      "delayMs": 70,
       "height": 128,
       "index": 11,
       "width": 128,
@@ -101,7 +101,7 @@
       "y": 128
     },
     {
-      "delayMs": 83,
+      "delayMs": 80,
       "height": 128,
       "index": 12,
       "width": 128,
@@ -109,7 +109,7 @@
       "y": 128
     },
     {
-      "delayMs": 83,
+      "delayMs": 90,
       "height": 128,
       "index": 13,
       "width": 128,
@@ -117,7 +117,7 @@
       "y": 128
     },
     {
-      "delayMs": 83,
+      "delayMs": 100,
       "height": 128,
       "index": 14,
       "width": 128,
@@ -125,7 +125,7 @@
       "y": 128
     },
     {
-      "delayMs": 83,
+      "delayMs": 160,
       "height": 128,
       "index": 15,
       "width": 128,

@@ -1,11 +1,28 @@
 {
   "engineSha": "b647dc1631e639b34279e6027825430b0a3ce1b2",
   "versionString": "pixelforge 0.1.0-rc.5",
-  "delayMs": 83,
-  "sheetSha256": "79b8abc62feb2fce63bb36a0672f3caeae6d51c8a5ee52c762f7247f6f47597e",
-  "projectSha256": "13077ba99a041c323eb06de005fc948513c13f01defafc414a2c06c3cdcd6bfe",
-  "dropped": 610,
-  "sealed": 610,
-  "breaks": 36,
-  "conflicts": 610
+  "delayMs": [
+    150,
+    80,
+    70,
+    100,
+    45,
+    40,
+    40,
+    55,
+    85,
+    60,
+    65,
+    70,
+    80,
+    90,
+    100,
+    160
+  ],
+  "sheetSha256": "5acbb7f2041e81370fabb1daab5336653be9227874fe1e7f75981e005d508a13",
+  "projectSha256": "6591ffec0440d70146452384c7bdc23c6f71aaa9210c49ef0c165397509a8294",
+  "dropped": 796,
+  "sealed": 795,
+  "breaks": 60,
+  "conflicts": 796
 }
