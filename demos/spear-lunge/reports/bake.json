@@ -1,0 +1,7773 @@
+{
+  "appended": 0,
+  "breaks": 36,
+  "conflicts": 610,
+  "constraints": true,
+  "delayMs": 83,
+  "dropped": 610,
+  "fps": 12,
+  "frames": [
+    {
+      "breaks": 0,
+      "conflicts": 0,
+      "delayMs": 83,
+      "dropped": 0,
+      "followed": [],
+      "index": 0,
+      "layers": [],
+      "parts": [
+        {
+          "anchors": [
+            {
+              "canvasX": 6,
+              "canvasY": 89,
+              "name": "end",
+              "x": -8,
+              "y": 4
+            },
+            {
+              "canvasX": 14,
+              "canvasY": 85,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "unchanged",
+          "layer": 1,
+          "name": "ribbon-tip",
+          "sealed": 0,
+          "x": 14,
+          "y": 85
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 14,
+              "canvasY": 85,
+              "name": "end",
+              "x": -10,
+              "y": 4
+            },
+            {
+              "canvasX": 24,
+              "canvasY": 81,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "unchanged",
+          "layer": 2,
+          "name": "ribbon-mid",
+          "sealed": 0,
+          "x": 24,
+          "y": 81
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 24,
+              "canvasY": 81,
+              "name": "end",
+              "x": -10,
+              "y": 3
+            },
+            {
+              "canvasX": 34,
+              "canvasY": 78,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "unchanged",
+          "layer": 3,
+          "name": "ribbon-root",
+          "sealed": 0,
+          "x": 34,
+          "y": 78
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "unchanged",
+          "layer": 4,
+          "name": "thigh-far",
+          "sealed": 0,
+          "x": 42,
+          "y": 82
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 30,
+              "canvasY": 116,
+              "name": "sole",
+              "x": 6,
+              "y": 14
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "unchanged",
+          "layer": 5,
+          "name": "shin-far",
+          "sealed": 0,
+          "x": 24,
+          "y": 102
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "unchanged",
+          "layer": 6,
+          "name": "upper-far",
+          "sealed": 0,
+          "x": 52,
+          "y": 56
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 70,
+              "canvasY": 66,
+              "name": "wrist",
+              "x": 12,
+              "y": -10
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "unchanged",
+          "layer": 7,
+          "name": "fore-far",
+          "sealed": 0,
+          "x": 58,
+          "y": 76
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 70,
+              "canvasY": 66,
+              "name": "palm",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "unchanged",
+          "layer": 8,
+          "name": "hand-far",
+          "sealed": 0,
+          "x": 70,
+          "y": 66
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 42,
+              "canvasY": 82,
+              "name": "hip-far",
+              "x": -4,
+              "y": 4
+            },
+            {
+              "canvasX": 50,
+              "canvasY": 82,
+              "name": "hip-near",
+              "x": 4,
+              "y": 4
+            },
+            {
+              "canvasX": 34,
+              "canvasY": 78,
+              "name": "ribbon",
+              "x": -12,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "unchanged",
+          "layer": 9,
+          "name": "pelvis",
+          "sealed": 0,
+          "x": 46,
+          "y": 78
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 50,
+              "canvasY": 50,
+              "name": "neck",
+              "x": 4,
+              "y": -28
+            },
+            {
+              "canvasX": 52,
+              "canvasY": 56,
+              "name": "shoulder-far",
+              "x": 6,
+              "y": -22
+            },
+            {
+              "canvasX": 56,
+              "canvasY": 54,
+              "name": "shoulder-near",
+              "x": 10,
+              "y": -24
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "unchanged",
+          "layer": 10,
+          "name": "torso",
+          "sealed": 0,
+          "x": 46,
+          "y": 78
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "unchanged",
+          "layer": 11,
+          "name": "thigh-near",
+          "sealed": 0,
+          "x": 50,
+          "y": 82
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 56,
+              "canvasY": 116,
+              "name": "sole",
+              "x": -10,
+              "y": 16
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "unchanged",
+          "layer": 12,
+          "name": "shin-near",
+          "sealed": 0,
+          "x": 66,
+          "y": 100
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 70,
+              "canvasY": 66,
+              "name": "grip-rear",
+              "x": 0,
+              "y": 0
+            },
+            {
+              "canvasX": 84,
+              "canvasY": 59,
+              "name": "grip-fore",
+              "x": 14,
+              "y": -7
+            },
+            {
+              "canvasX": 96,
+              "canvasY": 54,
+              "name": "tassel",
+              "x": 26,
+              "y": -12
+            },
+            {
+              "canvasX": 104,
+              "canvasY": 50,
+              "name": "tip",
+              "x": 34,
+              "y": -16
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "unchanged",
+          "layer": 13,
+          "name": "spear",
+          "sealed": 0,
+          "x": 70,
+          "y": 66
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 94,
+              "canvasY": 62,
+              "name": "end",
+              "x": -2,
+              "y": 8
+            },
+            {
+              "canvasX": 96,
+              "canvasY": 54,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "unchanged",
+          "layer": 14,
+          "name": "tassel-root",
+          "sealed": 0,
+          "x": 96,
+          "y": 54
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 93,
+              "canvasY": 69,
+              "name": "end",
+              "x": -1,
+              "y": 7
+            },
+            {
+              "canvasX": 94,
+              "canvasY": 62,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "unchanged",
+          "layer": 15,
+          "name": "tassel-tip",
+          "sealed": 0,
+          "x": 94,
+          "y": 62
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 104,
+              "canvasY": 50,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "unchanged",
+          "layer": 16,
+          "name": "flame",
+          "sealed": 0,
+          "x": 104,
+          "y": 50
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "unchanged",
+          "layer": 17,
+          "name": "upper-near",
+          "sealed": 0,
+          "x": 56,
+          "y": 54
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 84,
+              "canvasY": 59,
+              "name": "wrist",
+              "x": 20,
+              "y": -9
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "unchanged",
+          "layer": 18,
+          "name": "fore-near",
+          "sealed": 0,
+          "x": 64,
+          "y": 68
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 84,
+              "canvasY": 59,
+              "name": "palm",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "unchanged",
+          "layer": 19,
+          "name": "hand-near",
+          "sealed": 0,
+          "x": 84,
+          "y": 59
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 50,
+              "canvasY": 50,
+              "name": "neck",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "unchanged",
+          "layer": 20,
+          "name": "head",
+          "sealed": 0,
+          "x": 50,
+          "y": 50
+        }
+      ],
+      "rest": true,
+      "sealed": 0
+    },
+    {
+      "breaks": 2,
+      "conflicts": 4,
+      "delayMs": 83,
+      "dropped": 4,
+      "followed": [],
+      "index": 1,
+      "layers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "parts": [
+        {
+          "anchors": [
+            {
+              "canvasX": 5,
+              "canvasY": 90,
+              "name": "end",
+              "x": -8,
+              "y": 4
+            },
+            {
+              "canvasX": 13,
+              "canvasY": 86,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 1,
+          "name": "ribbon-tip",
+          "sealed": 0,
+          "x": 13,
+          "y": 86
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 13,
+              "canvasY": 86,
+              "name": "end",
+              "x": -10,
+              "y": 4
+            },
+            {
+              "canvasX": 23,
+              "canvasY": 82,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 2,
+          "name": "ribbon-mid",
+          "sealed": 0,
+          "x": 23,
+          "y": 82
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 23,
+              "canvasY": 82,
+              "name": "end",
+              "x": -10,
+              "y": 3
+            },
+            {
+              "canvasX": 33,
+              "canvasY": 79,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 3,
+          "name": "ribbon-root",
+          "sealed": 0,
+          "x": 33,
+          "y": 79
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 4,
+          "name": "thigh-far",
+          "sealed": 0,
+          "x": 41,
+          "y": 83
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 30,
+              "canvasY": 116,
+              "name": "sole",
+              "x": 7,
+              "y": 13
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 5,
+          "name": "shin-far",
+          "sealed": 1,
+          "x": 23,
+          "y": 103
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 6,
+          "name": "upper-far",
+          "sealed": 0,
+          "x": 50,
+          "y": 57
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 69,
+              "canvasY": 67,
+              "name": "wrist",
+              "x": 12,
+              "y": -10
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 7,
+          "name": "fore-far",
+          "sealed": 0,
+          "x": 57,
+          "y": 77
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 69,
+              "canvasY": 67,
+              "name": "palm",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 8,
+          "name": "hand-far",
+          "sealed": 0,
+          "x": 69,
+          "y": 67
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 41,
+              "canvasY": 83,
+              "name": "hip-far",
+              "x": -4,
+              "y": 4
+            },
+            {
+              "canvasX": 49,
+              "canvasY": 83,
+              "name": "hip-near",
+              "x": 4,
+              "y": 4
+            },
+            {
+              "canvasX": 33,
+              "canvasY": 79,
+              "name": "ribbon",
+              "x": -12,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 9,
+          "name": "pelvis",
+          "sealed": 0,
+          "x": 45,
+          "y": 79
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 48,
+              "canvasY": 51,
+              "name": "neck",
+              "x": 3,
+              "y": -28
+            },
+            {
+              "canvasX": 50,
+              "canvasY": 57,
+              "name": "shoulder-far",
+              "x": 5,
+              "y": -22
+            },
+            {
+              "canvasX": 54,
+              "canvasY": 55,
+              "name": "shoulder-near",
+              "x": 9,
+              "y": -24
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 10,
+          "name": "torso",
+          "sealed": 1,
+          "x": 45,
+          "y": 79
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 11,
+          "name": "thigh-near",
+          "sealed": 0,
+          "x": 49,
+          "y": 83
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 56,
+              "canvasY": 116,
+              "name": "sole",
+              "x": -10,
+              "y": 16
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "unchanged",
+          "layer": 12,
+          "name": "shin-near",
+          "sealed": 0,
+          "x": 66,
+          "y": 100
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 69,
+              "canvasY": 67,
+              "name": "grip-rear",
+              "x": 0,
+              "y": 0
+            },
+            {
+              "canvasX": 83,
+              "canvasY": 59,
+              "name": "grip-fore",
+              "x": 14,
+              "y": -8
+            },
+            {
+              "canvasX": 94,
+              "canvasY": 53,
+              "name": "tassel",
+              "x": 25,
+              "y": -14
+            },
+            {
+              "canvasX": 102,
+              "canvasY": 49,
+              "name": "tip",
+              "x": 33,
+              "y": -18
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 13,
+          "name": "spear",
+          "sealed": 1,
+          "x": 69,
+          "y": 67
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 92,
+              "canvasY": 61,
+              "name": "end",
+              "x": -2,
+              "y": 8
+            },
+            {
+              "canvasX": 94,
+              "canvasY": 53,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 14,
+          "name": "tassel-root",
+          "sealed": 0,
+          "x": 94,
+          "y": 53
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 91,
+              "canvasY": 68,
+              "name": "end",
+              "x": -1,
+              "y": 7
+            },
+            {
+              "canvasX": 92,
+              "canvasY": 61,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 15,
+          "name": "tassel-tip",
+          "sealed": 0,
+          "x": 92,
+          "y": 61
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 102,
+              "canvasY": 49,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 2,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 16,
+          "name": "flame",
+          "sealed": 0,
+          "x": 102,
+          "y": 49
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 17,
+          "name": "upper-near",
+          "sealed": 1,
+          "x": 54,
+          "y": 55
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 83,
+              "canvasY": 59,
+              "name": "wrist",
+              "x": 20,
+              "y": -9
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 18,
+          "name": "fore-near",
+          "sealed": 0,
+          "x": 63,
+          "y": 68
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 83,
+              "canvasY": 59,
+              "name": "palm",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 19,
+          "name": "hand-near",
+          "sealed": 0,
+          "x": 83,
+          "y": 59
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 48,
+              "canvasY": 51,
+              "name": "neck",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 20,
+          "name": "head",
+          "sealed": 0,
+          "x": 48,
+          "y": 51
+        }
+      ],
+      "rest": false,
+      "sealed": 4
+    },
+    {
+      "breaks": 1,
+      "conflicts": 16,
+      "delayMs": 83,
+      "dropped": 16,
+      "followed": [],
+      "index": 2,
+      "layers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "parts": [
+        {
+          "anchors": [
+            {
+              "canvasX": 5,
+              "canvasY": 92,
+              "name": "end",
+              "x": -8,
+              "y": 4
+            },
+            {
+              "canvasX": 13,
+              "canvasY": 88,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 1,
+          "name": "ribbon-tip",
+          "sealed": 0,
+          "x": 13,
+          "y": 88
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 13,
+              "canvasY": 88,
+              "name": "end",
+              "x": -10,
+              "y": 4
+            },
+            {
+              "canvasX": 23,
+              "canvasY": 84,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 2,
+          "name": "ribbon-mid",
+          "sealed": 0,
+          "x": 23,
+          "y": 84
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 23,
+              "canvasY": 84,
+              "name": "end",
+              "x": -10,
+              "y": 3
+            },
+            {
+              "canvasX": 33,
+              "canvasY": 81,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 3,
+          "name": "ribbon-root",
+          "sealed": 0,
+          "x": 33,
+          "y": 81
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 4,
+          "name": "thigh-far",
+          "sealed": 0,
+          "x": 41,
+          "y": 85
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 30,
+              "canvasY": 116,
+              "name": "sole",
+              "x": 9,
+              "y": 13
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 4,
+          "dropped": 4,
+          "ink": "moved",
+          "layer": 5,
+          "name": "shin-far",
+          "sealed": 4,
+          "x": 21,
+          "y": 103
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 6,
+          "name": "upper-far",
+          "sealed": 0,
+          "x": 48,
+          "y": 58
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 66,
+              "canvasY": 70,
+              "name": "wrist",
+              "x": 13,
+              "y": -8
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 2,
+          "dropped": 2,
+          "ink": "moved",
+          "layer": 7,
+          "name": "fore-far",
+          "sealed": 2,
+          "x": 53,
+          "y": 78
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 66,
+              "canvasY": 70,
+              "name": "palm",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 8,
+          "name": "hand-far",
+          "sealed": 0,
+          "x": 66,
+          "y": 70
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 41,
+              "canvasY": 85,
+              "name": "hip-far",
+              "x": -4,
+              "y": 4
+            },
+            {
+              "canvasX": 49,
+              "canvasY": 85,
+              "name": "hip-near",
+              "x": 4,
+              "y": 4
+            },
+            {
+              "canvasX": 33,
+              "canvasY": 81,
+              "name": "ribbon",
+              "x": -12,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 9,
+          "name": "pelvis",
+          "sealed": 0,
+          "x": 45,
+          "y": 81
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 45,
+              "canvasY": 53,
+              "name": "neck",
+              "x": 0,
+              "y": -28
+            },
+            {
+              "canvasX": 48,
+              "canvasY": 58,
+              "name": "shoulder-far",
+              "x": 3,
+              "y": -23
+            },
+            {
+              "canvasX": 52,
+              "canvasY": 56,
+              "name": "shoulder-near",
+              "x": 7,
+              "y": -25
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 7,
+          "dropped": 7,
+          "ink": "moved",
+          "layer": 10,
+          "name": "torso",
+          "sealed": 7,
+          "x": 45,
+          "y": 81
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 11,
+          "name": "thigh-near",
+          "sealed": 0,
+          "x": 49,
+          "y": 85
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 56,
+              "canvasY": 116,
+              "name": "sole",
+              "x": -11,
+              "y": 15
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 12,
+          "name": "shin-near",
+          "sealed": 1,
+          "x": 67,
+          "y": 101
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 66,
+              "canvasY": 70,
+              "name": "grip-rear",
+              "x": 0,
+              "y": 0
+            },
+            {
+              "canvasX": 79,
+              "canvasY": 61,
+              "name": "grip-fore",
+              "x": 13,
+              "y": -9
+            },
+            {
+              "canvasX": 89,
+              "canvasY": 54,
+              "name": "tassel",
+              "x": 23,
+              "y": -16
+            },
+            {
+              "canvasX": 97,
+              "canvasY": 48,
+              "name": "tip",
+              "x": 31,
+              "y": -22
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 13,
+          "name": "spear",
+          "sealed": 1,
+          "x": 66,
+          "y": 70
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 87,
+              "canvasY": 62,
+              "name": "end",
+              "x": -2,
+              "y": 8
+            },
+            {
+              "canvasX": 89,
+              "canvasY": 54,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 14,
+          "name": "tassel-root",
+          "sealed": 0,
+          "x": 89,
+          "y": 54
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 86,
+              "canvasY": 69,
+              "name": "end",
+              "x": -1,
+              "y": 7
+            },
+            {
+              "canvasX": 87,
+              "canvasY": 62,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 15,
+          "name": "tassel-tip",
+          "sealed": 0,
+          "x": 87,
+          "y": 62
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 97,
+              "canvasY": 48,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 1,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 16,
+          "name": "flame",
+          "sealed": 0,
+          "x": 97,
+          "y": 48
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 17,
+          "name": "upper-near",
+          "sealed": 1,
+          "x": 52,
+          "y": 56
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 79,
+              "canvasY": 61,
+              "name": "wrist",
+              "x": 20,
+              "y": -9
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 18,
+          "name": "fore-near",
+          "sealed": 0,
+          "x": 59,
+          "y": 70
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 79,
+              "canvasY": 61,
+              "name": "palm",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 19,
+          "name": "hand-near",
+          "sealed": 0,
+          "x": 79,
+          "y": 61
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 45,
+              "canvasY": 53,
+              "name": "neck",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 20,
+          "name": "head",
+          "sealed": 0,
+          "x": 45,
+          "y": 53
+        }
+      ],
+      "rest": false,
+      "sealed": 16
+    },
+    {
+      "breaks": 5,
+      "conflicts": 44,
+      "delayMs": 83,
+      "dropped": 44,
+      "followed": [],
+      "index": 3,
+      "layers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "parts": [
+        {
+          "anchors": [
+            {
+              "canvasX": 4,
+              "canvasY": 93,
+              "name": "end",
+              "x": -8,
+              "y": 4
+            },
+            {
+              "canvasX": 12,
+              "canvasY": 89,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 1,
+          "name": "ribbon-tip",
+          "sealed": 0,
+          "x": 12,
+          "y": 89
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 12,
+              "canvasY": 89,
+              "name": "end",
+              "x": -10,
+              "y": 4
+            },
+            {
+              "canvasX": 22,
+              "canvasY": 85,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 2,
+          "name": "ribbon-mid",
+          "sealed": 0,
+          "x": 22,
+          "y": 85
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 22,
+              "canvasY": 85,
+              "name": "end",
+              "x": -10,
+              "y": 2
+            },
+            {
+              "canvasX": 32,
+              "canvasY": 83,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 3,
+          "name": "ribbon-root",
+          "sealed": 0,
+          "x": 32,
+          "y": 83
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 4,
+          "name": "thigh-far",
+          "sealed": 0,
+          "x": 40,
+          "y": 86
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 30,
+              "canvasY": 116,
+              "name": "sole",
+              "x": 10,
+              "y": 12
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 10,
+          "dropped": 10,
+          "ink": "moved",
+          "layer": 5,
+          "name": "shin-far",
+          "sealed": 10,
+          "x": 20,
+          "y": 104
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 6,
+          "name": "upper-far",
+          "sealed": 0,
+          "x": 46,
+          "y": 59
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 65,
+              "canvasY": 71,
+              "name": "wrist",
+              "x": 13,
+              "y": -8
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 2,
+          "dropped": 2,
+          "ink": "moved",
+          "layer": 7,
+          "name": "fore-far",
+          "sealed": 2,
+          "x": 52,
+          "y": 79
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 65,
+              "canvasY": 71,
+              "name": "palm",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 4,
+          "dropped": 4,
+          "ink": "moved",
+          "layer": 8,
+          "name": "hand-far",
+          "sealed": 4,
+          "x": 65,
+          "y": 71
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 40,
+              "canvasY": 86,
+              "name": "hip-far",
+              "x": -4,
+              "y": 4
+            },
+            {
+              "canvasX": 48,
+              "canvasY": 86,
+              "name": "hip-near",
+              "x": 4,
+              "y": 4
+            },
+            {
+              "canvasX": 32,
+              "canvasY": 83,
+              "name": "ribbon",
+              "x": -12,
+              "y": 1
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 9,
+          "name": "pelvis",
+          "sealed": 0,
+          "x": 44,
+          "y": 82
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 43,
+              "canvasY": 54,
+              "name": "neck",
+              "x": -1,
+              "y": -28
+            },
+            {
+              "canvasX": 46,
+              "canvasY": 59,
+              "name": "shoulder-far",
+              "x": 2,
+              "y": -23
+            },
+            {
+              "canvasX": 50,
+              "canvasY": 57,
+              "name": "shoulder-near",
+              "x": 6,
+              "y": -25
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 13,
+          "dropped": 13,
+          "ink": "moved",
+          "layer": 10,
+          "name": "torso",
+          "sealed": 13,
+          "x": 44,
+          "y": 82
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 3,
+          "dropped": 3,
+          "ink": "moved",
+          "layer": 11,
+          "name": "thigh-near",
+          "sealed": 3,
+          "x": 48,
+          "y": 86
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 56,
+              "canvasY": 116,
+              "name": "sole",
+              "x": -11,
+              "y": 15
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 12,
+          "name": "shin-near",
+          "sealed": 1,
+          "x": 67,
+          "y": 101
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 65,
+              "canvasY": 71,
+              "name": "grip-rear",
+              "x": 0,
+              "y": 0
+            },
+            {
+              "canvasX": 77,
+              "canvasY": 61,
+              "name": "grip-fore",
+              "x": 12,
+              "y": -10
+            },
+            {
+              "canvasX": 87,
+              "canvasY": 53,
+              "name": "tassel",
+              "x": 22,
+              "y": -18
+            },
+            {
+              "canvasX": 94,
+              "canvasY": 47,
+              "name": "tip",
+              "x": 29,
+              "y": -24
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 6,
+          "dropped": 6,
+          "ink": "moved",
+          "layer": 13,
+          "name": "spear",
+          "sealed": 6,
+          "x": 65,
+          "y": 71
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 86,
+              "canvasY": 61,
+              "name": "end",
+              "x": -1,
+              "y": 8
+            },
+            {
+              "canvasX": 87,
+              "canvasY": 53,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 14,
+          "name": "tassel-root",
+          "sealed": 0,
+          "x": 87,
+          "y": 53
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 85,
+              "canvasY": 68,
+              "name": "end",
+              "x": -1,
+              "y": 7
+            },
+            {
+              "canvasX": 86,
+              "canvasY": 61,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 15,
+          "name": "tassel-tip",
+          "sealed": 0,
+          "x": 86,
+          "y": 61
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 94,
+              "canvasY": 47,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 5,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 16,
+          "name": "flame",
+          "sealed": 0,
+          "x": 94,
+          "y": 47
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 17,
+          "name": "upper-near",
+          "sealed": 0,
+          "x": 50,
+          "y": 57
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 77,
+              "canvasY": 61,
+              "name": "wrist",
+              "x": 19,
+              "y": -10
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 18,
+          "name": "fore-near",
+          "sealed": 1,
+          "x": 58,
+          "y": 71
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 77,
+              "canvasY": 61,
+              "name": "palm",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 4,
+          "dropped": 4,
+          "ink": "moved",
+          "layer": 19,
+          "name": "hand-near",
+          "sealed": 4,
+          "x": 77,
+          "y": 61
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 43,
+              "canvasY": 54,
+              "name": "neck",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 20,
+          "name": "head",
+          "sealed": 0,
+          "x": 43,
+          "y": 54
+        }
+      ],
+      "rest": false,
+      "sealed": 44
+    },
+    {
+      "breaks": 0,
+      "conflicts": 39,
+      "delayMs": 83,
+      "dropped": 39,
+      "followed": [],
+      "index": 4,
+      "layers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "parts": [
+        {
+          "anchors": [
+            {
+              "canvasX": 7,
+              "canvasY": 91,
+              "name": "end",
+              "x": -8,
+              "y": 4
+            },
+            {
+              "canvasX": 15,
+              "canvasY": 87,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 1,
+          "name": "ribbon-tip",
+          "sealed": 0,
+          "x": 15,
+          "y": 87
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 15,
+              "canvasY": 87,
+              "name": "end",
+              "x": -10,
+              "y": 3
+            },
+            {
+              "canvasX": 25,
+              "canvasY": 84,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 2,
+          "name": "ribbon-mid",
+          "sealed": 0,
+          "x": 25,
+          "y": 84
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 25,
+              "canvasY": 84,
+              "name": "end",
+              "x": -10,
+              "y": 2
+            },
+            {
+              "canvasX": 35,
+              "canvasY": 82,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 3,
+          "name": "ribbon-root",
+          "sealed": 1,
+          "x": 35,
+          "y": 82
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 3,
+          "dropped": 3,
+          "ink": "moved",
+          "layer": 4,
+          "name": "thigh-far",
+          "sealed": 3,
+          "x": 43,
+          "y": 86
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 30,
+              "canvasY": 116,
+              "name": "sole",
+              "x": 7,
+              "y": 13
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 5,
+          "name": "shin-far",
+          "sealed": 1,
+          "x": 23,
+          "y": 103
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 6,
+          "name": "upper-far",
+          "sealed": 0,
+          "x": 51,
+          "y": 60
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 69,
+              "canvasY": 70,
+              "name": "wrist",
+              "x": 12,
+              "y": -10
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 7,
+          "name": "fore-far",
+          "sealed": 0,
+          "x": 57,
+          "y": 80
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 69,
+              "canvasY": 70,
+              "name": "palm",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 8,
+          "name": "hand-far",
+          "sealed": 0,
+          "x": 69,
+          "y": 70
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 43,
+              "canvasY": 86,
+              "name": "hip-far",
+              "x": -4,
+              "y": 4
+            },
+            {
+              "canvasX": 51,
+              "canvasY": 86,
+              "name": "hip-near",
+              "x": 4,
+              "y": 4
+            },
+            {
+              "canvasX": 35,
+              "canvasY": 82,
+              "name": "ribbon",
+              "x": -12,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 9,
+          "name": "pelvis",
+          "sealed": 0,
+          "x": 47,
+          "y": 82
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 49,
+              "canvasY": 54,
+              "name": "neck",
+              "x": 2,
+              "y": -28
+            },
+            {
+              "canvasX": 51,
+              "canvasY": 60,
+              "name": "shoulder-far",
+              "x": 4,
+              "y": -22
+            },
+            {
+              "canvasX": 55,
+              "canvasY": 57,
+              "name": "shoulder-near",
+              "x": 8,
+              "y": -25
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 4,
+          "dropped": 4,
+          "ink": "moved",
+          "layer": 10,
+          "name": "torso",
+          "sealed": 4,
+          "x": 47,
+          "y": 82
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 21,
+          "dropped": 21,
+          "ink": "moved",
+          "layer": 11,
+          "name": "thigh-near",
+          "sealed": 21,
+          "x": 51,
+          "y": 86
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 61,
+              "canvasY": 109,
+              "name": "sole",
+              "x": -12,
+              "y": 14
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 3,
+          "dropped": 3,
+          "ink": "moved",
+          "layer": 12,
+          "name": "shin-near",
+          "sealed": 3,
+          "x": 73,
+          "y": 95
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 69,
+              "canvasY": 70,
+              "name": "grip-rear",
+              "x": 0,
+              "y": 0
+            },
+            {
+              "canvasX": 82,
+              "canvasY": 61,
+              "name": "grip-fore",
+              "x": 13,
+              "y": -9
+            },
+            {
+              "canvasX": 93,
+              "canvasY": 54,
+              "name": "tassel",
+              "x": 24,
+              "y": -16
+            },
+            {
+              "canvasX": 100,
+              "canvasY": 49,
+              "name": "tip",
+              "x": 31,
+              "y": -21
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 3,
+          "dropped": 3,
+          "ink": "moved",
+          "layer": 13,
+          "name": "spear",
+          "sealed": 3,
+          "x": 69,
+          "y": 70
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 93,
+              "canvasY": 62,
+              "name": "end",
+              "x": 0,
+              "y": 8
+            },
+            {
+              "canvasX": 93,
+              "canvasY": 54,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 14,
+          "name": "tassel-root",
+          "sealed": 1,
+          "x": 93,
+          "y": 54
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 92,
+              "canvasY": 69,
+              "name": "end",
+              "x": -1,
+              "y": 7
+            },
+            {
+              "canvasX": 93,
+              "canvasY": 62,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 15,
+          "name": "tassel-tip",
+          "sealed": 0,
+          "x": 93,
+          "y": 62
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 100,
+              "canvasY": 49,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 16,
+          "name": "flame",
+          "sealed": 0,
+          "x": 100,
+          "y": 49
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 17,
+          "name": "upper-near",
+          "sealed": 0,
+          "x": 55,
+          "y": 57
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 82,
+              "canvasY": 61,
+              "name": "wrist",
+              "x": 19,
+              "y": -10
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 18,
+          "name": "fore-near",
+          "sealed": 1,
+          "x": 63,
+          "y": 71
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 82,
+              "canvasY": 61,
+              "name": "palm",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 19,
+          "name": "hand-near",
+          "sealed": 0,
+          "x": 82,
+          "y": 61
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 49,
+              "canvasY": 54,
+              "name": "neck",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 20,
+          "name": "head",
+          "sealed": 1,
+          "x": 49,
+          "y": 54
+        }
+      ],
+      "rest": false,
+      "sealed": 39
+    },
+    {
+      "breaks": 2,
+      "conflicts": 25,
+      "delayMs": 83,
+      "dropped": 25,
+      "followed": [],
+      "index": 5,
+      "layers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "parts": [
+        {
+          "anchors": [
+            {
+              "canvasX": 9,
+              "canvasY": 89,
+              "name": "end",
+              "x": -8,
+              "y": 3
+            },
+            {
+              "canvasX": 17,
+              "canvasY": 86,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 1,
+          "name": "ribbon-tip",
+          "sealed": 0,
+          "x": 17,
+          "y": 86
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 17,
+              "canvasY": 86,
+              "name": "end",
+              "x": -10,
+              "y": 2
+            },
+            {
+              "canvasX": 27,
+              "canvasY": 84,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 2,
+          "name": "ribbon-mid",
+          "sealed": 1,
+          "x": 27,
+          "y": 84
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 27,
+              "canvasY": 84,
+              "name": "end",
+              "x": -10,
+              "y": 3
+            },
+            {
+              "canvasX": 37,
+              "canvasY": 81,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 3,
+          "name": "ribbon-root",
+          "sealed": 0,
+          "x": 37,
+          "y": 81
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 4,
+          "name": "thigh-far",
+          "sealed": 1,
+          "x": 45,
+          "y": 85
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 30,
+              "canvasY": 116,
+              "name": "sole",
+              "x": 6,
+              "y": 14
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "unchanged",
+          "layer": 5,
+          "name": "shin-far",
+          "sealed": 0,
+          "x": 24,
+          "y": 102
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 6,
+          "name": "upper-far",
+          "sealed": 0,
+          "x": 55,
+          "y": 59
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 73,
+              "canvasY": 69,
+              "name": "wrist",
+              "x": 12,
+              "y": -10
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 7,
+          "name": "fore-far",
+          "sealed": 0,
+          "x": 61,
+          "y": 79
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 73,
+              "canvasY": 69,
+              "name": "palm",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 8,
+          "name": "hand-far",
+          "sealed": 0,
+          "x": 73,
+          "y": 69
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 45,
+              "canvasY": 85,
+              "name": "hip-far",
+              "x": -4,
+              "y": 4
+            },
+            {
+              "canvasX": 53,
+              "canvasY": 85,
+              "name": "hip-near",
+              "x": 4,
+              "y": 4
+            },
+            {
+              "canvasX": 37,
+              "canvasY": 81,
+              "name": "ribbon",
+              "x": -12,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 9,
+          "name": "pelvis",
+          "sealed": 0,
+          "x": 49,
+          "y": 81
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 53,
+              "canvasY": 53,
+              "name": "neck",
+              "x": 4,
+              "y": -28
+            },
+            {
+              "canvasX": 55,
+              "canvasY": 59,
+              "name": "shoulder-far",
+              "x": 6,
+              "y": -22
+            },
+            {
+              "canvasX": 59,
+              "canvasY": 57,
+              "name": "shoulder-near",
+              "x": 10,
+              "y": -24
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 10,
+          "name": "torso",
+          "sealed": 0,
+          "x": 49,
+          "y": 81
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 21,
+          "dropped": 21,
+          "ink": "moved",
+          "layer": 11,
+          "name": "thigh-near",
+          "sealed": 21,
+          "x": 53,
+          "y": 85
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 67,
+              "canvasY": 107,
+              "name": "sole",
+              "x": -9,
+              "y": 16
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 12,
+          "name": "shin-near",
+          "sealed": 1,
+          "x": 76,
+          "y": 91
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 73,
+              "canvasY": 69,
+              "name": "grip-rear",
+              "x": 0,
+              "y": 0
+            },
+            {
+              "canvasX": 87,
+              "canvasY": 62,
+              "name": "grip-fore",
+              "x": 14,
+              "y": -7
+            },
+            {
+              "canvasX": 99,
+              "canvasY": 56,
+              "name": "tassel",
+              "x": 26,
+              "y": -13
+            },
+            {
+              "canvasX": 106,
+              "canvasY": 52,
+              "name": "tip",
+              "x": 33,
+              "y": -17
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 13,
+          "name": "spear",
+          "sealed": 0,
+          "x": 73,
+          "y": 69
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 98,
+              "canvasY": 64,
+              "name": "end",
+              "x": -1,
+              "y": 8
+            },
+            {
+              "canvasX": 99,
+              "canvasY": 56,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 14,
+          "name": "tassel-root",
+          "sealed": 1,
+          "x": 99,
+          "y": 56
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 98,
+              "canvasY": 71,
+              "name": "end",
+              "x": 0,
+              "y": 7
+            },
+            {
+              "canvasX": 98,
+              "canvasY": 64,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 15,
+          "name": "tassel-tip",
+          "sealed": 0,
+          "x": 98,
+          "y": 64
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 106,
+              "canvasY": 52,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 2,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 16,
+          "name": "flame",
+          "sealed": 0,
+          "x": 106,
+          "y": 52
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 17,
+          "name": "upper-near",
+          "sealed": 0,
+          "x": 59,
+          "y": 57
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 87,
+              "canvasY": 62,
+              "name": "wrist",
+              "x": 20,
+              "y": -9
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 18,
+          "name": "fore-near",
+          "sealed": 0,
+          "x": 67,
+          "y": 71
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 87,
+              "canvasY": 62,
+              "name": "palm",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 19,
+          "name": "hand-near",
+          "sealed": 0,
+          "x": 87,
+          "y": 62
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 53,
+              "canvasY": 53,
+              "name": "neck",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 20,
+          "name": "head",
+          "sealed": 0,
+          "x": 53,
+          "y": 53
+        }
+      ],
+      "rest": false,
+      "sealed": 25
+    },
+    {
+      "breaks": 0,
+      "conflicts": 34,
+      "delayMs": 83,
+      "dropped": 34,
+      "followed": [],
+      "index": 6,
+      "layers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "parts": [
+        {
+          "anchors": [
+            {
+              "canvasX": 10,
+              "canvasY": 89,
+              "name": "end",
+              "x": -9,
+              "y": 2
+            },
+            {
+              "canvasX": 19,
+              "canvasY": 87,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 1,
+          "name": "ribbon-tip",
+          "sealed": 1,
+          "x": 19,
+          "y": 87
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 19,
+              "canvasY": 87,
+              "name": "end",
+              "x": -10,
+              "y": 3
+            },
+            {
+              "canvasX": 29,
+              "canvasY": 84,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 2,
+          "name": "ribbon-mid",
+          "sealed": 0,
+          "x": 29,
+          "y": 84
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 29,
+              "canvasY": 84,
+              "name": "end",
+              "x": -10,
+              "y": 4
+            },
+            {
+              "canvasX": 39,
+              "canvasY": 80,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 3,
+          "name": "ribbon-root",
+          "sealed": 1,
+          "x": 39,
+          "y": 80
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 4,
+          "name": "thigh-far",
+          "sealed": 1,
+          "x": 47,
+          "y": 84
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 30,
+              "canvasY": 116,
+              "name": "sole",
+              "x": 4,
+              "y": 15
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 5,
+          "name": "shin-far",
+          "sealed": 0,
+          "x": 26,
+          "y": 101
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 6,
+          "name": "upper-far",
+          "sealed": 0,
+          "x": 59,
+          "y": 59
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 77,
+              "canvasY": 69,
+              "name": "wrist",
+              "x": 12,
+              "y": -10
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 7,
+          "name": "fore-far",
+          "sealed": 0,
+          "x": 65,
+          "y": 79
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 77,
+              "canvasY": 69,
+              "name": "palm",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 8,
+          "name": "hand-far",
+          "sealed": 0,
+          "x": 77,
+          "y": 69
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 47,
+              "canvasY": 84,
+              "name": "hip-far",
+              "x": -4,
+              "y": 4
+            },
+            {
+              "canvasX": 55,
+              "canvasY": 84,
+              "name": "hip-near",
+              "x": 4,
+              "y": 4
+            },
+            {
+              "canvasX": 39,
+              "canvasY": 80,
+              "name": "ribbon",
+              "x": -12,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 9,
+          "name": "pelvis",
+          "sealed": 0,
+          "x": 51,
+          "y": 80
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 58,
+              "canvasY": 53,
+              "name": "neck",
+              "x": 7,
+              "y": -27
+            },
+            {
+              "canvasX": 59,
+              "canvasY": 59,
+              "name": "shoulder-far",
+              "x": 8,
+              "y": -21
+            },
+            {
+              "canvasX": 63,
+              "canvasY": 57,
+              "name": "shoulder-near",
+              "x": 12,
+              "y": -23
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 3,
+          "dropped": 3,
+          "ink": "moved",
+          "layer": 10,
+          "name": "torso",
+          "sealed": 3,
+          "x": 51,
+          "y": 80
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 21,
+          "dropped": 21,
+          "ink": "moved",
+          "layer": 11,
+          "name": "thigh-near",
+          "sealed": 21,
+          "x": 55,
+          "y": 84
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 71,
+              "canvasY": 111,
+              "name": "sole",
+              "x": -6,
+              "y": 18
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 5,
+          "dropped": 5,
+          "ink": "moved",
+          "layer": 12,
+          "name": "shin-near",
+          "sealed": 5,
+          "x": 77,
+          "y": 93
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 77,
+              "canvasY": 69,
+              "name": "grip-rear",
+              "x": 0,
+              "y": 0
+            },
+            {
+              "canvasX": 92,
+              "canvasY": 64,
+              "name": "grip-fore",
+              "x": 15,
+              "y": -5
+            },
+            {
+              "canvasX": 104,
+              "canvasY": 61,
+              "name": "tassel",
+              "x": 27,
+              "y": -8
+            },
+            {
+              "canvasX": 113,
+              "canvasY": 58,
+              "name": "tip",
+              "x": 36,
+              "y": -11
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 13,
+          "name": "spear",
+          "sealed": 1,
+          "x": 77,
+          "y": 69
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 103,
+              "canvasY": 69,
+              "name": "end",
+              "x": -1,
+              "y": 8
+            },
+            {
+              "canvasX": 104,
+              "canvasY": 61,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 14,
+          "name": "tassel-root",
+          "sealed": 0,
+          "x": 104,
+          "y": 61
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 103,
+              "canvasY": 76,
+              "name": "end",
+              "x": 0,
+              "y": 7
+            },
+            {
+              "canvasX": 103,
+              "canvasY": 69,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 15,
+          "name": "tassel-tip",
+          "sealed": 1,
+          "x": 103,
+          "y": 69
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 113,
+              "canvasY": 58,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 16,
+          "name": "flame",
+          "sealed": 0,
+          "x": 113,
+          "y": 58
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 17,
+          "name": "upper-near",
+          "sealed": 0,
+          "x": 63,
+          "y": 57
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 92,
+              "canvasY": 64,
+              "name": "wrist",
+              "x": 21,
+              "y": -7
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 18,
+          "name": "fore-near",
+          "sealed": 0,
+          "x": 71,
+          "y": 71
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 92,
+              "canvasY": 64,
+              "name": "palm",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 19,
+          "name": "hand-near",
+          "sealed": 0,
+          "x": 92,
+          "y": 64
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 58,
+              "canvasY": 53,
+              "name": "neck",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 20,
+          "name": "head",
+          "sealed": 0,
+          "x": 58,
+          "y": 53
+        }
+      ],
+      "rest": false,
+      "sealed": 34
+    },
+    {
+      "breaks": 8,
+      "conflicts": 75,
+      "delayMs": 83,
+      "dropped": 75,
+      "followed": [],
+      "index": 7,
+      "layers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "parts": [
+        {
+          "anchors": [
+            {
+              "canvasX": 12,
+              "canvasY": 91,
+              "name": "end",
+              "x": -8,
+              "y": 3
+            },
+            {
+              "canvasX": 20,
+              "canvasY": 88,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 1,
+          "name": "ribbon-tip",
+          "sealed": 0,
+          "x": 20,
+          "y": 88
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 20,
+              "canvasY": 88,
+              "name": "end",
+              "x": -10,
+              "y": 5
+            },
+            {
+              "canvasX": 30,
+              "canvasY": 83,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 2,
+          "name": "ribbon-mid",
+          "sealed": 0,
+          "x": 30,
+          "y": 83
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 30,
+              "canvasY": 83,
+              "name": "end",
+              "x": -10,
+              "y": 4
+            },
+            {
+              "canvasX": 40,
+              "canvasY": 79,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 3,
+          "name": "ribbon-root",
+          "sealed": 1,
+          "x": 40,
+          "y": 79
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 4,
+          "name": "thigh-far",
+          "sealed": 0,
+          "x": 48,
+          "y": 83
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 30,
+              "canvasY": 116,
+              "name": "sole",
+              "x": 2,
+              "y": 15
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 9,
+          "dropped": 9,
+          "ink": "moved",
+          "layer": 5,
+          "name": "shin-far",
+          "sealed": 9,
+          "x": 28,
+          "y": 101
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 6,
+          "name": "upper-far",
+          "sealed": 0,
+          "x": 62,
+          "y": 59
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 80,
+              "canvasY": 68,
+              "name": "wrist",
+              "x": 12,
+              "y": -11
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 7,
+          "name": "fore-far",
+          "sealed": 0,
+          "x": 68,
+          "y": 79
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 80,
+              "canvasY": 68,
+              "name": "palm",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 2,
+          "conflicts": 2,
+          "dropped": 2,
+          "ink": "moved",
+          "layer": 8,
+          "name": "hand-far",
+          "sealed": 2,
+          "x": 80,
+          "y": 68
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 48,
+              "canvasY": 83,
+              "name": "hip-far",
+              "x": -4,
+              "y": 4
+            },
+            {
+              "canvasX": 56,
+              "canvasY": 83,
+              "name": "hip-near",
+              "x": 4,
+              "y": 4
+            },
+            {
+              "canvasX": 40,
+              "canvasY": 79,
+              "name": "ribbon",
+              "x": -12,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 9,
+          "name": "pelvis",
+          "sealed": 0,
+          "x": 52,
+          "y": 79
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 62,
+              "canvasY": 52,
+              "name": "neck",
+              "x": 10,
+              "y": -27
+            },
+            {
+              "canvasX": 62,
+              "canvasY": 59,
+              "name": "shoulder-far",
+              "x": 10,
+              "y": -20
+            },
+            {
+              "canvasX": 67,
+              "canvasY": 58,
+              "name": "shoulder-near",
+              "x": 15,
+              "y": -21
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 21,
+          "dropped": 21,
+          "ink": "moved",
+          "layer": 10,
+          "name": "torso",
+          "sealed": 21,
+          "x": 52,
+          "y": 79
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 5,
+          "dropped": 5,
+          "ink": "moved",
+          "layer": 11,
+          "name": "thigh-near",
+          "sealed": 5,
+          "x": 56,
+          "y": 83
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 74,
+              "canvasY": 116,
+              "name": "sole",
+              "x": -2,
+              "y": 19
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 24,
+          "dropped": 24,
+          "ink": "moved",
+          "layer": 12,
+          "name": "shin-near",
+          "sealed": 24,
+          "x": 76,
+          "y": 97
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 80,
+              "canvasY": 68,
+              "name": "grip-rear",
+              "x": 0,
+              "y": 0
+            },
+            {
+              "canvasX": 95,
+              "canvasY": 66,
+              "name": "grip-fore",
+              "x": 15,
+              "y": -2
+            },
+            {
+              "canvasX": 108,
+              "canvasY": 65,
+              "name": "tassel",
+              "x": 28,
+              "y": -3
+            },
+            {
+              "canvasX": 117,
+              "canvasY": 63,
+              "name": "tip",
+              "x": 37,
+              "y": -5
+            }
+          ],
+          "breaks": 4,
+          "conflicts": 8,
+          "dropped": 8,
+          "ink": "moved",
+          "layer": 13,
+          "name": "spear",
+          "sealed": 8,
+          "x": 80,
+          "y": 68
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 106,
+              "canvasY": 73,
+              "name": "end",
+              "x": -2,
+              "y": 8
+            },
+            {
+              "canvasX": 108,
+              "canvasY": 65,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 14,
+          "name": "tassel-root",
+          "sealed": 0,
+          "x": 108,
+          "y": 65
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 106,
+              "canvasY": 80,
+              "name": "end",
+              "x": 0,
+              "y": 7
+            },
+            {
+              "canvasX": 106,
+              "canvasY": 73,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 15,
+          "name": "tassel-tip",
+          "sealed": 1,
+          "x": 106,
+          "y": 73
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 117,
+              "canvasY": 63,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 16,
+          "name": "flame",
+          "sealed": 1,
+          "x": 117,
+          "y": 63
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 17,
+          "name": "upper-near",
+          "sealed": 1,
+          "x": 67,
+          "y": 58
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 95,
+              "canvasY": 66,
+              "name": "wrist",
+              "x": 21,
+              "y": -7
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 18,
+          "name": "fore-near",
+          "sealed": 0,
+          "x": 74,
+          "y": 73
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 95,
+              "canvasY": 66,
+              "name": "palm",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 2,
+          "conflicts": 2,
+          "dropped": 2,
+          "ink": "moved",
+          "layer": 19,
+          "name": "hand-near",
+          "sealed": 2,
+          "x": 95,
+          "y": 66
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 62,
+              "canvasY": 52,
+              "name": "neck",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 20,
+          "name": "head",
+          "sealed": 0,
+          "x": 62,
+          "y": 52
+        }
+      ],
+      "rest": false,
+      "sealed": 75
+    },
+    {
+      "breaks": 2,
+      "conflicts": 53,
+      "delayMs": 83,
+      "dropped": 53,
+      "followed": [],
+      "index": 8,
+      "layers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "parts": [
+        {
+          "anchors": [
+            {
+              "canvasX": 15,
+              "canvasY": 94,
+              "name": "end",
+              "x": -8,
+              "y": 4
+            },
+            {
+              "canvasX": 23,
+              "canvasY": 90,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 1,
+          "name": "ribbon-tip",
+          "sealed": 0,
+          "x": 23,
+          "y": 90
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 23,
+              "canvasY": 90,
+              "name": "end",
+              "x": -9,
+              "y": 6
+            },
+            {
+              "canvasX": 32,
+              "canvasY": 84,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 2,
+          "name": "ribbon-mid",
+          "sealed": 1,
+          "x": 32,
+          "y": 84
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 32,
+              "canvasY": 84,
+              "name": "end",
+              "x": -9,
+              "y": 5
+            },
+            {
+              "canvasX": 41,
+              "canvasY": 79,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 3,
+          "dropped": 3,
+          "ink": "moved",
+          "layer": 3,
+          "name": "ribbon-root",
+          "sealed": 3,
+          "x": 41,
+          "y": 79
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 4,
+          "name": "thigh-far",
+          "sealed": 0,
+          "x": 49,
+          "y": 83
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 30,
+              "canvasY": 116,
+              "name": "sole",
+              "x": 1,
+              "y": 15
+            }
+          ],
+          "breaks": 2,
+          "conflicts": 10,
+          "dropped": 10,
+          "ink": "moved",
+          "layer": 5,
+          "name": "shin-far",
+          "sealed": 10,
+          "x": 29,
+          "y": 101
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 6,
+          "name": "upper-far",
+          "sealed": 0,
+          "x": 62,
+          "y": 58
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 80,
+              "canvasY": 67,
+              "name": "wrist",
+              "x": 12,
+              "y": -11
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 7,
+          "name": "fore-far",
+          "sealed": 0,
+          "x": 68,
+          "y": 78
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 80,
+              "canvasY": 67,
+              "name": "palm",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 8,
+          "name": "hand-far",
+          "sealed": 0,
+          "x": 80,
+          "y": 67
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 49,
+              "canvasY": 83,
+              "name": "hip-far",
+              "x": -4,
+              "y": 4
+            },
+            {
+              "canvasX": 57,
+              "canvasY": 83,
+              "name": "hip-near",
+              "x": 4,
+              "y": 4
+            },
+            {
+              "canvasX": 41,
+              "canvasY": 79,
+              "name": "ribbon",
+              "x": -12,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 9,
+          "name": "pelvis",
+          "sealed": 0,
+          "x": 53,
+          "y": 79
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 61,
+              "canvasY": 52,
+              "name": "neck",
+              "x": 8,
+              "y": -27
+            },
+            {
+              "canvasX": 62,
+              "canvasY": 58,
+              "name": "shoulder-far",
+              "x": 9,
+              "y": -21
+            },
+            {
+              "canvasX": 67,
+              "canvasY": 57,
+              "name": "shoulder-near",
+              "x": 14,
+              "y": -22
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 10,
+          "dropped": 10,
+          "ink": "moved",
+          "layer": 10,
+          "name": "torso",
+          "sealed": 10,
+          "x": 53,
+          "y": 79
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 5,
+          "dropped": 5,
+          "ink": "moved",
+          "layer": 11,
+          "name": "thigh-near",
+          "sealed": 5,
+          "x": 57,
+          "y": 83
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 74,
+              "canvasY": 116,
+              "name": "sole",
+              "x": -3,
+              "y": 19
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 14,
+          "dropped": 14,
+          "ink": "moved",
+          "layer": 12,
+          "name": "shin-near",
+          "sealed": 14,
+          "x": 77,
+          "y": 97
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 80,
+              "canvasY": 67,
+              "name": "grip-rear",
+              "x": 0,
+              "y": 0
+            },
+            {
+              "canvasX": 95,
+              "canvasY": 64,
+              "name": "grip-fore",
+              "x": 15,
+              "y": -3
+            },
+            {
+              "canvasX": 108,
+              "canvasY": 63,
+              "name": "tassel",
+              "x": 28,
+              "y": -4
+            },
+            {
+              "canvasX": 117,
+              "canvasY": 61,
+              "name": "tip",
+              "x": 37,
+              "y": -6
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 6,
+          "dropped": 6,
+          "ink": "moved",
+          "layer": 13,
+          "name": "spear",
+          "sealed": 6,
+          "x": 80,
+          "y": 67
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 105,
+              "canvasY": 70,
+              "name": "end",
+              "x": -3,
+              "y": 7
+            },
+            {
+              "canvasX": 108,
+              "canvasY": 63,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 14,
+          "name": "tassel-root",
+          "sealed": 1,
+          "x": 108,
+          "y": 63
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 105,
+              "canvasY": 77,
+              "name": "end",
+              "x": 0,
+              "y": 7
+            },
+            {
+              "canvasX": 105,
+              "canvasY": 70,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 15,
+          "name": "tassel-tip",
+          "sealed": 0,
+          "x": 105,
+          "y": 70
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 117,
+              "canvasY": 61,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 16,
+          "name": "flame",
+          "sealed": 0,
+          "x": 117,
+          "y": 61
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 17,
+          "name": "upper-near",
+          "sealed": 1,
+          "x": 67,
+          "y": 57
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 95,
+              "canvasY": 64,
+              "name": "wrist",
+              "x": 21,
+              "y": -7
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 18,
+          "name": "fore-near",
+          "sealed": 0,
+          "x": 74,
+          "y": 71
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 95,
+              "canvasY": 64,
+              "name": "palm",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 19,
+          "name": "hand-near",
+          "sealed": 0,
+          "x": 95,
+          "y": 64
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 61,
+              "canvasY": 52,
+              "name": "neck",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 2,
+          "dropped": 2,
+          "ink": "moved",
+          "layer": 20,
+          "name": "head",
+          "sealed": 2,
+          "x": 61,
+          "y": 52
+        }
+      ],
+      "rest": false,
+      "sealed": 53
+    },
+    {
+      "breaks": 4,
+      "conflicts": 63,
+      "delayMs": 83,
+      "dropped": 63,
+      "followed": [],
+      "index": 9,
+      "layers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "parts": [
+        {
+          "anchors": [
+            {
+              "canvasX": 17,
+              "canvasY": 96,
+              "name": "end",
+              "x": -7,
+              "y": 6
+            },
+            {
+              "canvasX": 24,
+              "canvasY": 90,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 1,
+          "name": "ribbon-tip",
+          "sealed": 1,
+          "x": 24,
+          "y": 90
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 24,
+              "canvasY": 90,
+              "name": "end",
+              "x": -8,
+              "y": 7
+            },
+            {
+              "canvasX": 32,
+              "canvasY": 83,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 2,
+          "name": "ribbon-mid",
+          "sealed": 1,
+          "x": 32,
+          "y": 83
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 32,
+              "canvasY": 83,
+              "name": "end",
+              "x": -9,
+              "y": 5
+            },
+            {
+              "canvasX": 41,
+              "canvasY": 78,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 1,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 3,
+          "name": "ribbon-root",
+          "sealed": 1,
+          "x": 41,
+          "y": 78
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 4,
+          "name": "thigh-far",
+          "sealed": 0,
+          "x": 49,
+          "y": 82
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 30,
+              "canvasY": 116,
+              "name": "sole",
+              "x": 1,
+              "y": 15
+            }
+          ],
+          "breaks": 2,
+          "conflicts": 10,
+          "dropped": 10,
+          "ink": "moved",
+          "layer": 5,
+          "name": "shin-far",
+          "sealed": 10,
+          "x": 29,
+          "y": 101
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 6,
+          "name": "upper-far",
+          "sealed": 0,
+          "x": 61,
+          "y": 57
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 79,
+              "canvasY": 66,
+              "name": "wrist",
+              "x": 12,
+              "y": -11
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 7,
+          "name": "fore-far",
+          "sealed": 0,
+          "x": 67,
+          "y": 77
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 79,
+              "canvasY": 66,
+              "name": "palm",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 4,
+          "dropped": 4,
+          "ink": "moved",
+          "layer": 8,
+          "name": "hand-far",
+          "sealed": 4,
+          "x": 79,
+          "y": 66
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 49,
+              "canvasY": 82,
+              "name": "hip-far",
+              "x": -4,
+              "y": 4
+            },
+            {
+              "canvasX": 57,
+              "canvasY": 82,
+              "name": "hip-near",
+              "x": 4,
+              "y": 4
+            },
+            {
+              "canvasX": 41,
+              "canvasY": 78,
+              "name": "ribbon",
+              "x": -12,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 9,
+          "name": "pelvis",
+          "sealed": 0,
+          "x": 53,
+          "y": 78
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 60,
+              "canvasY": 51,
+              "name": "neck",
+              "x": 7,
+              "y": -27
+            },
+            {
+              "canvasX": 61,
+              "canvasY": 57,
+              "name": "shoulder-far",
+              "x": 8,
+              "y": -21
+            },
+            {
+              "canvasX": 65,
+              "canvasY": 55,
+              "name": "shoulder-near",
+              "x": 12,
+              "y": -23
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 3,
+          "dropped": 3,
+          "ink": "moved",
+          "layer": 10,
+          "name": "torso",
+          "sealed": 3,
+          "x": 53,
+          "y": 78
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 3,
+          "dropped": 3,
+          "ink": "moved",
+          "layer": 11,
+          "name": "thigh-near",
+          "sealed": 3,
+          "x": 57,
+          "y": 82
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 74,
+              "canvasY": 116,
+              "name": "sole",
+              "x": -2,
+              "y": 19
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 24,
+          "dropped": 24,
+          "ink": "moved",
+          "layer": 12,
+          "name": "shin-near",
+          "sealed": 24,
+          "x": 76,
+          "y": 97
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 79,
+              "canvasY": 66,
+              "name": "grip-rear",
+              "x": 0,
+              "y": 0
+            },
+            {
+              "canvasX": 94,
+              "canvasY": 63,
+              "name": "grip-fore",
+              "x": 15,
+              "y": -3
+            },
+            {
+              "canvasX": 107,
+              "canvasY": 61,
+              "name": "tassel",
+              "x": 28,
+              "y": -5
+            },
+            {
+              "canvasX": 116,
+              "canvasY": 59,
+              "name": "tip",
+              "x": 37,
+              "y": -7
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 6,
+          "dropped": 6,
+          "ink": "moved",
+          "layer": 13,
+          "name": "spear",
+          "sealed": 6,
+          "x": 79,
+          "y": 66
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 103,
+              "canvasY": 68,
+              "name": "end",
+              "x": -4,
+              "y": 7
+            },
+            {
+              "canvasX": 107,
+              "canvasY": 61,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 14,
+          "name": "tassel-root",
+          "sealed": 1,
+          "x": 107,
+          "y": 61
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 102,
+              "canvasY": 75,
+              "name": "end",
+              "x": -1,
+              "y": 7
+            },
+            {
+              "canvasX": 103,
+              "canvasY": 68,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 15,
+          "name": "tassel-tip",
+          "sealed": 0,
+          "x": 103,
+          "y": 68
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 116,
+              "canvasY": 59,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 1,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 16,
+          "name": "flame",
+          "sealed": 0,
+          "x": 116,
+          "y": 59
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 17,
+          "name": "upper-near",
+          "sealed": 0,
+          "x": 65,
+          "y": 55
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 94,
+              "canvasY": 63,
+              "name": "wrist",
+              "x": 21,
+              "y": -6
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 4,
+          "dropped": 4,
+          "ink": "moved",
+          "layer": 18,
+          "name": "fore-near",
+          "sealed": 4,
+          "x": 73,
+          "y": 69
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 94,
+              "canvasY": 63,
+              "name": "palm",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 4,
+          "dropped": 4,
+          "ink": "moved",
+          "layer": 19,
+          "name": "hand-near",
+          "sealed": 4,
+          "x": 94,
+          "y": 63
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 60,
+              "canvasY": 51,
+              "name": "neck",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 20,
+          "name": "head",
+          "sealed": 1,
+          "x": 60,
+          "y": 51
+        }
+      ],
+      "rest": false,
+      "sealed": 63
+    },
+    {
+      "breaks": 2,
+      "conflicts": 49,
+      "delayMs": 83,
+      "dropped": 49,
+      "followed": [],
+      "index": 10,
+      "layers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "parts": [
+        {
+          "anchors": [
+            {
+              "canvasX": 17,
+              "canvasY": 97,
+              "name": "end",
+              "x": -6,
+              "y": 7
+            },
+            {
+              "canvasX": 23,
+              "canvasY": 90,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 1,
+          "name": "ribbon-tip",
+          "sealed": 0,
+          "x": 23,
+          "y": 90
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 23,
+              "canvasY": 90,
+              "name": "end",
+              "x": -8,
+              "y": 7
+            },
+            {
+              "canvasX": 31,
+              "canvasY": 83,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 2,
+          "dropped": 2,
+          "ink": "moved",
+          "layer": 2,
+          "name": "ribbon-mid",
+          "sealed": 2,
+          "x": 31,
+          "y": 83
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 31,
+              "canvasY": 83,
+              "name": "end",
+              "x": -9,
+              "y": 5
+            },
+            {
+              "canvasX": 40,
+              "canvasY": 78,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 1,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 3,
+          "name": "ribbon-root",
+          "sealed": 1,
+          "x": 40,
+          "y": 78
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 4,
+          "name": "thigh-far",
+          "sealed": 0,
+          "x": 48,
+          "y": 82
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 30,
+              "canvasY": 116,
+              "name": "sole",
+              "x": 2,
+              "y": 15
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 9,
+          "dropped": 9,
+          "ink": "moved",
+          "layer": 5,
+          "name": "shin-far",
+          "sealed": 9,
+          "x": 28,
+          "y": 101
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 6,
+          "name": "upper-far",
+          "sealed": 0,
+          "x": 60,
+          "y": 57
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 78,
+              "canvasY": 66,
+              "name": "wrist",
+              "x": 12,
+              "y": -11
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 7,
+          "name": "fore-far",
+          "sealed": 0,
+          "x": 66,
+          "y": 77
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 78,
+              "canvasY": 66,
+              "name": "palm",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 8,
+          "name": "hand-far",
+          "sealed": 0,
+          "x": 78,
+          "y": 66
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 48,
+              "canvasY": 82,
+              "name": "hip-far",
+              "x": -4,
+              "y": 4
+            },
+            {
+              "canvasX": 56,
+              "canvasY": 82,
+              "name": "hip-near",
+              "x": 4,
+              "y": 4
+            },
+            {
+              "canvasX": 40,
+              "canvasY": 78,
+              "name": "ribbon",
+              "x": -12,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 9,
+          "name": "pelvis",
+          "sealed": 0,
+          "x": 52,
+          "y": 78
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 59,
+              "canvasY": 50,
+              "name": "neck",
+              "x": 7,
+              "y": -28
+            },
+            {
+              "canvasX": 60,
+              "canvasY": 57,
+              "name": "shoulder-far",
+              "x": 8,
+              "y": -21
+            },
+            {
+              "canvasX": 64,
+              "canvasY": 55,
+              "name": "shoulder-near",
+              "x": 12,
+              "y": -23
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 2,
+          "dropped": 2,
+          "ink": "moved",
+          "layer": 10,
+          "name": "torso",
+          "sealed": 2,
+          "x": 52,
+          "y": 78
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 3,
+          "dropped": 3,
+          "ink": "moved",
+          "layer": 11,
+          "name": "thigh-near",
+          "sealed": 3,
+          "x": 56,
+          "y": 82
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 74,
+              "canvasY": 116,
+              "name": "sole",
+              "x": -1,
+              "y": 19
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 23,
+          "dropped": 23,
+          "ink": "moved",
+          "layer": 12,
+          "name": "shin-near",
+          "sealed": 23,
+          "x": 75,
+          "y": 97
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 78,
+              "canvasY": 66,
+              "name": "grip-rear",
+              "x": 0,
+              "y": 0
+            },
+            {
+              "canvasX": 93,
+              "canvasY": 62,
+              "name": "grip-fore",
+              "x": 15,
+              "y": -4
+            },
+            {
+              "canvasX": 106,
+              "canvasY": 60,
+              "name": "tassel",
+              "x": 28,
+              "y": -6
+            },
+            {
+              "canvasX": 115,
+              "canvasY": 58,
+              "name": "tip",
+              "x": 37,
+              "y": -8
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 6,
+          "dropped": 6,
+          "ink": "moved",
+          "layer": 13,
+          "name": "spear",
+          "sealed": 6,
+          "x": 78,
+          "y": 66
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 102,
+              "canvasY": 67,
+              "name": "end",
+              "x": -4,
+              "y": 7
+            },
+            {
+              "canvasX": 106,
+              "canvasY": 60,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 2,
+          "dropped": 2,
+          "ink": "moved",
+          "layer": 14,
+          "name": "tassel-root",
+          "sealed": 2,
+          "x": 106,
+          "y": 60
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 100,
+              "canvasY": 74,
+              "name": "end",
+              "x": -2,
+              "y": 7
+            },
+            {
+              "canvasX": 102,
+              "canvasY": 67,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 15,
+          "name": "tassel-tip",
+          "sealed": 0,
+          "x": 102,
+          "y": 67
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 115,
+              "canvasY": 58,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 1,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 16,
+          "name": "flame",
+          "sealed": 0,
+          "x": 115,
+          "y": 58
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 17,
+          "name": "upper-near",
+          "sealed": 0,
+          "x": 64,
+          "y": 55
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 93,
+              "canvasY": 62,
+              "name": "wrist",
+              "x": 21,
+              "y": -7
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 18,
+          "name": "fore-near",
+          "sealed": 0,
+          "x": 72,
+          "y": 69
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 93,
+              "canvasY": 62,
+              "name": "palm",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 19,
+          "name": "hand-near",
+          "sealed": 0,
+          "x": 93,
+          "y": 62
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 59,
+              "canvasY": 50,
+              "name": "neck",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 20,
+          "name": "head",
+          "sealed": 1,
+          "x": 59,
+          "y": 50
+        }
+      ],
+      "rest": false,
+      "sealed": 49
+    },
+    {
+      "breaks": 2,
+      "conflicts": 62,
+      "delayMs": 83,
+      "dropped": 62,
+      "followed": [],
+      "index": 11,
+      "layers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "parts": [
+        {
+          "anchors": [
+            {
+              "canvasX": 18,
+              "canvasY": 97,
+              "name": "end",
+              "x": -5,
+              "y": 7
+            },
+            {
+              "canvasX": 23,
+              "canvasY": 90,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 6,
+          "dropped": 6,
+          "ink": "moved",
+          "layer": 1,
+          "name": "ribbon-tip",
+          "sealed": 6,
+          "x": 23,
+          "y": 90
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 23,
+              "canvasY": 90,
+              "name": "end",
+              "x": -8,
+              "y": 7
+            },
+            {
+              "canvasX": 31,
+              "canvasY": 83,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 3,
+          "dropped": 3,
+          "ink": "moved",
+          "layer": 2,
+          "name": "ribbon-mid",
+          "sealed": 3,
+          "x": 31,
+          "y": 83
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 31,
+              "canvasY": 83,
+              "name": "end",
+              "x": -9,
+              "y": 5
+            },
+            {
+              "canvasX": 40,
+              "canvasY": 78,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 3,
+          "dropped": 3,
+          "ink": "moved",
+          "layer": 3,
+          "name": "ribbon-root",
+          "sealed": 3,
+          "x": 40,
+          "y": 78
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 4,
+          "name": "thigh-far",
+          "sealed": 0,
+          "x": 48,
+          "y": 82
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 30,
+              "canvasY": 116,
+              "name": "sole",
+              "x": 2,
+              "y": 15
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 9,
+          "dropped": 9,
+          "ink": "moved",
+          "layer": 5,
+          "name": "shin-far",
+          "sealed": 9,
+          "x": 28,
+          "y": 101
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 6,
+          "name": "upper-far",
+          "sealed": 0,
+          "x": 59,
+          "y": 56
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 76,
+              "canvasY": 66,
+              "name": "wrist",
+              "x": 12,
+              "y": -10
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 7,
+          "name": "fore-far",
+          "sealed": 0,
+          "x": 64,
+          "y": 76
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 76,
+              "canvasY": 66,
+              "name": "palm",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 2,
+          "dropped": 2,
+          "ink": "moved",
+          "layer": 8,
+          "name": "hand-far",
+          "sealed": 2,
+          "x": 76,
+          "y": 66
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 48,
+              "canvasY": 82,
+              "name": "hip-far",
+              "x": -4,
+              "y": 4
+            },
+            {
+              "canvasX": 56,
+              "canvasY": 82,
+              "name": "hip-near",
+              "x": 4,
+              "y": 4
+            },
+            {
+              "canvasX": 40,
+              "canvasY": 78,
+              "name": "ribbon",
+              "x": -12,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 9,
+          "name": "pelvis",
+          "sealed": 0,
+          "x": 52,
+          "y": 78
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 58,
+              "canvasY": 50,
+              "name": "neck",
+              "x": 6,
+              "y": -28
+            },
+            {
+              "canvasX": 59,
+              "canvasY": 56,
+              "name": "shoulder-far",
+              "x": 7,
+              "y": -22
+            },
+            {
+              "canvasX": 64,
+              "canvasY": 55,
+              "name": "shoulder-near",
+              "x": 12,
+              "y": -23
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 3,
+          "dropped": 3,
+          "ink": "moved",
+          "layer": 10,
+          "name": "torso",
+          "sealed": 3,
+          "x": 52,
+          "y": 78
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 3,
+          "dropped": 3,
+          "ink": "moved",
+          "layer": 11,
+          "name": "thigh-near",
+          "sealed": 3,
+          "x": 56,
+          "y": 82
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 74,
+              "canvasY": 116,
+              "name": "sole",
+              "x": -1,
+              "y": 19
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 23,
+          "dropped": 23,
+          "ink": "moved",
+          "layer": 12,
+          "name": "shin-near",
+          "sealed": 23,
+          "x": 75,
+          "y": 97
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 76,
+              "canvasY": 66,
+              "name": "grip-rear",
+              "x": 0,
+              "y": 0
+            },
+            {
+              "canvasX": 91,
+              "canvasY": 61,
+              "name": "grip-fore",
+              "x": 15,
+              "y": -5
+            },
+            {
+              "canvasX": 104,
+              "canvasY": 58,
+              "name": "tassel",
+              "x": 28,
+              "y": -8
+            },
+            {
+              "canvasX": 112,
+              "canvasY": 56,
+              "name": "tip",
+              "x": 36,
+              "y": -10
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 6,
+          "dropped": 6,
+          "ink": "moved",
+          "layer": 13,
+          "name": "spear",
+          "sealed": 6,
+          "x": 76,
+          "y": 66
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 100,
+              "canvasY": 65,
+              "name": "end",
+              "x": -4,
+              "y": 7
+            },
+            {
+              "canvasX": 104,
+              "canvasY": 58,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 1,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 14,
+          "name": "tassel-root",
+          "sealed": 0,
+          "x": 104,
+          "y": 58
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 98,
+              "canvasY": 72,
+              "name": "end",
+              "x": -2,
+              "y": 7
+            },
+            {
+              "canvasX": 100,
+              "canvasY": 65,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 15,
+          "name": "tassel-tip",
+          "sealed": 1,
+          "x": 100,
+          "y": 65
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 112,
+              "canvasY": 56,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 1,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 16,
+          "name": "flame",
+          "sealed": 0,
+          "x": 112,
+          "y": 56
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 17,
+          "name": "upper-near",
+          "sealed": 1,
+          "x": 64,
+          "y": 55
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 91,
+              "canvasY": 61,
+              "name": "wrist",
+              "x": 20,
+              "y": -8
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 18,
+          "name": "fore-near",
+          "sealed": 0,
+          "x": 71,
+          "y": 69
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 91,
+              "canvasY": 61,
+              "name": "palm",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 2,
+          "dropped": 2,
+          "ink": "moved",
+          "layer": 19,
+          "name": "hand-near",
+          "sealed": 2,
+          "x": 91,
+          "y": 61
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 58,
+              "canvasY": 50,
+              "name": "neck",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 20,
+          "name": "head",
+          "sealed": 0,
+          "x": 58,
+          "y": 50
+        }
+      ],
+      "rest": false,
+      "sealed": 62
+    },
+    {
+      "breaks": 1,
+      "conflicts": 38,
+      "delayMs": 83,
+      "dropped": 38,
+      "followed": [],
+      "index": 12,
+      "layers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "parts": [
+        {
+          "anchors": [
+            {
+              "canvasX": 17,
+              "canvasY": 97,
+              "name": "end",
+              "x": -5,
+              "y": 8
+            },
+            {
+              "canvasX": 22,
+              "canvasY": 89,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 3,
+          "dropped": 3,
+          "ink": "moved",
+          "layer": 1,
+          "name": "ribbon-tip",
+          "sealed": 3,
+          "x": 22,
+          "y": 89
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 22,
+              "canvasY": 89,
+              "name": "end",
+              "x": -8,
+              "y": 7
+            },
+            {
+              "canvasX": 30,
+              "canvasY": 82,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 2,
+          "dropped": 2,
+          "ink": "moved",
+          "layer": 2,
+          "name": "ribbon-mid",
+          "sealed": 2,
+          "x": 30,
+          "y": 82
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 30,
+              "canvasY": 82,
+              "name": "end",
+              "x": -9,
+              "y": 4
+            },
+            {
+              "canvasX": 39,
+              "canvasY": 78,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 3,
+          "name": "ribbon-root",
+          "sealed": 1,
+          "x": 39,
+          "y": 78
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 4,
+          "name": "thigh-far",
+          "sealed": 0,
+          "x": 47,
+          "y": 82
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 30,
+              "canvasY": 116,
+              "name": "sole",
+              "x": 3,
+              "y": 15
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 5,
+          "dropped": 5,
+          "ink": "moved",
+          "layer": 5,
+          "name": "shin-far",
+          "sealed": 5,
+          "x": 27,
+          "y": 101
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 6,
+          "name": "upper-far",
+          "sealed": 0,
+          "x": 58,
+          "y": 56
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 75,
+              "canvasY": 66,
+              "name": "wrist",
+              "x": 12,
+              "y": -10
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 7,
+          "name": "fore-far",
+          "sealed": 0,
+          "x": 63,
+          "y": 76
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 75,
+              "canvasY": 66,
+              "name": "palm",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 8,
+          "name": "hand-far",
+          "sealed": 0,
+          "x": 75,
+          "y": 66
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 47,
+              "canvasY": 82,
+              "name": "hip-far",
+              "x": -4,
+              "y": 4
+            },
+            {
+              "canvasX": 55,
+              "canvasY": 82,
+              "name": "hip-near",
+              "x": 4,
+              "y": 4
+            },
+            {
+              "canvasX": 39,
+              "canvasY": 78,
+              "name": "ribbon",
+              "x": -12,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 9,
+          "name": "pelvis",
+          "sealed": 0,
+          "x": 51,
+          "y": 78
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 56,
+              "canvasY": 50,
+              "name": "neck",
+              "x": 5,
+              "y": -28
+            },
+            {
+              "canvasX": 58,
+              "canvasY": 56,
+              "name": "shoulder-far",
+              "x": 7,
+              "y": -22
+            },
+            {
+              "canvasX": 62,
+              "canvasY": 55,
+              "name": "shoulder-near",
+              "x": 11,
+              "y": -23
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 10,
+          "name": "torso",
+          "sealed": 1,
+          "x": 51,
+          "y": 78
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 3,
+          "dropped": 3,
+          "ink": "moved",
+          "layer": 11,
+          "name": "thigh-near",
+          "sealed": 3,
+          "x": 55,
+          "y": 82
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 74,
+              "canvasY": 116,
+              "name": "sole",
+              "x": 0,
+              "y": 19
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 20,
+          "dropped": 20,
+          "ink": "moved",
+          "layer": 12,
+          "name": "shin-near",
+          "sealed": 20,
+          "x": 74,
+          "y": 97
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 75,
+              "canvasY": 66,
+              "name": "grip-rear",
+              "x": 0,
+              "y": 0
+            },
+            {
+              "canvasX": 90,
+              "canvasY": 61,
+              "name": "grip-fore",
+              "x": 15,
+              "y": -5
+            },
+            {
+              "canvasX": 102,
+              "canvasY": 58,
+              "name": "tassel",
+              "x": 27,
+              "y": -8
+            },
+            {
+              "canvasX": 111,
+              "canvasY": 55,
+              "name": "tip",
+              "x": 36,
+              "y": -11
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 13,
+          "name": "spear",
+          "sealed": 1,
+          "x": 75,
+          "y": 66
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 98,
+              "canvasY": 65,
+              "name": "end",
+              "x": -4,
+              "y": 7
+            },
+            {
+              "canvasX": 102,
+              "canvasY": 58,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 2,
+          "dropped": 2,
+          "ink": "moved",
+          "layer": 14,
+          "name": "tassel-root",
+          "sealed": 2,
+          "x": 102,
+          "y": 58
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 95,
+              "canvasY": 72,
+              "name": "end",
+              "x": -3,
+              "y": 7
+            },
+            {
+              "canvasX": 98,
+              "canvasY": 65,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 1,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 15,
+          "name": "tassel-tip",
+          "sealed": 0,
+          "x": 98,
+          "y": 65
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 111,
+              "canvasY": 55,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 16,
+          "name": "flame",
+          "sealed": 0,
+          "x": 111,
+          "y": 55
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 17,
+          "name": "upper-near",
+          "sealed": 0,
+          "x": 62,
+          "y": 55
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 90,
+              "canvasY": 61,
+              "name": "wrist",
+              "x": 20,
+              "y": -8
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 18,
+          "name": "fore-near",
+          "sealed": 0,
+          "x": 70,
+          "y": 69
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 90,
+              "canvasY": 61,
+              "name": "palm",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 19,
+          "name": "hand-near",
+          "sealed": 0,
+          "x": 90,
+          "y": 61
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 56,
+              "canvasY": 50,
+              "name": "neck",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 20,
+          "name": "head",
+          "sealed": 0,
+          "x": 56,
+          "y": 50
+        }
+      ],
+      "rest": false,
+      "sealed": 38
+    },
+    {
+      "breaks": 3,
+      "conflicts": 41,
+      "delayMs": 83,
+      "dropped": 41,
+      "followed": [],
+      "index": 13,
+      "layers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "parts": [
+        {
+          "anchors": [
+            {
+              "canvasX": 17,
+              "canvasY": 97,
+              "name": "end",
+              "x": -5,
+              "y": 7
+            },
+            {
+              "canvasX": 22,
+              "canvasY": 90,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 7,
+          "dropped": 7,
+          "ink": "moved",
+          "layer": 1,
+          "name": "ribbon-tip",
+          "sealed": 7,
+          "x": 22,
+          "y": 90
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 22,
+              "canvasY": 90,
+              "name": "end",
+              "x": -8,
+              "y": 7
+            },
+            {
+              "canvasX": 30,
+              "canvasY": 83,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 2,
+          "dropped": 2,
+          "ink": "moved",
+          "layer": 2,
+          "name": "ribbon-mid",
+          "sealed": 2,
+          "x": 30,
+          "y": 83
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 30,
+              "canvasY": 83,
+              "name": "end",
+              "x": -9,
+              "y": 5
+            },
+            {
+              "canvasX": 39,
+              "canvasY": 78,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 2,
+          "dropped": 2,
+          "ink": "moved",
+          "layer": 3,
+          "name": "ribbon-root",
+          "sealed": 2,
+          "x": 39,
+          "y": 78
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 4,
+          "name": "thigh-far",
+          "sealed": 0,
+          "x": 47,
+          "y": 82
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 30,
+              "canvasY": 116,
+              "name": "sole",
+              "x": 3,
+              "y": 15
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 5,
+          "dropped": 5,
+          "ink": "moved",
+          "layer": 5,
+          "name": "shin-far",
+          "sealed": 5,
+          "x": 27,
+          "y": 101
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 6,
+          "name": "upper-far",
+          "sealed": 0,
+          "x": 58,
+          "y": 56
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 75,
+              "canvasY": 66,
+              "name": "wrist",
+              "x": 12,
+              "y": -10
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 7,
+          "name": "fore-far",
+          "sealed": 0,
+          "x": 63,
+          "y": 76
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 75,
+              "canvasY": 66,
+              "name": "palm",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 8,
+          "name": "hand-far",
+          "sealed": 0,
+          "x": 75,
+          "y": 66
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 47,
+              "canvasY": 82,
+              "name": "hip-far",
+              "x": -4,
+              "y": 4
+            },
+            {
+              "canvasX": 55,
+              "canvasY": 82,
+              "name": "hip-near",
+              "x": 4,
+              "y": 4
+            },
+            {
+              "canvasX": 39,
+              "canvasY": 78,
+              "name": "ribbon",
+              "x": -12,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 9,
+          "name": "pelvis",
+          "sealed": 0,
+          "x": 51,
+          "y": 78
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 56,
+              "canvasY": 50,
+              "name": "neck",
+              "x": 5,
+              "y": -28
+            },
+            {
+              "canvasX": 58,
+              "canvasY": 56,
+              "name": "shoulder-far",
+              "x": 7,
+              "y": -22
+            },
+            {
+              "canvasX": 62,
+              "canvasY": 55,
+              "name": "shoulder-near",
+              "x": 11,
+              "y": -23
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 10,
+          "name": "torso",
+          "sealed": 1,
+          "x": 51,
+          "y": 78
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 3,
+          "dropped": 3,
+          "ink": "moved",
+          "layer": 11,
+          "name": "thigh-near",
+          "sealed": 3,
+          "x": 55,
+          "y": 82
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 74,
+              "canvasY": 116,
+              "name": "sole",
+              "x": 0,
+              "y": 19
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 20,
+          "dropped": 20,
+          "ink": "moved",
+          "layer": 12,
+          "name": "shin-near",
+          "sealed": 20,
+          "x": 74,
+          "y": 97
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 75,
+              "canvasY": 66,
+              "name": "grip-rear",
+              "x": 0,
+              "y": 0
+            },
+            {
+              "canvasX": 90,
+              "canvasY": 61,
+              "name": "grip-fore",
+              "x": 15,
+              "y": -5
+            },
+            {
+              "canvasX": 102,
+              "canvasY": 57,
+              "name": "tassel",
+              "x": 27,
+              "y": -9
+            },
+            {
+              "canvasX": 111,
+              "canvasY": 55,
+              "name": "tip",
+              "x": 36,
+              "y": -11
+            }
+          ],
+          "breaks": 2,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 13,
+          "name": "spear",
+          "sealed": 0,
+          "x": 75,
+          "y": 66
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 99,
+              "canvasY": 65,
+              "name": "end",
+              "x": -3,
+              "y": 8
+            },
+            {
+              "canvasX": 102,
+              "canvasY": 57,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 14,
+          "name": "tassel-root",
+          "sealed": 0,
+          "x": 102,
+          "y": 57
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 97,
+              "canvasY": 72,
+              "name": "end",
+              "x": -2,
+              "y": 7
+            },
+            {
+              "canvasX": 99,
+              "canvasY": 65,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 15,
+          "name": "tassel-tip",
+          "sealed": 1,
+          "x": 99,
+          "y": 65
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 111,
+              "canvasY": 55,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 1,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 16,
+          "name": "flame",
+          "sealed": 0,
+          "x": 111,
+          "y": 55
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 17,
+          "name": "upper-near",
+          "sealed": 0,
+          "x": 62,
+          "y": 55
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 90,
+              "canvasY": 61,
+              "name": "wrist",
+              "x": 20,
+              "y": -8
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 18,
+          "name": "fore-near",
+          "sealed": 0,
+          "x": 70,
+          "y": 69
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 90,
+              "canvasY": 61,
+              "name": "palm",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 19,
+          "name": "hand-near",
+          "sealed": 0,
+          "x": 90,
+          "y": 61
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 56,
+              "canvasY": 50,
+              "name": "neck",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 20,
+          "name": "head",
+          "sealed": 0,
+          "x": 56,
+          "y": 50
+        }
+      ],
+      "rest": false,
+      "sealed": 41
+    },
+    {
+      "breaks": 3,
+      "conflicts": 36,
+      "delayMs": 83,
+      "dropped": 36,
+      "followed": [],
+      "index": 14,
+      "layers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "parts": [
+        {
+          "anchors": [
+            {
+              "canvasX": 14,
+              "canvasY": 95,
+              "name": "end",
+              "x": -6,
+              "y": 6
+            },
+            {
+              "canvasX": 20,
+              "canvasY": 89,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 2,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 1,
+          "name": "ribbon-tip",
+          "sealed": 1,
+          "x": 20,
+          "y": 89
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 20,
+              "canvasY": 89,
+              "name": "end",
+              "x": -9,
+              "y": 6
+            },
+            {
+              "canvasX": 29,
+              "canvasY": 83,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 2,
+          "dropped": 2,
+          "ink": "moved",
+          "layer": 2,
+          "name": "ribbon-mid",
+          "sealed": 2,
+          "x": 29,
+          "y": 83
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 29,
+              "canvasY": 83,
+              "name": "end",
+              "x": -9,
+              "y": 5
+            },
+            {
+              "canvasX": 38,
+              "canvasY": 78,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 2,
+          "dropped": 2,
+          "ink": "moved",
+          "layer": 3,
+          "name": "ribbon-root",
+          "sealed": 2,
+          "x": 38,
+          "y": 78
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 4,
+          "name": "thigh-far",
+          "sealed": 0,
+          "x": 46,
+          "y": 82
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 30,
+              "canvasY": 116,
+              "name": "sole",
+              "x": 4,
+              "y": 15
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 5,
+          "name": "shin-far",
+          "sealed": 0,
+          "x": 26,
+          "y": 101
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 6,
+          "name": "upper-far",
+          "sealed": 0,
+          "x": 57,
+          "y": 56
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 74,
+              "canvasY": 66,
+              "name": "wrist",
+              "x": 12,
+              "y": -10
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 7,
+          "name": "fore-far",
+          "sealed": 0,
+          "x": 62,
+          "y": 76
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 74,
+              "canvasY": 66,
+              "name": "palm",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 8,
+          "name": "hand-far",
+          "sealed": 0,
+          "x": 74,
+          "y": 66
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 46,
+              "canvasY": 82,
+              "name": "hip-far",
+              "x": -4,
+              "y": 4
+            },
+            {
+              "canvasX": 54,
+              "canvasY": 82,
+              "name": "hip-near",
+              "x": 4,
+              "y": 4
+            },
+            {
+              "canvasX": 38,
+              "canvasY": 78,
+              "name": "ribbon",
+              "x": -12,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 9,
+          "name": "pelvis",
+          "sealed": 0,
+          "x": 50,
+          "y": 78
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 55,
+              "canvasY": 50,
+              "name": "neck",
+              "x": 5,
+              "y": -28
+            },
+            {
+              "canvasX": 57,
+              "canvasY": 56,
+              "name": "shoulder-far",
+              "x": 7,
+              "y": -22
+            },
+            {
+              "canvasX": 61,
+              "canvasY": 54,
+              "name": "shoulder-near",
+              "x": 11,
+              "y": -24
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 10,
+          "name": "torso",
+          "sealed": 0,
+          "x": 50,
+          "y": 78
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 3,
+          "dropped": 3,
+          "ink": "moved",
+          "layer": 11,
+          "name": "thigh-near",
+          "sealed": 3,
+          "x": 54,
+          "y": 82
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 74,
+              "canvasY": 116,
+              "name": "sole",
+              "x": 1,
+              "y": 19
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 25,
+          "dropped": 25,
+          "ink": "moved",
+          "layer": 12,
+          "name": "shin-near",
+          "sealed": 25,
+          "x": 73,
+          "y": 97
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 74,
+              "canvasY": 66,
+              "name": "grip-rear",
+              "x": 0,
+              "y": 0
+            },
+            {
+              "canvasX": 89,
+              "canvasY": 61,
+              "name": "grip-fore",
+              "x": 15,
+              "y": -5
+            },
+            {
+              "canvasX": 101,
+              "canvasY": 57,
+              "name": "tassel",
+              "x": 27,
+              "y": -9
+            },
+            {
+              "canvasX": 110,
+              "canvasY": 54,
+              "name": "tip",
+              "x": 36,
+              "y": -12
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 2,
+          "dropped": 2,
+          "ink": "moved",
+          "layer": 13,
+          "name": "spear",
+          "sealed": 2,
+          "x": 74,
+          "y": 66
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 98,
+              "canvasY": 65,
+              "name": "end",
+              "x": -3,
+              "y": 8
+            },
+            {
+              "canvasX": 101,
+              "canvasY": 57,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 14,
+          "name": "tassel-root",
+          "sealed": 0,
+          "x": 101,
+          "y": 57
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 96,
+              "canvasY": 72,
+              "name": "end",
+              "x": -2,
+              "y": 7
+            },
+            {
+              "canvasX": 98,
+              "canvasY": 65,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 15,
+          "name": "tassel-tip",
+          "sealed": 0,
+          "x": 98,
+          "y": 65
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 110,
+              "canvasY": 54,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 1,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 16,
+          "name": "flame",
+          "sealed": 0,
+          "x": 110,
+          "y": 54
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 17,
+          "name": "upper-near",
+          "sealed": 1,
+          "x": 61,
+          "y": 54
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 89,
+              "canvasY": 61,
+              "name": "wrist",
+              "x": 21,
+              "y": -7
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 18,
+          "name": "fore-near",
+          "sealed": 0,
+          "x": 68,
+          "y": 68
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 89,
+              "canvasY": 61,
+              "name": "palm",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 19,
+          "name": "hand-near",
+          "sealed": 0,
+          "x": 89,
+          "y": 61
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 55,
+              "canvasY": 50,
+              "name": "neck",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 20,
+          "name": "head",
+          "sealed": 0,
+          "x": 55,
+          "y": 50
+        }
+      ],
+      "rest": false,
+      "sealed": 36
+    },
+    {
+      "breaks": 1,
+      "conflicts": 31,
+      "delayMs": 83,
+      "dropped": 31,
+      "followed": [],
+      "index": 15,
+      "layers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "parts": [
+        {
+          "anchors": [
+            {
+              "canvasX": 13,
+              "canvasY": 94,
+              "name": "end",
+              "x": -7,
+              "y": 5
+            },
+            {
+              "canvasX": 20,
+              "canvasY": 89,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 1,
+          "name": "ribbon-tip",
+          "sealed": 0,
+          "x": 20,
+          "y": 89
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 20,
+              "canvasY": 89,
+              "name": "end",
+              "x": -9,
+              "y": 6
+            },
+            {
+              "canvasX": 29,
+              "canvasY": 83,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 2,
+          "name": "ribbon-mid",
+          "sealed": 0,
+          "x": 29,
+          "y": 83
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 29,
+              "canvasY": 83,
+              "name": "end",
+              "x": -9,
+              "y": 5
+            },
+            {
+              "canvasX": 38,
+              "canvasY": 78,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 3,
+          "name": "ribbon-root",
+          "sealed": 0,
+          "x": 38,
+          "y": 78
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 4,
+          "name": "thigh-far",
+          "sealed": 0,
+          "x": 46,
+          "y": 82
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 30,
+              "canvasY": 116,
+              "name": "sole",
+              "x": 4,
+              "y": 15
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 5,
+          "name": "shin-far",
+          "sealed": 0,
+          "x": 26,
+          "y": 101
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 6,
+          "name": "upper-far",
+          "sealed": 0,
+          "x": 57,
+          "y": 56
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 74,
+              "canvasY": 66,
+              "name": "wrist",
+              "x": 12,
+              "y": -10
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 7,
+          "name": "fore-far",
+          "sealed": 0,
+          "x": 62,
+          "y": 76
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 74,
+              "canvasY": 66,
+              "name": "palm",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 8,
+          "name": "hand-far",
+          "sealed": 0,
+          "x": 74,
+          "y": 66
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 46,
+              "canvasY": 82,
+              "name": "hip-far",
+              "x": -4,
+              "y": 4
+            },
+            {
+              "canvasX": 54,
+              "canvasY": 82,
+              "name": "hip-near",
+              "x": 4,
+              "y": 4
+            },
+            {
+              "canvasX": 38,
+              "canvasY": 78,
+              "name": "ribbon",
+              "x": -12,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 9,
+          "name": "pelvis",
+          "sealed": 0,
+          "x": 50,
+          "y": 78
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 55,
+              "canvasY": 50,
+              "name": "neck",
+              "x": 5,
+              "y": -28
+            },
+            {
+              "canvasX": 57,
+              "canvasY": 56,
+              "name": "shoulder-far",
+              "x": 7,
+              "y": -22
+            },
+            {
+              "canvasX": 61,
+              "canvasY": 54,
+              "name": "shoulder-near",
+              "x": 11,
+              "y": -24
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 10,
+          "name": "torso",
+          "sealed": 0,
+          "x": 50,
+          "y": 78
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 3,
+          "dropped": 3,
+          "ink": "moved",
+          "layer": 11,
+          "name": "thigh-near",
+          "sealed": 3,
+          "x": 54,
+          "y": 82
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 74,
+              "canvasY": 116,
+              "name": "sole",
+              "x": 1,
+              "y": 19
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 25,
+          "dropped": 25,
+          "ink": "moved",
+          "layer": 12,
+          "name": "shin-near",
+          "sealed": 25,
+          "x": 73,
+          "y": 97
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 74,
+              "canvasY": 66,
+              "name": "grip-rear",
+              "x": 0,
+              "y": 0
+            },
+            {
+              "canvasX": 89,
+              "canvasY": 61,
+              "name": "grip-fore",
+              "x": 15,
+              "y": -5
+            },
+            {
+              "canvasX": 101,
+              "canvasY": 57,
+              "name": "tassel",
+              "x": 27,
+              "y": -9
+            },
+            {
+              "canvasX": 109,
+              "canvasY": 54,
+              "name": "tip",
+              "x": 35,
+              "y": -12
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 2,
+          "dropped": 2,
+          "ink": "moved",
+          "layer": 13,
+          "name": "spear",
+          "sealed": 2,
+          "x": 74,
+          "y": 66
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 98,
+              "canvasY": 65,
+              "name": "end",
+              "x": -3,
+              "y": 8
+            },
+            {
+              "canvasX": 101,
+              "canvasY": 57,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 14,
+          "name": "tassel-root",
+          "sealed": 0,
+          "x": 101,
+          "y": 57
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 96,
+              "canvasY": 72,
+              "name": "end",
+              "x": -2,
+              "y": 7
+            },
+            {
+              "canvasX": 98,
+              "canvasY": 65,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 15,
+          "name": "tassel-tip",
+          "sealed": 0,
+          "x": 98,
+          "y": 65
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 109,
+              "canvasY": 54,
+              "name": "root",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 1,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 16,
+          "name": "flame",
+          "sealed": 0,
+          "x": 109,
+          "y": 54
+        },
+        {
+          "anchors": [],
+          "breaks": 0,
+          "conflicts": 1,
+          "dropped": 1,
+          "ink": "moved",
+          "layer": 17,
+          "name": "upper-near",
+          "sealed": 1,
+          "x": 61,
+          "y": 54
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 89,
+              "canvasY": 61,
+              "name": "wrist",
+              "x": 21,
+              "y": -7
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 18,
+          "name": "fore-near",
+          "sealed": 0,
+          "x": 68,
+          "y": 68
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 89,
+              "canvasY": 61,
+              "name": "palm",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 19,
+          "name": "hand-near",
+          "sealed": 0,
+          "x": 89,
+          "y": 61
+        },
+        {
+          "anchors": [
+            {
+              "canvasX": 55,
+              "canvasY": 50,
+              "name": "neck",
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "breaks": 0,
+          "conflicts": 0,
+          "dropped": 0,
+          "ink": "moved",
+          "layer": 20,
+          "name": "head",
+          "sealed": 0,
+          "x": 55,
+          "y": 50
+        }
+      ],
+      "rest": false,
+      "sealed": 31
+    }
+  ],
+  "from": 0,
+  "polish": [],
+  "revision": "cda60c074b224438",
+  "sealed": 610,
+  "source": 0,
+  "to": 15,
+  "wrote": true
+}

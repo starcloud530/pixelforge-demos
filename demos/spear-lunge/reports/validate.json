@@ -1,0 +1,767 @@
+{
+  "engineSha": "b647dc1631e639b34279e6027825430b0a3ce1b2",
+  "versionString": "pixelforge 0.1.0-rc.5",
+  "staticCheck": "passed",
+  "playbackCheck": "not this script",
+  "pelvisX": [
+    0.0,
+    -0.5185185185185185,
+    -1.4814814814814814,
+    -2.0,
+    0.5,
+    3.0,
+    4.5,
+    6.0,
+    6.5,
+    7.0,
+    6.481481481481482,
+    5.518518518518519,
+    5.0,
+    4.7407407407407405,
+    4.2592592592592595,
+    4.0
+  ],
+  "pelvisY": [
+    0.0,
+    1.037037037037037,
+    2.962962962962963,
+    4.0,
+    3.5,
+    3.0,
+    2.0,
+    1.0,
+    0.5,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "torsoRotation": [
+    0.0,
+    -2.592592592592593,
+    -7.4074074074074066,
+    -10.0,
+    -5.0,
+    0.0,
+    6.0,
+    12.0,
+    9.0,
+    6.0,
+    5.222222222222221,
+    3.777777777777778,
+    3.0,
+    2.740740740740741,
+    2.259259259259259,
+    2.0
+  ],
+  "spearRotation": [
+    0.0,
+    -3.6296296296296298,
+    -10.37037037037037,
+    -14.0,
+    -8.0,
+    -2.0,
+    8.0,
+    18.0,
+    16.0,
+    14.0,
+    12.444444444444445,
+    9.555555555555555,
+    8.0,
+    7.481481481481482,
+    6.518518518518518,
+    6.0
+  ],
+  "tasselTipRotation": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    -1.59,
+    -5.52,
+    -9.54,
+    -9.41,
+    -6.71,
+    -0.66,
+    7.46,
+    11.61,
+    13.32,
+    11.62,
+    8.57,
+    6.0
+  ],
+  "thrustTasselLagDegrees": 27.41,
+  "settleTasselLagDegrees": 0.0,
+  "thrustRibbonTipMinusRootDegrees": 13.89,
+  "frontStepPx": 18,
+  "rows": [
+    {
+      "frame": 0,
+      "frontSole": [
+        56,
+        116
+      ],
+      "rearSole": [
+        30,
+        116
+      ],
+      "frontLocal": [
+        -10,
+        16
+      ],
+      "gripForeCanvas": [
+        84,
+        59
+      ],
+      "gripForeLocal": [
+        14,
+        -7
+      ],
+      "restGripForeLocal": [
+        14,
+        -7
+      ],
+      "legNearPlantedFlag": true,
+      "legFarPlantedFlag": true,
+      "nearGrip": true,
+      "farGrip": true,
+      "ribbonHeld": true,
+      "tasselHeld": true
+    },
+    {
+      "frame": 1,
+      "frontSole": [
+        56,
+        116
+      ],
+      "rearSole": [
+        30,
+        116
+      ],
+      "frontLocal": [
+        -10,
+        16
+      ],
+      "gripForeCanvas": [
+        83,
+        59
+      ],
+      "gripForeLocal": [
+        14,
+        -8
+      ],
+      "restGripForeLocal": [
+        14,
+        -7
+      ],
+      "legNearPlantedFlag": true,
+      "legFarPlantedFlag": true,
+      "nearGrip": true,
+      "farGrip": true,
+      "ribbonHeld": true,
+      "tasselHeld": true
+    },
+    {
+      "frame": 2,
+      "frontSole": [
+        56,
+        116
+      ],
+      "rearSole": [
+        30,
+        116
+      ],
+      "frontLocal": [
+        -11,
+        15
+      ],
+      "gripForeCanvas": [
+        79,
+        61
+      ],
+      "gripForeLocal": [
+        13,
+        -9
+      ],
+      "restGripForeLocal": [
+        14,
+        -7
+      ],
+      "legNearPlantedFlag": true,
+      "legFarPlantedFlag": true,
+      "nearGrip": true,
+      "farGrip": true,
+      "ribbonHeld": true,
+      "tasselHeld": true
+    },
+    {
+      "frame": 3,
+      "frontSole": [
+        56,
+        116
+      ],
+      "rearSole": [
+        30,
+        116
+      ],
+      "frontLocal": [
+        -11,
+        15
+      ],
+      "gripForeCanvas": [
+        77,
+        61
+      ],
+      "gripForeLocal": [
+        12,
+        -10
+      ],
+      "restGripForeLocal": [
+        14,
+        -7
+      ],
+      "legNearPlantedFlag": true,
+      "legFarPlantedFlag": true,
+      "nearGrip": true,
+      "farGrip": true,
+      "ribbonHeld": true,
+      "tasselHeld": true
+    },
+    {
+      "frame": 4,
+      "frontSole": [
+        61,
+        109
+      ],
+      "rearSole": [
+        30,
+        116
+      ],
+      "frontLocal": [
+        -12,
+        14
+      ],
+      "gripForeCanvas": [
+        82,
+        61
+      ],
+      "gripForeLocal": [
+        13,
+        -9
+      ],
+      "restGripForeLocal": [
+        14,
+        -7
+      ],
+      "legNearPlantedFlag": true,
+      "legFarPlantedFlag": true,
+      "nearGrip": true,
+      "farGrip": true,
+      "ribbonHeld": true,
+      "tasselHeld": true
+    },
+    {
+      "frame": 5,
+      "frontSole": [
+        67,
+        107
+      ],
+      "rearSole": [
+        30,
+        116
+      ],
+      "frontLocal": [
+        -9,
+        16
+      ],
+      "gripForeCanvas": [
+        87,
+        62
+      ],
+      "gripForeLocal": [
+        14,
+        -7
+      ],
+      "restGripForeLocal": [
+        14,
+        -7
+      ],
+      "legNearPlantedFlag": true,
+      "legFarPlantedFlag": true,
+      "nearGrip": true,
+      "farGrip": true,
+      "ribbonHeld": true,
+      "tasselHeld": true
+    },
+    {
+      "frame": 6,
+      "frontSole": [
+        71,
+        111
+      ],
+      "rearSole": [
+        30,
+        116
+      ],
+      "frontLocal": [
+        -6,
+        18
+      ],
+      "gripForeCanvas": [
+        92,
+        64
+      ],
+      "gripForeLocal": [
+        15,
+        -5
+      ],
+      "restGripForeLocal": [
+        14,
+        -7
+      ],
+      "legNearPlantedFlag": true,
+      "legFarPlantedFlag": true,
+      "nearGrip": true,
+      "farGrip": true,
+      "ribbonHeld": true,
+      "tasselHeld": true
+    },
+    {
+      "frame": 7,
+      "frontSole": [
+        74,
+        116
+      ],
+      "rearSole": [
+        30,
+        116
+      ],
+      "frontLocal": [
+        -2,
+        19
+      ],
+      "gripForeCanvas": [
+        95,
+        66
+      ],
+      "gripForeLocal": [
+        15,
+        -2
+      ],
+      "restGripForeLocal": [
+        14,
+        -7
+      ],
+      "legNearPlantedFlag": true,
+      "legFarPlantedFlag": true,
+      "nearGrip": true,
+      "farGrip": true,
+      "ribbonHeld": true,
+      "tasselHeld": true
+    },
+    {
+      "frame": 8,
+      "frontSole": [
+        74,
+        116
+      ],
+      "rearSole": [
+        30,
+        116
+      ],
+      "frontLocal": [
+        -3,
+        19
+      ],
+      "gripForeCanvas": [
+        95,
+        64
+      ],
+      "gripForeLocal": [
+        15,
+        -3
+      ],
+      "restGripForeLocal": [
+        14,
+        -7
+      ],
+      "legNearPlantedFlag": true,
+      "legFarPlantedFlag": true,
+      "nearGrip": true,
+      "farGrip": true,
+      "ribbonHeld": true,
+      "tasselHeld": true
+    },
+    {
+      "frame": 9,
+      "frontSole": [
+        74,
+        116
+      ],
+      "rearSole": [
+        30,
+        116
+      ],
+      "frontLocal": [
+        -2,
+        19
+      ],
+      "gripForeCanvas": [
+        94,
+        63
+      ],
+      "gripForeLocal": [
+        15,
+        -3
+      ],
+      "restGripForeLocal": [
+        14,
+        -7
+      ],
+      "legNearPlantedFlag": true,
+      "legFarPlantedFlag": true,
+      "nearGrip": true,
+      "farGrip": true,
+      "ribbonHeld": true,
+      "tasselHeld": true
+    },
+    {
+      "frame": 10,
+      "frontSole": [
+        74,
+        116
+      ],
+      "rearSole": [
+        30,
+        116
+      ],
+      "frontLocal": [
+        -1,
+        19
+      ],
+      "gripForeCanvas": [
+        93,
+        62
+      ],
+      "gripForeLocal": [
+        15,
+        -4
+      ],
+      "restGripForeLocal": [
+        14,
+        -7
+      ],
+      "legNearPlantedFlag": true,
+      "legFarPlantedFlag": true,
+      "nearGrip": true,
+      "farGrip": true,
+      "ribbonHeld": true,
+      "tasselHeld": true
+    },
+    {
+      "frame": 11,
+      "frontSole": [
+        74,
+        116
+      ],
+      "rearSole": [
+        30,
+        116
+      ],
+      "frontLocal": [
+        -1,
+        19
+      ],
+      "gripForeCanvas": [
+        91,
+        61
+      ],
+      "gripForeLocal": [
+        15,
+        -5
+      ],
+      "restGripForeLocal": [
+        14,
+        -7
+      ],
+      "legNearPlantedFlag": true,
+      "legFarPlantedFlag": true,
+      "nearGrip": true,
+      "farGrip": true,
+      "ribbonHeld": true,
+      "tasselHeld": true
+    },
+    {
+      "frame": 12,
+      "frontSole": [
+        74,
+        116
+      ],
+      "rearSole": [
+        30,
+        116
+      ],
+      "frontLocal": [
+        0,
+        19
+      ],
+      "gripForeCanvas": [
+        90,
+        61
+      ],
+      "gripForeLocal": [
+        15,
+        -5
+      ],
+      "restGripForeLocal": [
+        14,
+        -7
+      ],
+      "legNearPlantedFlag": true,
+      "legFarPlantedFlag": true,
+      "nearGrip": true,
+      "farGrip": true,
+      "ribbonHeld": true,
+      "tasselHeld": true
+    },
+    {
+      "frame": 13,
+      "frontSole": [
+        74,
+        116
+      ],
+      "rearSole": [
+        30,
+        116
+      ],
+      "frontLocal": [
+        0,
+        19
+      ],
+      "gripForeCanvas": [
+        90,
+        61
+      ],
+      "gripForeLocal": [
+        15,
+        -5
+      ],
+      "restGripForeLocal": [
+        14,
+        -7
+      ],
+      "legNearPlantedFlag": true,
+      "legFarPlantedFlag": true,
+      "nearGrip": true,
+      "farGrip": true,
+      "ribbonHeld": true,
+      "tasselHeld": true
+    },
+    {
+      "frame": 14,
+      "frontSole": [
+        74,
+        116
+      ],
+      "rearSole": [
+        30,
+        116
+      ],
+      "frontLocal": [
+        1,
+        19
+      ],
+      "gripForeCanvas": [
+        89,
+        61
+      ],
+      "gripForeLocal": [
+        15,
+        -5
+      ],
+      "restGripForeLocal": [
+        14,
+        -7
+      ],
+      "legNearPlantedFlag": true,
+      "legFarPlantedFlag": true,
+      "nearGrip": true,
+      "farGrip": true,
+      "ribbonHeld": true,
+      "tasselHeld": true
+    },
+    {
+      "frame": 15,
+      "frontSole": [
+        74,
+        116
+      ],
+      "rearSole": [
+        30,
+        116
+      ],
+      "frontLocal": [
+        1,
+        19
+      ],
+      "gripForeCanvas": [
+        89,
+        61
+      ],
+      "gripForeLocal": [
+        15,
+        -5
+      ],
+      "restGripForeLocal": [
+        14,
+        -7
+      ],
+      "legNearPlantedFlag": true,
+      "legFarPlantedFlag": true,
+      "nearGrip": true,
+      "farGrip": true,
+      "ribbonHeld": true,
+      "tasselHeld": true
+    }
+  ],
+  "clothBottomY": [
+    {
+      "frame": 0,
+      "ribbon-tip": 90,
+      "ribbon-mid": 86,
+      "ribbon-root": 83,
+      "tassel-tip": 70,
+      "tassel-root": 63
+    },
+    {
+      "frame": 1,
+      "ribbon-tip": 91,
+      "ribbon-mid": 87,
+      "ribbon-root": 84,
+      "tassel-tip": 69,
+      "tassel-root": 62
+    },
+    {
+      "frame": 2,
+      "ribbon-tip": 93,
+      "ribbon-mid": 89,
+      "ribbon-root": 86,
+      "tassel-tip": 70,
+      "tassel-root": 63
+    },
+    {
+      "frame": 3,
+      "ribbon-tip": 94,
+      "ribbon-mid": 90,
+      "ribbon-root": 88,
+      "tassel-tip": 69,
+      "tassel-root": 62
+    },
+    {
+      "frame": 4,
+      "ribbon-tip": 92,
+      "ribbon-mid": 88,
+      "ribbon-root": 86,
+      "tassel-tip": 70,
+      "tassel-root": 63
+    },
+    {
+      "frame": 5,
+      "ribbon-tip": 90,
+      "ribbon-mid": 88,
+      "ribbon-root": 86,
+      "tassel-tip": 72,
+      "tassel-root": 65
+    },
+    {
+      "frame": 6,
+      "ribbon-tip": 91,
+      "ribbon-mid": 88,
+      "ribbon-root": 86,
+      "tassel-tip": 77,
+      "tassel-root": 70
+    },
+    {
+      "frame": 7,
+      "ribbon-tip": 92,
+      "ribbon-mid": 89,
+      "ribbon-root": 85,
+      "tassel-tip": 81,
+      "tassel-root": 74
+    },
+    {
+      "frame": 8,
+      "ribbon-tip": 95,
+      "ribbon-mid": 91,
+      "ribbon-root": 86,
+      "tassel-tip": 78,
+      "tassel-root": 72
+    },
+    {
+      "frame": 9,
+      "ribbon-tip": 97,
+      "ribbon-mid": 91,
+      "ribbon-root": 85,
+      "tassel-tip": 76,
+      "tassel-root": 70
+    },
+    {
+      "frame": 10,
+      "ribbon-tip": 98,
+      "ribbon-mid": 92,
+      "ribbon-root": 85,
+      "tassel-tip": 75,
+      "tassel-root": 68
+    },
+    {
+      "frame": 11,
+      "ribbon-tip": 99,
+      "ribbon-mid": 92,
+      "ribbon-root": 85,
+      "tassel-tip": 73,
+      "tassel-root": 67
+    },
+    {
+      "frame": 12,
+      "ribbon-tip": 98,
+      "ribbon-mid": 91,
+      "ribbon-root": 85,
+      "tassel-tip": 73,
+      "tassel-root": 67
+    },
+    {
+      "frame": 13,
+      "ribbon-tip": 98,
+      "ribbon-mid": 91,
+      "ribbon-root": 85,
+      "tassel-tip": 73,
+      "tassel-root": 66
+    },
+    {
+      "frame": 14,
+      "ribbon-tip": 97,
+      "ribbon-mid": 90,
+      "ribbon-root": 85,
+      "tassel-tip": 73,
+      "tassel-root": 66
+    },
+    {
+      "frame": 15,
+      "ribbon-tip": 96,
+      "ribbon-mid": 90,
+      "ribbon-root": 85,
+      "tassel-tip": 73,
+      "tassel-root": 66
+    }
+  ],
+  "observation": "Sole, grip, and cloth-root cells are constraint-solve canvas positions. restGripForeLocal is the authored rest offset. gripForeLocal on later frames is the anchor after rotation, and it is not used as the contact cell.",
+  "bake": {
+    "dropped": 610,
+    "sealed": 610,
+    "breaks": 36,
+    "note": "sealed counts coverage fill. breaks are diagonal joins left after that fill. No polish layer was painted."
+  }
+}

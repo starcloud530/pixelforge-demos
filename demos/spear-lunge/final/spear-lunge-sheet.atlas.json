@@ -1,0 +1,179 @@
+{
+  "columns": 8,
+  "format": "pixelforge-atlas",
+  "frameHeight": 128,
+  "frameWidth": 128,
+  "frames": [
+    {
+      "delayMs": 83,
+      "height": 128,
+      "index": 0,
+      "width": 128,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "delayMs": 83,
+      "height": 128,
+      "index": 1,
+      "width": 128,
+      "x": 128,
+      "y": 0
+    },
+    {
+      "delayMs": 83,
+      "height": 128,
+      "index": 2,
+      "width": 128,
+      "x": 256,
+      "y": 0
+    },
+    {
+      "delayMs": 83,
+      "height": 128,
+      "index": 3,
+      "width": 128,
+      "x": 384,
+      "y": 0
+    },
+    {
+      "delayMs": 83,
+      "height": 128,
+      "index": 4,
+      "width": 128,
+      "x": 512,
+      "y": 0
+    },
+    {
+      "delayMs": 83,
+      "height": 128,
+      "index": 5,
+      "width": 128,
+      "x": 640,
+      "y": 0
+    },
+    {
+      "delayMs": 83,
+      "height": 128,
+      "index": 6,
+      "width": 128,
+      "x": 768,
+      "y": 0
+    },
+    {
+      "delayMs": 83,
+      "height": 128,
+      "index": 7,
+      "width": 128,
+      "x": 896,
+      "y": 0
+    },
+    {
+      "delayMs": 83,
+      "height": 128,
+      "index": 8,
+      "width": 128,
+      "x": 0,
+      "y": 128
+    },
+    {
+      "delayMs": 83,
+      "height": 128,
+      "index": 9,
+      "width": 128,
+      "x": 128,
+      "y": 128
+    },
+    {
+      "delayMs": 83,
+      "height": 128,
+      "index": 10,
+      "width": 128,
+      "x": 256,
+      "y": 128
+    },
+    {
+      "delayMs": 83,
+      "height": 128,
+      "index": 11,
+      "width": 128,
+      "x": 384,
+      "y": 128
+    },
+    {
+      "delayMs": 83,
+      "height": 128,
+      "index": 12,
+      "width": 128,
+      "x": 512,
+      "y": 128
+    },
+    {
+      "delayMs": 83,
+      "height": 128,
+      "index": 13,
+      "width": 128,
+      "x": 640,
+      "y": 128
+    },
+    {
+      "delayMs": 83,
+      "height": 128,
+      "index": 14,
+      "width": 128,
+      "x": 768,
+      "y": 128
+    },
+    {
+      "delayMs": 83,
+      "height": 128,
+      "index": 15,
+      "width": 128,
+      "x": 896,
+      "y": 128
+    }
+  ],
+  "image": "spear-lunge-sheet.png",
+  "rows": 2,
+  "scale": 1,
+  "sheetHeight": 256,
+  "sheetWidth": 1024,
+  "tags": [
+    {
+      "from": 0,
+      "index": 0,
+      "loop": "once",
+      "name": "lunge",
+      "to": 15
+    },
+    {
+      "from": 0,
+      "index": 1,
+      "loop": "once",
+      "name": "charge",
+      "to": 3
+    },
+    {
+      "from": 4,
+      "index": 2,
+      "loop": "once",
+      "name": "stride",
+      "to": 6
+    },
+    {
+      "from": 7,
+      "index": 3,
+      "loop": "once",
+      "name": "thrust",
+      "to": 8
+    },
+    {
+      "from": 9,
+      "index": 4,
+      "loop": "once",
+      "name": "recover",
+      "to": 15
+    }
+  ],
+  "version": 1
+}
