@@ -1,0 +1,55 @@
+{
+  "status": "passed",
+  "reference": "selected twelve-frame Nezha preview from this conversation",
+  "comparison": "decoded RGBA pixels; not a subjective rating",
+  "frames": [
+    {
+      "frame": 0,
+      "rgbaSha256": "4edc25d4fde61f143148787399113b38e431fab201bf25eaa68d85bd2711dd62"
+    },
+    {
+      "frame": 1,
+      "rgbaSha256": "6b4972cfcae8922705a10d631914d98a176aefee95ecfda06a49ac836f54fbd3"
+    },
+    {
+      "frame": 2,
+      "rgbaSha256": "e5a2489db66aae4f745af3d2b358418582d122e8518d225a7c17b5bcd6c4dca4"
+    },
+    {
+      "frame": 3,
+      "rgbaSha256": "13fa50a45420254707d6e123898ab3cf4a50ee85aa2af401195beaead6ff96ec"
+    },
+    {
+      "frame": 4,
+      "rgbaSha256": "b4d041ee170df8a99a5979486fa40ddf737baef58bcd0e8abbea4ab709b77786"
+    },
+    {
+      "frame": 5,
+      "rgbaSha256": "5b512295021adf02da1ad533c7cb7c1933e3d21f6f324dbdd3c213c9b86ed7a4"
+    },
+    {
+      "frame": 6,
+      "rgbaSha256": "5b9ec1643266bc982523c78b64fc78cedef1970e1d244d1b6bbee9c1a696edbf"
+    },
+    {
+      "frame": 7,
+      "rgbaSha256": "5cb1d26b7f08bac9c6b7d432a177bcc210a101ff8153eb2c0254884500896ae2"
+    },
+    {
+      "frame": 8,
+      "rgbaSha256": "b0bf4a98dabadfad1c3c8bab3764f9728c55393d5c23fa32b6e9bcbc186febf2"
+    },
+    {
+      "frame": 9,
+      "rgbaSha256": "4dea579e3623757c676ba0d0d23ed59dc0eec4b87f341be0150cdc50ccd67998"
+    },
+    {
+      "frame": 10,
+      "rgbaSha256": "8bafcac27a09a091cb10abbf7773b023eca358c533b0017d7b12c26f7713a62b"
+    },
+    {
+      "frame": 11,
+      "rgbaSha256": "4ba02783e895542bd7305990830b492951aea4625f53a4af27911e7dd72615ae"
+    }
+  ]
+}

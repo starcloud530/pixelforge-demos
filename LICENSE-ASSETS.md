@@ -1,8 +1,8 @@
 # Example art assets license
 
-`examples/` 下的示例美术素材（像素工程、精灵表、图块、预览图等视觉资源）采用 [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) 授权。
+`examples/` 与 `demos/` 下的示例美术素材（像素工程、精灵表、图块、预览图等视觉资源）采用 [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/) 授权。
 
-*Example art assets under `examples/` (pixel projects, sprite sheets, tilesets, preview images, and other visual resources) are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).*
+*Example art assets under `examples/` and `demos/` (pixel projects, sprite sheets, tilesets, preview images, and other visual resources) are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).*
 
 版权所有 © 2026 PixelForge contributors / starcloud530。
 

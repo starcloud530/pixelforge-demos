@@ -1,0 +1,140 @@
+{
+  "status": "passed",
+  "method": "frame-by-frame",
+  "frameCount": 12,
+  "durationMs": 1070,
+  "rigMetadata": "absent",
+  "lowerBody": [
+    {
+      "frame": 0,
+      "changedLegLayerPixelsVsReady": 0
+    },
+    {
+      "frame": 1,
+      "changedLegLayerPixelsVsReady": 403
+    },
+    {
+      "frame": 2,
+      "changedLegLayerPixelsVsReady": 547
+    },
+    {
+      "frame": 3,
+      "changedLegLayerPixelsVsReady": 539
+    },
+    {
+      "frame": 4,
+      "changedLegLayerPixelsVsReady": 606
+    },
+    {
+      "frame": 5,
+      "changedLegLayerPixelsVsReady": 968
+    },
+    {
+      "frame": 6,
+      "changedLegLayerPixelsVsReady": 884
+    },
+    {
+      "frame": 7,
+      "changedLegLayerPixelsVsReady": 792
+    },
+    {
+      "frame": 8,
+      "changedLegLayerPixelsVsReady": 619
+    },
+    {
+      "frame": 9,
+      "changedLegLayerPixelsVsReady": 498
+    },
+    {
+      "frame": 10,
+      "changedLegLayerPixelsVsReady": 351
+    },
+    {
+      "frame": 11,
+      "changedLegLayerPixelsVsReady": 43
+    }
+  ],
+  "rigidShaft": [
+    {
+      "frame": 0,
+      "centerline": "continuous"
+    },
+    {
+      "frame": 1,
+      "centerline": "continuous"
+    },
+    {
+      "frame": 2,
+      "centerline": "continuous"
+    },
+    {
+      "frame": 3,
+      "centerline": "continuous"
+    },
+    {
+      "frame": 4,
+      "centerline": "continuous"
+    },
+    {
+      "frame": 5,
+      "centerline": "continuous"
+    },
+    {
+      "frame": 6,
+      "centerline": "continuous"
+    },
+    {
+      "frame": 7,
+      "centerline": "continuous"
+    },
+    {
+      "frame": 8,
+      "centerline": "continuous"
+    },
+    {
+      "frame": 9,
+      "centerline": "continuous"
+    },
+    {
+      "frame": 10,
+      "centerline": "continuous"
+    },
+    {
+      "frame": 11,
+      "centerline": "continuous"
+    }
+  ],
+  "media": {
+    "apngDelaysMs": [
+      180.0,
+      80.0,
+      80.0,
+      60.0,
+      40.0,
+      50.0,
+      70.0,
+      70.0,
+      80.0,
+      90.0,
+      100.0,
+      170.0
+    ],
+    "gifDelaysMs": [
+      180,
+      80,
+      80,
+      60,
+      40,
+      50,
+      70,
+      70,
+      80,
+      90,
+      100,
+      170
+    ],
+    "durationMs": 1070
+  },
+  "aestheticApproval": false,
+  "limits": "Checks cover pixel continuity, structure, timing and artifact identity, not naturalness or artistic approval."
+}

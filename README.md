@@ -10,6 +10,10 @@ Companion to [pixelforge-ai](https://github.com/starcloud530/pixelforge-ai): mar
 
 Agent / tool layout rules: **[AGENTS.md](AGENTS.md)** (also mirrored for Claude as [CLAUDE.md](CLAUDE.md) and Cursor as [`.cursor/rules/`](.cursor/rules/)).
 
+## 可重跑示例
+
+- [哪吒普攻：逐帧编排](demos/nezha-frame-attack/README.md)：12 帧角色动作，展示关键姿势、发力、脚步与附属物跟随，附可编辑工程、图集和 GIF。
+
 ## 什么放哪 What goes where
 
 | 路径 | 放什么 | 进 Git？ |
