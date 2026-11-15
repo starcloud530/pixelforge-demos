@@ -19,10 +19,11 @@
     100,
     160
   ],
-  "sheetSha256": "5acbb7f2041e81370fabb1daab5336653be9227874fe1e7f75981e005d508a13",
-  "projectSha256": "6591ffec0440d70146452384c7bdc23c6f71aaa9210c49ef0c165397509a8294",
+  "sheetSha256": "642e9b973f14eab97317936dc6cd9542425b5a5878b63ad69be443bad405b7b8",
+  "projectSha256": "c450ec29aca2ef100e1485803744d328a1e025211eeff7e15300c0a4afa29e4a",
   "dropped": 796,
   "sealed": 795,
   "breaks": 60,
-  "conflicts": 796
+  "conflicts": 796,
+  "rigidSpearFinish": "one source template transformed into kernel primitives per frame; post-bake"
 }

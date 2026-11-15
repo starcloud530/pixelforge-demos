@@ -156,6 +156,104 @@
     "mp4DurationSeconds": 3.871,
     "visualPlayback": "not established by metadata checks"
   },
+  "rigidShaft": [
+    {
+      "frame": 0,
+      "maxAxisDistancePx": 1.789,
+      "tailExtentPx": 14.758,
+      "centerline": "continuous"
+    },
+    {
+      "frame": 1,
+      "maxAxisDistancePx": 2.06,
+      "tailExtentPx": 14.757,
+      "centerline": "continuous"
+    },
+    {
+      "frame": 2,
+      "maxAxisDistancePx": 1.826,
+      "tailExtentPx": 15.0,
+      "centerline": "continuous"
+    },
+    {
+      "frame": 3,
+      "maxAxisDistancePx": 2.054,
+      "tailExtentPx": 14.859,
+      "centerline": "continuous"
+    },
+    {
+      "frame": 4,
+      "maxAxisDistancePx": 2.14,
+      "tailExtentPx": 14.988,
+      "centerline": "continuous"
+    },
+    {
+      "frame": 5,
+      "maxAxisDistancePx": 1.6,
+      "tailExtentPx": 14.765,
+      "centerline": "continuous"
+    },
+    {
+      "frame": 6,
+      "maxAxisDistancePx": 2.148,
+      "tailExtentPx": 14.844,
+      "centerline": "continuous"
+    },
+    {
+      "frame": 7,
+      "maxAxisDistancePx": 2.077,
+      "tailExtentPx": 15.032,
+      "centerline": "continuous"
+    },
+    {
+      "frame": 8,
+      "maxAxisDistancePx": 2.18,
+      "tailExtentPx": 15.016,
+      "centerline": "continuous"
+    },
+    {
+      "frame": 9,
+      "maxAxisDistancePx": 2.21,
+      "tailExtentPx": 15.131,
+      "centerline": "continuous"
+    },
+    {
+      "frame": 10,
+      "maxAxisDistancePx": 2.088,
+      "tailExtentPx": 14.509,
+      "centerline": "continuous"
+    },
+    {
+      "frame": 11,
+      "maxAxisDistancePx": 1.386,
+      "tailExtentPx": 14.835,
+      "centerline": "continuous"
+    },
+    {
+      "frame": 12,
+      "maxAxisDistancePx": 1.925,
+      "tailExtentPx": 14.863,
+      "centerline": "continuous"
+    },
+    {
+      "frame": 13,
+      "maxAxisDistancePx": 1.962,
+      "tailExtentPx": 14.865,
+      "centerline": "continuous"
+    },
+    {
+      "frame": 14,
+      "maxAxisDistancePx": 1.625,
+      "tailExtentPx": 14.866,
+      "centerline": "continuous"
+    },
+    {
+      "frame": 15,
+      "maxAxisDistancePx": 1.759,
+      "tailExtentPx": 14.864,
+      "centerline": "continuous"
+    }
+  ],
   "totalDurationMs": 1290,
   "independentFeet": "sole attachments match solved shin IK endpoints on every frame",
   "rows": [
@@ -176,6 +274,10 @@
       "gripForeCanvas": [
         84,
         59
+      ],
+      "gripRearCanvas": [
+        70,
+        66
       ],
       "gripForeLocal": [
         14,
@@ -210,6 +312,10 @@
         83,
         59
       ],
+      "gripRearCanvas": [
+        69,
+        67
+      ],
       "gripForeLocal": [
         14,
         -8
@@ -242,6 +348,10 @@
       "gripForeCanvas": [
         79,
         61
+      ],
+      "gripRearCanvas": [
+        66,
+        70
       ],
       "gripForeLocal": [
         13,
@@ -276,6 +386,10 @@
         77,
         61
       ],
+      "gripRearCanvas": [
+        65,
+        71
+      ],
       "gripForeLocal": [
         12,
         -10
@@ -308,6 +422,10 @@
       "gripForeCanvas": [
         81,
         61
+      ],
+      "gripRearCanvas": [
+        68,
+        70
       ],
       "gripForeLocal": [
         13,
@@ -342,6 +460,10 @@
         85,
         61
       ],
+      "gripRearCanvas": [
+        71,
+        68
+      ],
       "gripForeLocal": [
         14,
         -7
@@ -374,6 +496,10 @@
       "gripForeCanvas": [
         91,
         64
+      ],
+      "gripRearCanvas": [
+        76,
+        68
       ],
       "gripForeLocal": [
         15,
@@ -408,6 +534,10 @@
         97,
         67
       ],
+      "gripRearCanvas": [
+        81,
+        68
+      ],
       "gripForeLocal": [
         16,
         -1
@@ -440,6 +570,10 @@
       "gripForeCanvas": [
         96,
         67
+      ],
+      "gripRearCanvas": [
+        80,
+        69
       ],
       "gripForeLocal": [
         16,
@@ -474,6 +608,10 @@
         94,
         68
       ],
+      "gripRearCanvas": [
+        79,
+        70
+      ],
       "gripForeLocal": [
         15,
         -2
@@ -506,6 +644,10 @@
       "gripForeCanvas": [
         93,
         66
+      ],
+      "gripRearCanvas": [
+        78,
+        69
       ],
       "gripForeLocal": [
         15,
@@ -540,6 +682,10 @@
         91,
         63
       ],
+      "gripRearCanvas": [
+        76,
+        67
+      ],
       "gripForeLocal": [
         15,
         -4
@@ -572,6 +718,10 @@
       "gripForeCanvas": [
         90,
         61
+      ],
+      "gripRearCanvas": [
+        75,
+        66
       ],
       "gripForeLocal": [
         15,
@@ -606,6 +756,10 @@
         90,
         61
       ],
+      "gripRearCanvas": [
+        75,
+        66
+      ],
       "gripForeLocal": [
         15,
         -5
@@ -639,6 +793,10 @@
         89,
         61
       ],
+      "gripRearCanvas": [
+        74,
+        66
+      ],
       "gripForeLocal": [
         15,
         -5
@@ -671,6 +829,10 @@
       "gripForeCanvas": [
         89,
         61
+      ],
+      "gripRearCanvas": [
+        74,
+        66
       ],
       "gripForeLocal": [
         15,

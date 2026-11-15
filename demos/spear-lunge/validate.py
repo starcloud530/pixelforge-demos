@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import math
 import os
 import subprocess
 import struct
@@ -294,6 +295,7 @@ def main() -> None:
                 "rearSole": [rear["canvasX"], rear["canvasY"]],
                 "frontLocal": [front["x"], front["y"]],
                 "gripForeCanvas": [grip_fore["canvasX"], grip_fore["canvasY"]],
+                "gripRearCanvas": [grip_rear["canvasX"], grip_rear["canvasY"]],
                 "gripForeLocal": [grip_fore["x"], grip_fore["y"]],
                 "restGripForeLocal": [14, -7],
                 "legNearPlantedFlag": constraints["leg-near"]["planted"],
@@ -429,6 +431,53 @@ def main() -> None:
                         f"rendered support boot {side} floats or penetrates the floor on frame {frame}: y={lowest}"
                     )
 
+    # Check the actual shaft pixels independently of the mathematical rig.
+    spear_views = run_batch(
+        binary,
+        project,
+        [
+            {"tool": "previewFrame", "params": {"frame": frame, "layer": LAYERS.index("spear")}}
+            for frame in range(FRAMES)
+        ],
+    )
+    rigid_shaft = []
+    shaft_colors = {9, 14, 30}  # gold, boot_light and leather in the locked brief palette
+    for frame, view in enumerate(spear_views):
+        pixels = view["pixels"]
+        rx, ry = rows[frame]["gripRearCanvas"]
+        theta = math.atan2(-7, 14) + math.radians(spear[frame])
+        ux, uy = math.cos(theta), math.sin(theta)
+        distances = []
+        tail = []
+        for index, color in enumerate(pixels):
+            if color not in shaft_colors:
+                continue
+            dx, dy = index % WIDTH - rx, index // WIDTH - ry
+            along = dx * ux + dy * uy
+            across = abs(-dx * uy + dy * ux)
+            if along < 27:
+                distances.append(across)
+            if along < 0:
+                tail.append(along)
+        if not tail or abs(min(tail) + 14.5) > 1.5:
+            fail(f"spear tail length changed on frame {frame}")
+        # Allow half-width 1.3 plus vertex and raster-edge half-cell rounding.
+        # This bounds grid quantization, not deformation of the rigid template.
+        if max(distances) > 1.3 + math.sqrt(2):
+            fail(f"spear shaft bulges away from its rigid axis on frame {frame}: {max(distances)}")
+        for t in range(-13, 27):
+            x, y = round(rx + t * ux), round(ry + t * uy)
+            if pixels[y * WIDTH + x] == 0:
+                fail(f"spear centerline has a hole on frame {frame} at {x},{y}")
+        rigid_shaft.append(
+            {
+                "frame": frame,
+                "maxAxisDistancePx": round(max(distances), 3),
+                "tailExtentPx": round(-min(tail), 3),
+                "centerline": "continuous",
+            }
+        )
+
     sheet = root / "final" / "spear-lunge-sheet.png"
     atlas = root / "final" / "spear-lunge-sheet.atlas.json"
     atlas_proc = subprocess.run(
@@ -464,6 +513,7 @@ def main() -> None:
         "frontStepPx": 74 - 56,
         "frameDelaysMs": expected_delays,
         "mediaTiming": media,
+        "rigidShaft": rigid_shaft,
         "totalDurationMs": sum(expected_delays),
         "independentFeet": "sole attachments match solved shin IK endpoints on every frame",
         "rows": rows,

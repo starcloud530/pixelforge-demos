@@ -762,6 +762,64 @@ def add_attaches(cli: Cli) -> None:
     cli.batch(requests)
 
 
+def finish_rigid_spear(cli: Cli, layers: dict, colors: dict) -> None:
+    """Rasterize one rigid source template per pose, avoiding rotated-pixel holes.
+
+    Anchors/curves still drive the hands and attachments. This finishing pass
+    writes only the spear layer through kernel primitives, never an RGB bitmap.
+    """
+    cli.batch([{"tool": "setActiveFrame", "params": {"index": 0}}])
+    reports = solve_many(cli, list(range(FRAMES)))
+    if reports is None:
+        raise SystemExit("rigid spear pose solve failed")
+    angles = series(cli, "spear", "rotation")
+    requests = []
+    for frame, (report, angle) in enumerate(zip(reports, angles)):
+        rear = anchor_canvas(part_map(report)["spear"], "grip-rear")
+        theta = math.radians(angle)
+        cs, sn = math.cos(theta), math.sin(theta)
+
+        def transform(point):
+            x, y = point[0] - SPEAR[0], point[1] - SPEAR[1]
+            return (rear[0] + cs * x - sn * y, rear[1] + sn * x + cs * y)
+
+        requests += [
+            {"tool": "setActiveFrame", "params": {"index": frame}},
+            {
+                "tool": "eraseRect",
+                "params": dict(x=0, y=0, width=WIDTH, height=HEIGHT, layer=layers["spear"]),
+            },
+        ]
+        art = Ink()
+        layer = layers["spear"]
+        ux, uy = 14 / math.hypot(14, 7), -7 / math.hypot(14, 7)
+        nx, ny = -uy, ux
+
+        def point(t, w=0):
+            return (SPEAR[0] + t * ux + w * nx, SPEAR[1] + t * uy + w * ny)
+
+        for width, color in [(1.3, "leather"), (0.55, "boot_light")]:
+            art.poly(
+                layer,
+                [
+                    transform(point(t, w))
+                    for t, w in [(-14.5, -width), (29, -width), (29, width), (-14.5, width)]
+                ],
+                colors[color],
+            )
+        art.line(layer, transform(point(-14, -0.4)), transform(point(28, -0.4)), colors["gold"])
+        for vertices, color in [
+            ([(94, 52), (98, 50), (108, 48), (103, 55), (96, 57)], "metal_shade"),
+            ([(96, 53), (106, 49), (102, 54), (97, 55)], "metal_light"),
+        ]:
+            art.poly(layer, [transform(p) for p in vertices], colors[color])
+        art.line(layer, transform((97, 54)), transform((105, 50)), colors["teeth"])
+        art.line(layer, transform((94, 52)), transform((96, 56)), colors["gold"])
+        requests += art.requests()
+    requests.append({"tool": "setActiveFrame", "params": {"index": 0}})
+    cli.batch(requests)
+
+
 def smooth_cloth(cli: Cli, layers: dict, colors: dict) -> None:
     """Finish cloth from solved guide anchors with kernel polygon/line tools.
 
@@ -1416,6 +1474,7 @@ def main() -> None:
         raise SystemExit(
             f"unexpected bake: delay={baked.get('delayMs')} wrote={baked.get('wrote')}"
         )
+    finish_rigid_spear(cli, layers, colors)
     smooth_cloth(cli, layers, colors)
     cli.batch(
         [
@@ -1455,6 +1514,7 @@ def main() -> None:
         "delayMs": DELAYS,
         "sheetSha256": sha256(sheet),
         "projectSha256": sha256(final / "spear-lunge.pxf.json"),
+        "rigidSpearFinish": "one source template transformed into kernel primitives per frame; post-bake",
         "dropped": baked.get("dropped"),
         "sealed": baked.get("sealed"),
         "breaks": baked.get("breaks"),
