@@ -1058,6 +1058,12 @@ def run_ffmpeg(args: list[str]) -> None:
         raise SystemExit(f"ffmpeg failed\n{proc.stderr[-2000:]}")
 
 
+def compact_project(path: Path) -> None:
+    """Drop insignificant whitespace. Values stay the kernel's. The CLI writes pretty JSON."""
+    data = json.loads(path.read_text(encoding="utf-8"))
+    path.write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+
+
 def sha256(path: Path) -> str:
     digest = hashlib.sha256()
     digest.update(path.read_bytes())
@@ -1095,6 +1101,7 @@ def main() -> None:
     cli.batch(ink.requests())
     add_parts(cli, layers)
     shutil.copy(project, source / "rest.pxf.json")
+    compact_project(source / "rest.pxf.json")
 
     print("frames and curves", flush=True)
     cli.batch([{"tool": "duplicateFrame", "params": {"index": 0}} for _ in range(FRAMES - 1)])
@@ -1115,6 +1122,7 @@ def main() -> None:
     if baked.get("wrote") is not True or baked.get("delayMs") != 83:
         raise SystemExit(f"unexpected bake: delay={baked.get('delayMs')} wrote={baked.get('wrote')}")
     shutil.copy(project, final / "spear-lunge.pxf.json")
+    compact_project(final / "spear-lunge.pxf.json")
 
     motion = {
         "engineSha": ENGINE_SHA,

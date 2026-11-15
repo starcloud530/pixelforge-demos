@@ -22,7 +22,7 @@ PIXELFORGE=/path/to/pixelforge python3 demos/spear-lunge/validate.py
 
 `build.py` 只通过 CLI 写像素。Python 负责选关键帧、脚印格、延迟曲线和导出。第二次 bake 不会在上一帧上叠加。把 `--out` 指到另一个目录再跑一遍，精灵表和工程文件的 SHA256 与本目录一致。本机只在 Linux 上跑过上述命令。
 
-工作树里的工程 JSON 是内核的展开格式，大约 80MB，内容大部分是透明索引，git 压缩后会小很多。`work/`、力学工程副本和放大帧序列不提交。
+内核写出的工程是按像素换行的 JSON。`build.py` 在复制到 `source/` 和 `final/` 之后去掉空白，数值不变；提交里的成片工程大约 11MB。`work/` 里仍是内核原文，不提交。力学工程副本和放大帧序列也不提交。
 
 ## 时间
 
