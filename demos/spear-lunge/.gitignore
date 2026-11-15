@@ -1,9 +1,0 @@
-work/
-__pycache__/
-*.pyc
-*.pixelforge.lock
-final/mechanics.pxf.json
-final/posed-frames/
-final/mechanics-frames/
-final/pair-frames/
-final/pairs/

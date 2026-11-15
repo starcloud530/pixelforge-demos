@@ -1,0 +1,341 @@
+{
+  "method": "explicit authored frames; no interpolation, IK, curves or physics simulation",
+  "frames": [
+    {
+      "body": {
+        "offset": [
+          0,
+          0
+        ],
+        "headLean": 0
+      },
+      "weapon": {
+        "grip": [
+          66,
+          67
+        ],
+        "angleDegrees": -65
+      },
+      "feet": {
+        "front": [
+          60,
+          100
+        ],
+        "rear": [
+          48,
+          99
+        ]
+      },
+      "ribbonLag": 0,
+      "delayMs": 180
+    },
+    {
+      "body": {
+        "offset": [
+          -2,
+          2
+        ],
+        "headLean": -1
+      },
+      "weapon": {
+        "grip": [
+          64,
+          69
+        ],
+        "angleDegrees": -77
+      },
+      "feet": {
+        "front": [
+          59,
+          98
+        ],
+        "rear": [
+          48,
+          99
+        ]
+      },
+      "ribbonLag": -1,
+      "delayMs": 80
+    },
+    {
+      "body": {
+        "offset": [
+          -4,
+          4
+        ],
+        "headLean": -2
+      },
+      "weapon": {
+        "grip": [
+          61,
+          71
+        ],
+        "angleDegrees": -88
+      },
+      "feet": {
+        "front": [
+          56,
+          94
+        ],
+        "rear": [
+          48,
+          99
+        ]
+      },
+      "ribbonLag": -3,
+      "delayMs": 80
+    },
+    {
+      "body": {
+        "offset": [
+          -4,
+          4
+        ],
+        "headLean": -2
+      },
+      "weapon": {
+        "grip": [
+          60,
+          71
+        ],
+        "angleDegrees": -83
+      },
+      "feet": {
+        "front": [
+          58,
+          91
+        ],
+        "rear": [
+          48,
+          99
+        ]
+      },
+      "ribbonLag": -5,
+      "delayMs": 60
+    },
+    {
+      "body": {
+        "offset": [
+          1,
+          0
+        ],
+        "headLean": 1
+      },
+      "weapon": {
+        "grip": [
+          70,
+          66
+        ],
+        "angleDegrees": -29
+      },
+      "feet": {
+        "front": [
+          68,
+          92
+        ],
+        "rear": [
+          47,
+          98
+        ]
+      },
+      "ribbonLag": -7,
+      "delayMs": 40
+    },
+    {
+      "body": {
+        "offset": [
+          7,
+          -1
+        ],
+        "headLean": 3
+      },
+      "weapon": {
+        "grip": [
+          80,
+          65
+        ],
+        "angleDegrees": -5
+      },
+      "feet": {
+        "front": [
+          77,
+          100
+        ],
+        "rear": [
+          46,
+          97
+        ]
+      },
+      "ribbonLag": -10,
+      "delayMs": 50
+    },
+    {
+      "body": {
+        "offset": [
+          8,
+          1
+        ],
+        "headLean": 2
+      },
+      "weapon": {
+        "grip": [
+          80,
+          67
+        ],
+        "angleDegrees": -5
+      },
+      "feet": {
+        "front": [
+          77,
+          100
+        ],
+        "rear": [
+          46,
+          99
+        ]
+      },
+      "ribbonLag": -8,
+      "delayMs": 70
+    },
+    {
+      "body": {
+        "offset": [
+          6,
+          3
+        ],
+        "headLean": 1
+      },
+      "weapon": {
+        "grip": [
+          77,
+          69
+        ],
+        "angleDegrees": -8
+      },
+      "feet": {
+        "front": [
+          75,
+          100
+        ],
+        "rear": [
+          47,
+          99
+        ]
+      },
+      "ribbonLag": -2,
+      "delayMs": 70
+    },
+    {
+      "body": {
+        "offset": [
+          4,
+          2
+        ],
+        "headLean": 0
+      },
+      "weapon": {
+        "grip": [
+          73,
+          69
+        ],
+        "angleDegrees": -25
+      },
+      "feet": {
+        "front": [
+          70,
+          96
+        ],
+        "rear": [
+          48,
+          99
+        ]
+      },
+      "ribbonLag": 5,
+      "delayMs": 80
+    },
+    {
+      "body": {
+        "offset": [
+          2,
+          -1
+        ],
+        "headLean": -1
+      },
+      "weapon": {
+        "grip": [
+          70,
+          67
+        ],
+        "angleDegrees": -43
+      },
+      "feet": {
+        "front": [
+          64,
+          94
+        ],
+        "rear": [
+          48,
+          99
+        ]
+      },
+      "ribbonLag": 7,
+      "delayMs": 90
+    },
+    {
+      "body": {
+        "offset": [
+          0,
+          -1
+        ],
+        "headLean": 0
+      },
+      "weapon": {
+        "grip": [
+          67,
+          66
+        ],
+        "angleDegrees": -59
+      },
+      "feet": {
+        "front": [
+          61,
+          97
+        ],
+        "rear": [
+          48,
+          99
+        ]
+      },
+      "ribbonLag": 4,
+      "delayMs": 100
+    },
+    {
+      "body": {
+        "offset": [
+          0,
+          0
+        ],
+        "headLean": 0
+      },
+      "weapon": {
+        "grip": [
+          66,
+          67
+        ],
+        "angleDegrees": -65
+      },
+      "feet": {
+        "front": [
+          60,
+          100
+        ],
+        "rear": [
+          48,
+          99
+        ]
+      },
+      "ribbonLag": 1,
+      "delayMs": 170
+    }
+  ]
+}

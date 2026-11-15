@@ -1,0 +1,55 @@
+{
+  "title": "孩童哪吒普通攻击：逐帧编排示例",
+  "canvas": [
+    128,
+    128
+  ],
+  "frameCount": 12,
+  "frameDelaysMs": [
+    180,
+    80,
+    80,
+    60,
+    40,
+    50,
+    70,
+    70,
+    80,
+    90,
+    100,
+    170
+  ],
+  "durationMs": 1070,
+  "facing": "right",
+  "layers": [
+    "silk",
+    "legs-and-wheels",
+    "body",
+    "arms-and-spear"
+  ],
+  "aestheticApproval": false,
+  "method": "frame-by-frame",
+  "rigFeatures": [],
+  "phases": [
+    {
+      "name": "ready",
+      "from": 0,
+      "to": 0
+    },
+    {
+      "name": "charge",
+      "from": 1,
+      "to": 3
+    },
+    {
+      "name": "thrust",
+      "from": 4,
+      "to": 6
+    },
+    {
+      "name": "recover",
+      "from": 7,
+      "to": 11
+    }
+  ]
+}

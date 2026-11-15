@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "scope": "fresh build; all seven stamped source/result artifacts",
+  "sha256": {
+    "source/body.pxf.json": "c5bd5dfd95163162320eb21c22707e7f90dbaf106a36dfd9a6ba0ef38831bf96",
+    "source/poses.json": "156d443146178221276f62ff6ef1ad92d3d33554312b052a87bc1f3427f9650a",
+    "final/nezha-attack.pxf.json": "214cda7012f5a3e3324f7f4697f4ab388f74ff8680deae0d6bf1101aa22de965",
+    "final/nezha-attack-sheet.png": "51d09661d00652e343a8e78bbf6cf3736007bb90793c1e9020e0c7c1b19317fe",
+    "final/nezha-attack.atlas.json": "89c8da78bbc7148de5a50ea4fd0777dd35aa04191630cc8c2484e77b530a5b71",
+    "final/nezha-attack.apng": "88b32e88116fde814158fe1cd2047460f1b2852d567c785541e69bc989d64b0a",
+    "final/nezha-attack.gif": "dc8f472cfb53d9225f43de1a0bec3cc3bf4391b069a7807db3ebbca10858d00a"
+  }
+}
