@@ -2,7 +2,7 @@
 
 64×64、32个非透明调色板项、透明索引0。本例由外部Agent用本地PixelForge CLI/kernel绘制；没有调用生图模型、PNG导入、旋转冒充四向或IK自动步态。
 
-![四向行走](https://resources.pixelforge.torzsi.com/demo-zombie/v1/a/walk-four-directions.gif)
+![四向行走](https://resources.pixelforge.torzsi.com/port-keeper/v2/a/walk-four-directions.gif)
 
 本目录只保存工程层。展示层在CDN，`clone`后验证或重建工程不需要下载展示素材，也不需要Pillow或FFmpeg。
 
@@ -11,9 +11,8 @@
 从仓库根目录运行，Python3只使用标准库：
 
 ```bash
-cargo build -p pixelforge-cli
-python3 examples/demo-zombie/validate.py
-python3 examples/demo-zombie/replay.py
+python3 demos/demo-zombie/validate.py
+python3 demos/demo-zombie/replay.py
 ```
 
 如果使用已安装的预编译CLI，直接运行后两条即可。也可通过`PIXELFORGE_BIN`指定可执行文件；未指定时优先使用仓库`target/debug/pixelforge`，不存在则从PATH查找`pixelforge`。安装方法见[仓库README](https://github.com/starcloud530/pixelforge-ai#readme)。
@@ -55,24 +54,39 @@ D0的支撑靴向右偏2格是**明确设置的诊断故障**，不是历史自�
 每个`d/step-N/`保留说明和原生diff JSON；对应前后图和diff展示图链接至CDN。`d/local-iterations.pxf.json`包含全部版本，可自行运行原生diff：
 
 ```bash
-pixelforge diff --project examples/demo-zombie/d/local-iterations.pxf.json \
+pixelforge diff --project demos/demo-zombie/d/local-iterations.pxf.json \
   --frame 2 --with 3 --scale 4 --output /tmp/keeper-foot-diff.png
 ```
 
 ## 展示层（CDN，不进Git）
 
-- [Hero前后对比](https://resources.pixelforge.torzsi.com/demo-zombie/v1/storyboard/hero-before-after.png)
-- [七阶段故事板](https://resources.pixelforge.torzsi.com/demo-zombie/v1/storyboard/timeline.png)
+- [Hero前后对比](https://resources.pixelforge.torzsi.com/port-keeper/v2/storyboard/hero-before-after.png)
+- [七阶段故事板](https://resources.pixelforge.torzsi.com/port-keeper/v2/storyboard/timeline.png)
 - [换装前后](https://resources.pixelforge.torzsi.com/demo-zombie/v1/b/before-after.png)
 - [道具预览](https://resources.pixelforge.torzsi.com/demo-zombie/v1/c/harbor-props-preview.png)
 - [三次局部修改](https://resources.pixelforge.torzsi.com/demo-zombie/v1/d/local-iterations.png)
-- [40秒sheet组装短片](https://resources.pixelforge.torzsi.com/demo-zombie/v1/videos/01-sheet-assembly.mp4)
+- [40秒sheet组装短片](https://resources.pixelforge.torzsi.com/port-keeper/v2/videos/01-sheet-assembly.mp4)
 - [60秒局部编辑短片](https://resources.pixelforge.torzsi.com/demo-zombie/v1/videos/02-local-editing.mp4)
 
-短片编排自真实CLI导出，**非GUI或逐键终端录屏**。安装镜头对应本地已构建二进制安装与检查，不宣称全新机器下载。可选`media.py`用于本地重建展示层：先完成`replay.py --out ...`，安装`requirements-media.txt`中的媒体依赖，再将`PIXELFORGE_DEMO_OUT`指向该输出目录运行`media.py`及`media.py videos`。该脚本不改资产像素。
+短片编排自真实CLI导出，**非GUI或逐键终端录屏**。组装短片展示新建工程、分阶段绘制、四向动作、动画预览和图集导出。可选`media.py`用于本地重建展示层：先完成`replay.py --out ...`，安装`requirements-media.txt`中的媒体依赖，再将`PIXELFORGE_DEMO_OUT`指向该输出目录运行`media.py`及`media.py videos`。该脚本不改资产像素。
 
 ## 验收范围与许可
 
 验证覆盖atlas结构、四向标签、共享色板、20帧脚底行、每向4个不同walk姿势、B身份保护和D修改边界。**`aestheticApproval`仍为false**。步态、造型和游戏引擎适配仍需人工判断，结构校验不等于审美或进游戏验收。
 
-本包美术为AI辅助、原生CLI绘制，采用[示例素材CC BY4.0许可](https://github.com/starcloud530/pixelforge-ai/blob/main/LICENSE-ASSETS.md)，署名PixelForge / starcloud530。脚本和工具遵循仓库[MIT OR Apache-2.0](https://github.com/starcloud530/pixelforge-ai/blob/main/LICENSE)双许可。
+本包美术为AI辅助、原生CLI绘制，采用[示例素材CC BY4.0许可](https://github.com/starcloud530/pixelforge-demos/blob/main/LICENSE-ASSETS.md)，署名PixelForge / starcloud530。脚本和工具遵循仓库[MIT OR Apache-2.0](https://github.com/starcloud530/pixelforge-ai/blob/main/LICENSE)双许可。
+
+## README 媒体重建
+
+角色是**港口守灯人（Port Keeper）**；`demo-zombie` 仅保留为历史工程路径。
+
+四项 README 展示素材已使用 `pixelforge 0.1.0-rc.6` 从空目录重跑；四张原尺寸图集的 SHA-256 与已提交工程一致。CLI 二进制、制作脚本与展示文件的哈希见 [media-latest.json](media-latest.json)。
+
+```bash
+python3 -m pip install -r demos/demo-zombie/requirements-media.txt
+python3 demos/demo-zombie/refresh_media.py \
+  --pixelforge "$(command -v pixelforge)" \
+  --out /tmp/port-keeper-rebuild
+```
+
+输出目录须为空。脚本先重建全部工程并验证，再生成四向 GIF、前后对比、七阶段故事板和 40 秒图集制作短片。展示文件保留在输出目录并上传 CDN，Git 只保存脚本与哈希清单。

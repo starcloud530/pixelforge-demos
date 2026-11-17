@@ -12,6 +12,8 @@ Agent / tool layout rules: **[AGENTS.md](AGENTS.md)** (also mirrored for Claude 
 
 ## 可重跑示例
 
+- [港口守灯人：四向行走与分层换装](demos/demo-zombie/README.md)：从剪影到四向动画、换装与游戏图集，附最新版 CLI 重跑的展示素材。
+
 - [哪吒普攻：逐帧编排](demos/nezha-frame-attack/README.md)：12 帧角色动作，展示关键姿势、发力、脚步与附属物跟随，附可编辑工程、图集和 GIF。
 
 ## 什么放哪 What goes where

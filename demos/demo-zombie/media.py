@@ -40,9 +40,9 @@ def stills():
  panel(hero,(40,125,610,645));panel(hero,(635,125,1240,645))
  paste(hero,image('storyboard/v0-rough.png'),(165,200),(320,320))
  paste(hero,frame(0),(780,200),(320,320))
- label(hero,(65,603),'BEFORE / deliberately rough blockout',22,MUTED)
- label(hero,(660,603),'AFTER / native64x64 +32colors',22,ORANGE)
- label(hero,(50,676),'A worked example, not a promise of unattended generation or aesthetic validation.',19,MUTED)
+ label(hero,(65,603),'BEFORE / silhouette blockout',22,MUTED)
+ label(hero,(660,603),'AFTER / 64 x 64 + 32 colors',22,ORANGE)
+ label(hero,(50,676),'From blockout to editable character: layers, palette, animation and game exports.',19,MUTED)
  save(hero,'storyboard/hero-before-after.png')
  outfit=canvas(960,580)
  label(outfit,(30,20),'B / SAME KEEPER, NEW STORM CAPE',28)
@@ -58,7 +58,7 @@ def stills():
  save(d,'d/local-iterations.png')
  # Seven actual production stages. The fourth view and sheet use native exports.
  storyboard=canvas(1400,820)
- label(storyboard,(30,18),'A REAL COMMAND HISTORY /7 STAGES',30)
+ label(storyboard,(30,18),'FROM BLOCKOUT TO ANIMATION / 7 STAGES',30)
  stages=[('v0-rough.png','0 / rough blockout'),('v1-silhouette.png','1 / repair silhouette'),('v2-flats.png','2 / separate materials'),('v3-details.png','3 / face + seam detail')]
  for i,(f,title) in enumerate(stages):
   paste(storyboard,image('storyboard/'+f),(i*345+12,70),(320,320));label(storyboard,(i*345+20,395),title,21,MUTED)
@@ -71,34 +71,34 @@ def chapter(title,subtitle,commands):
  im=canvas(1280,720);label(im,(40,26),'PIXELFORGE / CLI WORKFLOW',22,ORANGE)
  label(im,(40,70),title,32);label(im,(40,117),subtitle,20,MUTED)
  panel(im,(28,158,790,650));panel(im,(808,158,1252,650))
- label(im,(830,180),'ACTUAL COMMANDS',18,ORANGE)
+ label(im,(830,180),'CLI COMMANDS',18,ORANGE)
  y=222
  for line in commands:
   label(im,(830,y),line,15,TEXT,True);y+=25
- label(im,(40,680),'Captioned walkthrough of real CLI artifacts / not a GUI recording / no generated pixels',17,MUTED)
+ label(im,(40,680),'PORT KEEPER / indexed pixels, editable layers and animation exports',17,MUTED)
  return im
 def video1(k):
  # 40 seconds, five8-second chapters, actual exported states.
  if k<8:
-  im=chapter('01 / INSTALL + CHECK','Local source-build binary installed for this demonstration.',
-   ['install -m755', '  target/debug/pixelforge','  /tmp/pf-demo-bin/pixelforge','','pixelforge --version','','pixelforge new','  --width 64 --height 64','  --output keeper.pxf.json'])
+  im=chapter('01 / START YOUR CHARACTER','Create a local project with a shared palette and editable layers.',
+   ['pixelforge --version','','pixelforge new','  --width 64 --height 64','  --output a/keeper.pxf.json','','pixelforge scene','  --project a/keeper.pxf.json'])
   paste(im,image('storyboard/v0-rough.png'),(175,194),(410,410))
  elif k<16:
   im=chapter('02 / COMMANDS TO AN IDLE','Silhouette, material blocks, then face and clothing detail.',
-   ['pixelforge call','  --project keeper.pxf.json','  --request-file stage.json','','# polygon / line / fillRect','','pixelforge preview','  --project keeper.pxf.json','  --scale 6'])
+   ['pixelforge call','  --project a/keeper.pxf.json','  --request-file', '  logs/03-flats.requests.json','','# polygon / line / fillRect','','pixelforge preview','  --project a/keeper.pxf.json','  --scale 6'])
   paste(im,image('storyboard/'+['v1-silhouette.png','v2-flats.png','v3-details.png'][min(2,int((k-8)/2.67))]),(175,194),(410,410))
  elif k<24:
   im=chapter('03 / ONE IDENTITY, FOUR VIEWS','A redrawn profile and rear. Opposite profile mirrored and relit.',
-   ['# row order: S W E N','# each row: idle +4walk','','pixelforge call','  --request-file views.json','','# no sprite rotations','# no automatic IK gait'])
+   ['# row order: S W E N','# each row: idle +4walk','','pixelforge call','  --project a/keeper.pxf.json','  --request-file', '  logs/05-directions.requests.json','','# profile + rear drawing','# relight opposite profile'])
   for row in range(4):paste(im,frame(row),(48+row*180,285),(180,180))
  elif k<32:
-  im=chapter('04 / KEYED WALK + TAGS','Four manually keyed poses per facing, with110/140ms timing.',
+  im=chapter('04 / KEYED WALK + TAGS','Four keyed walk poses per facing, with 110 / 140 ms timing.',
    ['# native copyRect + moveRect','# limb edits on copied pose','','pixelforge direction set','  --count 4 --columns 5','  --apply','','idle_down /walk_down','idle_left /walk_left','idle_right/walk_right','idle_up   /walk_up'])
-  phase=1+int((k-24)*8)%4
+  phase=1+next(i for i,end in enumerate([140,250,390,500]) if int((k-24)*1000)%500<end)
   for row in range(4):paste(im,frame(row,phase),(48+row*180,285),(180,180))
  else:
-  im=chapter('05 / EXPORT + VALIDATE','Structural checks pass. This is not an aesthetic certification.',
-   ['pixelforge export sheet','  --cols 5 --scale 1','  --output keeper-sheet.png','  --atlas keeper.atlas.json','','pixelforge validate-atlas','  --atlas keeper.atlas.json','  --strict','','0 errors /0 warnings'])
+  im=chapter('05 / PREVIEW + EXPORT','Preview the animation, then export its sprite sheet and atlas.',
+   ['pixelforge play','  --project a/keeper.pxf.json','','pixelforge export sheet','  --project a/keeper.pxf.json','  --cols 5 --scale 1','  --output keeper-sheet.png','  --atlas keeper.atlas.json','','pixelforge validate-atlas','  --atlas keeper.atlas.json','  --strict'])
   paste(im,image('a/keeper-sheet.png'),(118,173),(600,480))
  return im
 def video2(k):
@@ -127,9 +127,10 @@ def video2(k):
    ['pixelforge export sheet','  --project local.pxf.json','  --cols 4','  --atlas iteration.atlas.json','','pixelforge validate-atlas','  --four-direction off','','# body layer unchanged','# original foot restored'])
   paste(im,image('d/iteration-sheet.png'),(40,276),(736,184))
  return im
-def videos():
+def videos(sheet_only=False):
  ff=imageio_ffmpeg.get_ffmpeg_exe();(ROOT/'videos').mkdir(exist_ok=True)
  for name,seconds,fn in [('01-sheet-assembly.mp4',40,video1),('02-local-editing.mp4',60,video2)]:
+  if sheet_only and name!='01-sheet-assembly.mp4':continue
   p=subprocess.Popen([ff,'-y','-loglevel','error','-f','rawvideo','-pix_fmt','rgb24','-s','1280x720','-r','12','-i','-','-an','-c:v','libx264','-preset','fast','-crf','19','-pix_fmt','yuv420p','-movflags','+faststart',str(ROOT/'videos'/name)],stdin=subprocess.PIPE)
   try:
    for i in range(seconds*12):p.stdin.write(fn(i/12).tobytes())
@@ -139,6 +140,6 @@ def videos():
   print(name,seconds,'seconds')
   fn(5).save(ROOT/'videos'/name.replace('.mp4','-poster.png'))
 def main():
- if len(sys.argv)>1 and sys.argv[1]=='videos':videos()
+ if len(sys.argv)>1 and sys.argv[1] in ['videos','sheet-video']:videos(sheet_only=sys.argv[1]=='sheet-video')
  else:gif();stills()
 if __name__=='__main__':main()
