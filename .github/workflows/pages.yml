@@ -22,6 +22,14 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      - name: Prepare showcase media
+        run: |
+          cp demos/nezha-frame-attack/final/nezha-attack.gif site/assets/nezha-attack.gif
+          cp demos/nezha-frame-attack/final/nezha-attack-sheet.png site/assets/nezha-attack-sheet.png
+          cp demos/nezha-frame-attack/final/poses/00-ready.png site/assets/nezha-ready.png
+          cp demos/nezha-frame-attack/final/poses/02-charge.png site/assets/nezha-charge.png
+          cp demos/nezha-frame-attack/final/poses/05-thrust.png site/assets/nezha-thrust.png
+          cp demos/nezha-frame-attack/final/poses/08-recover.png site/assets/nezha-recover.png
       - name: Upload
         uses: actions/upload-pages-artifact@v3
         with:

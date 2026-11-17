@@ -1,34 +1,3 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>PixelForge Gallery — curated runs</title>
-<style>
-body{margin:0;font-family:system-ui,sans-serif;background:#0b0b10;color:#e8e8ef;line-height:1.5}
-a{color:#9ad} .wrap{max-width:880px;margin:0 auto;padding:28px 18px}
-.card{border:1px solid #2a2a36;border-radius:12px;padding:16px;margin:14px 0;background:#12121a}
-.meta{font-size:13px;color:#9a9ab0} code{font-size:12px;background:#1c1c28;padding:2px 6px;border-radius:4px}
-h1{font-size:28px;margin:0 0 8px} .top a{color:#9a9ab0;text-decoration:none;margin-right:14px}
-</style>
-</head>
-<body>
-<div class="wrap">
-  <div class="top"><a href="../">← Landing</a><a href="https://starcloud530.github.io/pixelforge-ai/">Docs</a></div>
-  <h1>Curated runs</h1>
-  <p class="meta">路径 <code>output/&lt;task&gt;/&lt;version&gt;/&lt;harness&gt;/</code> · 含 <code>final/</code> + <code>trajectory.jsonl</code> · 默认 <code>aestheticApproval:false</code></p>
-  <div class="card"><p class="meta">尚无已发布 run。好的结果提交到仓库 <code>output/</code> 后在此展示。</p></div>
-  <div class="card">
-    <strong>目录约定</strong>
-    <pre class="meta" style="white-space:pre-wrap">output/&lt;task-slug&gt;/&lt;version&gt;/&lt;harness&gt;/
-  meta.json
-  trajectory.jsonl
-  final/
-  README.md
-
-harness: grok-bot | codex | claude-code | …
-version: v1, v2, …</pre>
-  </div>
-</div>
-</body>
-</html>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>作品 · PixelForge</title><meta name="description" content="查看哪吒像素攻击动画、关键姿势与图集，下载可编辑工程。"/><style>
+*{box-sizing:border-box}body{margin:0;background:#fff;color:#111;font:16px/1.65 system-ui,sans-serif}main,header,footer{max-width:920px;margin:auto;padding:24px}a{color:inherit}header{display:flex;justify-content:space-between;border-bottom:1px solid #e8e8e8}h1{font-size:40px;margin:16px 0}h2{margin:0 0 12px}.feature{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;margin:32px 0}.feature img{width:100%;image-rendering:pixelated;background:#171822;border-radius:12px}.links{display:flex;gap:16px;flex-wrap:wrap}.sheet{width:100%;image-rendering:pixelated;background:#171822;border-radius:12px}footer{border-top:1px solid #e8e8e8;color:#555;font-size:13px}@media(max-width:600px){.feature{grid-template-columns:1fr}h1{font-size:32px}}
+</style></head><body><header><a href="../">PixelForge</a><a href="https://starcloud530.github.io/pixelforge-ai/install/">下载 PixelForge</a></header><main><h1>像素里的动作与故事</h1><p>打开动画，走进每一帧。下载工程，接着创作。</p><article><div class="feature"><img src="../assets/nezha-attack.gif" width="384" height="384" alt="哪吒火尖枪攻击像素动画"/><div><h2>哪吒 · 火尖枪攻击</h2><p>128 × 128 像素，12 帧，1.07 秒。身体前送、迈步出枪，混天绫延后回摆。</p><p>四个独立图层保留红绫、下肢与风火轮、身体、手臂与枪，方便继续调整动作。</p><div class="links"><a href="https://github.com/starcloud530/pixelforge-demos/tree/main/demos/nezha-frame-attack">制作流程</a><a href="https://raw.githubusercontent.com/starcloud530/pixelforge-demos/main/demos/nezha-frame-attack/final/nezha-attack.pxf.json">可编辑工程</a><a href="https://raw.githubusercontent.com/starcloud530/pixelforge-demos/main/demos/nezha-frame-attack/final/nezha-attack.apng">透明动画</a></div></div></div><h2>从逐帧动作，到游戏图集</h2><p>6 × 2 精灵表，配套 atlas JSON 记录帧位置与时长。</p><img class="sheet" src="../assets/nezha-attack-sheet.png" width="768" height="256" loading="lazy" alt="哪吒攻击的12帧精灵表，按6列2行排列"/><p class="links"><a href="https://raw.githubusercontent.com/starcloud530/pixelforge-demos/main/demos/nezha-frame-attack/final/nezha-attack-sheet.png">下载精灵表</a><a href="https://raw.githubusercontent.com/starcloud530/pixelforge-demos/main/demos/nezha-frame-attack/final/nezha-attack.atlas.json">下载 atlas JSON</a><a href="https://starcloud530.github.io/pixelforge-ai/showcase/">用 CLI 播放与导出 →</a></p></article><hr/><h2>继续探索</h2><p><a href="https://github.com/starcloud530/pixelforge-demos/tree/main/demos/demo-zombie">角色四向行走、换装与场景道具制作</a></p></main><footer>示例美术 CC BY 4.0 · PixelForge / starcloud530 · CLI 绘制，AI 辅助编排。<a href="https://starcloud530.github.io/pixelforge-ai/licensing/">许可详情</a></footer></body></html>
