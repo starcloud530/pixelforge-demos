@@ -1,0 +1,46 @@
+{
+  "character": "Port Keeper / 港口守灯人",
+  "cliVersion": "pixelforge 0.1.0-rc.6",
+  "cliBinarySha256": "6e3c01683634a33e30edb6c3ba058d8091bb9573e9f4270639dafce1711644ea",
+  "cleanReplay": true,
+  "nativeSheetHashes": {
+    "a/keeper-sheet.png": "217e9d5f556dfe6b1fff7f7bbe76a0ad34bced41138f9463bebc15dd10fb9e47",
+    "b/keeper-storm-sheet.png": "a67b8db85ed743d21897c6810dd7ec889c0ac892bd016b946b0ec06343914066",
+    "c/harbor-props-sheet.png": "bf956411ce5a29a4bf5f8ce86fb8172a46eb4e9a1127a058fffbaa4feed59990",
+    "d/iteration-sheet.png": "5746686ffe4b26c2b8051c67ddbc723302968f3ce0fdb14e2ba4af2efb6020f8"
+  },
+  "recipeSha256": {
+    "build.py": "8be61cc506baf18ff5a0975d505fdad94e7b6b0eec39f1dfd90cc18c266864a0",
+    "replay.py": "b0c3f0ae0e0f833e7a18dc7176612cf1f9830b1913cb3ccc8e88e7309c64461f",
+    "validate.py": "e4f119f5e8bb5575e5c36b79dcb9a23a5bde38c110595bb83f722da232242c68",
+    "media.py": "db38f92573f522d42fa127a22bfddbb67825e9e4c4049c0908f2a0e7d3bce114",
+    "refresh_media.py": "53b6abb673821e3102d6e1a494666ed72be072cc8b037d4181e7165c30cadf7c"
+  },
+  "aestheticApproval": false,
+  "assets": [
+    {
+      "file": "a/walk-four-directions.gif",
+      "bytes": 70142,
+      "sha256": "597c41352c96204cb037734de73ca776f8d0cbd85ca47d1519714c8d4fe7b485",
+      "url": "https://resources.pixelforge.torzsi.com/port-keeper/v2/a/walk-four-directions.gif"
+    },
+    {
+      "file": "storyboard/hero-before-after.png",
+      "bytes": 29985,
+      "sha256": "08de44fb7cf260fcd3b99a0686522aaf99473123e185ae84450654943efdc5b2",
+      "url": "https://resources.pixelforge.torzsi.com/port-keeper/v2/storyboard/hero-before-after.png"
+    },
+    {
+      "file": "storyboard/timeline.png",
+      "bytes": 31806,
+      "sha256": "58b6d359e72d53fd0b0be1b48e1cd66fefc5022996c8e72d20a6bb060699b758",
+      "url": "https://resources.pixelforge.torzsi.com/port-keeper/v2/storyboard/timeline.png"
+    },
+    {
+      "file": "videos/01-sheet-assembly.mp4",
+      "bytes": 353164,
+      "sha256": "b3df151e209f34f4370bce57b23c5627d44d43b8e067721c537098cf434acfa4",
+      "url": "https://resources.pixelforge.torzsi.com/port-keeper/v2/videos/01-sheet-assembly.mp4"
+    }
+  ]
+}
