@@ -2,3 +2,6 @@
 __pycache__/
 *.pyc
 eval/runs/
+
+# Pages showcase assets are copied from the canonical demo during deployment.
+/site/assets/nezha-*
