@@ -1,20 +1,23 @@
 # pixelforge-demos
 
-Companion to [pixelforge-ai](https://github.com/starcloud530/pixelforge-ai): marketing site, replayable demos, curated Agent runs, and eval task packs.
+Pixel art and editable example projects made with the [PixelForge CLI](https://github.com/starcloud530/pixelforge-ai). This repository also hosts the evaluation tasks and selected runs.
 
-| Surface | URL |
-| --- | --- |
-| Marketing Pages | https://starcloud530.github.io/pixelforge-demos/ |
-| Product docs | https://starcloud530.github.io/pixelforge-ai/ |
-| CDN media | https://resources.pixelforge.torzsi.com/ |
+[像素画室](https://starcloud530.github.io/pixelforge-demos/) · [作品集与工程下载](https://starcloud530.github.io/pixelforge-demos/gallery/) · [技术文档](https://starcloud530.github.io/pixelforge-ai/)
 
-Agent / tool layout rules: **[AGENTS.md](AGENTS.md)** (also mirrored for Claude as [CLAUDE.md](CLAUDE.md) and Cursor as [`.cursor/rules/`](.cursor/rules/)).
+## 可重放作品
 
-## 可重跑示例
+| 作品 | 内容 | 工程说明 |
+| --- | --- | --- |
+| [潮汐温室](https://starcloud530.github.io/pixelforge-demos/gallery/#tidal-glasshouse) | 51 个图块组成的五层地图 | [制作与重放](demos/tidal-glasshouse/README.md) |
+| [雪岭邮差](https://starcloud530.github.io/pixelforge-demos/gallery/#alpine-courier) | 四个朝向、20 帧 | [制作与重放](demos/alpine-courier/README.md) |
+| [星芒风候仪](https://starcloud530.github.io/pixelforge-demos/gallery/#observatory-machine) | 启动、采样与待机 | [制作与重放](demos/observatory-machine/README.md) |
+| [潮汐科考道具](https://starcloud530.github.io/pixelforge-demos/gallery/#tide-survey-icons) | 八枚背包图标，两套配色 | [制作与重放](demos/tide-survey-icons/README.md) |
+| [港口守灯人](https://starcloud530.github.io/pixelforge-demos/gallery/#port-keeper) | 四向行走与分层换装 | [制作与重放](demos/demo-zombie/README.md) |
+| [哪吒逐帧动作](https://starcloud530.github.io/pixelforge-demos/gallery/#nezha) | 12 帧动作分解 | [制作与重放](demos/nezha-frame-attack/README.md) |
 
-- [港口守灯人：四向行走与分层换装](demos/demo-zombie/README.md)：从剪影到四向动画、换装与游戏图集，附最新版 CLI 重跑的展示素材。
+作品集提供工程包。四套画室选作的预览与工程包托管于 R2，文件地址、大小和 SHA-256 见[素材清单](demos/studio-media.json)。
 
-- [哪吒普攻：逐帧编排](demos/nezha-frame-attack/README.md)：12 帧角色动作，展示关键姿势、发力、脚步与附属物跟随，附可编辑工程、图集和 GIF。
+仓库协作约定见 [AGENTS.md](AGENTS.md)、[CLAUDE.md](CLAUDE.md) 和 [Cursor 规则](.cursor/rules/)。
 
 ## 什么放哪 What goes where
 

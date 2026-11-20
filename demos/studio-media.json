@@ -1,0 +1,87 @@
+{
+  "base": "https://resources.pixelforge.torzsi.com/studio/rc6/1bacf12e29c69944/",
+  "objects": {
+    "alpine-courier.atlas.json": {
+      "sha256": "9ed144f1b22a93c27e6f878676915aea55fbb998d351caffb7e7fbb81f9d260d",
+      "bytes": 3606,
+      "contentType": "application/json"
+    },
+    "alpine-courier.png": {
+      "sha256": "4741436ca9e0d5f28f0f7106034fff7372bb28c83d0ee7e79653fe4e079bd13c",
+      "bytes": 47973,
+      "contentType": "image/png"
+    },
+    "alpine-courier.zip": {
+      "sha256": "36818f595463fd65063d68b8dd89fed3d15a7a9ff70acff92cc5a1ac277e22b9",
+      "bytes": 135124,
+      "contentType": "application/zip"
+    },
+    "aster-wind-observatory-native.png": {
+      "sha256": "d07de7f08c0a67a447c6c6ef9eb3f8da9aabba0f020fdd1bb8345262d1d054b3",
+      "bytes": 8126,
+      "contentType": "image/png"
+    },
+    "aster-wind-observatory-sheet.png": {
+      "sha256": "e0546ec1e011b5d24307d73a3d3958c335303b19cd1fc26825c6e14f5d405f2b",
+      "bytes": 93903,
+      "contentType": "image/png"
+    },
+    "aster-wind-observatory.atlas.json": {
+      "sha256": "7dcbcd0efe1c2e3c0d2a3d70b60c8eb1cc350789c1ce562d6c9820f8159a8883",
+      "bytes": 2040,
+      "contentType": "application/json"
+    },
+    "courier-front.png": {
+      "sha256": "3b617c1fc479b2eee56eed9c2b1c3090c184c08d114c6f8ed4c697741b410a4d",
+      "bytes": 13056,
+      "contentType": "image/png"
+    },
+    "glasshouse-facade-preview.png": {
+      "sha256": "d440a94c29c332e9962d56e0f5f185ab28b90333d4e36181573b31a5aa1e176b",
+      "bytes": 39563,
+      "contentType": "image/png"
+    },
+    "observatory-machine.zip": {
+      "sha256": "fa0b682eec2099fcd7c06727ddd8b2da5972de09adbedb0de39f3ca120eebd52",
+      "bytes": 269506,
+      "contentType": "application/zip"
+    },
+    "tidal-glasshouse.png": {
+      "sha256": "fb2d394c870ececb3ab3565c031b82da4f99220ad23722663726a63b6122c64b",
+      "bytes": 67781,
+      "contentType": "image/png"
+    },
+    "tidal-glasshouse.zip": {
+      "sha256": "355c8aa45718fe66f99be52ec685ce3cdadc22105ee5057ec8c08f18c2478900",
+      "bytes": 157040,
+      "contentType": "application/zip"
+    },
+    "tide-survey-icons-dusk.png": {
+      "sha256": "ec04be5b6aff8c4288c9462f976b0908b4e596e2dc4ef2231e8e6a2838298e1e",
+      "bytes": 9606,
+      "contentType": "image/png"
+    },
+    "tide-survey-icons.png": {
+      "sha256": "9c6383834cd008cf42068bf1e8b7b31675bd18cbb175cafd17745ae03e6c3916",
+      "bytes": 9433,
+      "contentType": "image/png"
+    },
+    "tide-survey-icons.zip": {
+      "sha256": "f0ca8f15dae3e7821b48ffb12fdc2623afd36ab168117e6475ec959052923e9f",
+      "bytes": 61529,
+      "contentType": "application/zip"
+    },
+    "tiles.png": {
+      "sha256": "7aaadd3a70acea9ea892611edb10407fd6167321a5dc9dcbd9bd88e4c2af1341",
+      "bytes": 39233,
+      "contentType": "image/png"
+    }
+  },
+  "release": "v0.1.0-rc.6",
+  "selectedForShowcase": [
+    "tidal-glasshouse",
+    "alpine-courier",
+    "observatory-machine",
+    "tide-survey-icons"
+  ]
+}

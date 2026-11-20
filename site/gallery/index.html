@@ -1,3 +1,223 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>作品 · PixelForge</title><meta name="description" content="查看哪吒像素攻击动画、关键姿势与图集，下载可编辑工程。"/><style>
-*{box-sizing:border-box}body{margin:0;background:#fff;color:#111;font:16px/1.65 system-ui,sans-serif}main,header,footer{max-width:920px;margin:auto;padding:24px}a{color:inherit}header{display:flex;justify-content:space-between;border-bottom:1px solid #e8e8e8}h1{font-size:40px;margin:16px 0}h2{margin:0 0 12px}.feature{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;margin:32px 0}.feature img{width:100%;image-rendering:pixelated;background:#171822;border-radius:12px}.links{display:flex;gap:16px;flex-wrap:wrap}.sheet{width:100%;image-rendering:pixelated;background:#171822;border-radius:12px}footer{border-top:1px solid #e8e8e8;color:#555;font-size:13px}@media(max-width:600px){.feature{grid-template-columns:1fr}h1{font-size:32px}}
-</style></head><body><header><a href="../">PixelForge</a><a href="https://starcloud530.github.io/pixelforge-ai/install/">下载 PixelForge</a></header><main><h1>像素里的动作与故事</h1><p>打开动画，走进每一帧。下载工程，接着创作。</p><article><div class="feature"><img src="../assets/nezha-attack.gif" width="384" height="384" alt="哪吒火尖枪攻击像素动画"/><div><h2>哪吒 · 火尖枪攻击</h2><p>128 × 128 像素，12 帧，1.07 秒。身体前送、迈步出枪，混天绫延后回摆。</p><p>四个独立图层保留红绫、下肢与风火轮、身体、手臂与枪，方便继续调整动作。</p><div class="links"><a href="https://github.com/starcloud530/pixelforge-demos/tree/main/demos/nezha-frame-attack">制作流程</a><a href="https://raw.githubusercontent.com/starcloud530/pixelforge-demos/main/demos/nezha-frame-attack/final/nezha-attack.pxf.json">可编辑工程</a><a href="https://raw.githubusercontent.com/starcloud530/pixelforge-demos/main/demos/nezha-frame-attack/final/nezha-attack.apng">透明动画</a></div></div></div><h2>从逐帧动作，到游戏图集</h2><p>6 × 2 精灵表，配套 atlas JSON 记录帧位置与时长。</p><img class="sheet" src="../assets/nezha-attack-sheet.png" width="768" height="256" loading="lazy" alt="哪吒攻击的12帧精灵表，按6列2行排列"/><p class="links"><a href="https://raw.githubusercontent.com/starcloud530/pixelforge-demos/main/demos/nezha-frame-attack/final/nezha-attack-sheet.png">下载精灵表</a><a href="https://raw.githubusercontent.com/starcloud530/pixelforge-demos/main/demos/nezha-frame-attack/final/nezha-attack.atlas.json">下载 atlas JSON</a><a href="https://starcloud530.github.io/pixelforge-ai/showcase/">用 CLI 播放与导出 →</a></p></article><hr/><h2>继续探索</h2><p><a href="https://github.com/starcloud530/pixelforge-demos/tree/main/demos/demo-zombie">角色四向行走、换装与场景道具制作</a></p></main><footer>示例美术 CC BY 4.0 · PixelForge / starcloud530 · CLI 绘制，AI 辅助编排。<a href="https://starcloud530.github.io/pixelforge-ai/licensing/">许可详情</a></footer></body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="六套可查看与下载的像素作品。拆看图块、切换配色、逐帧播放，并下载源工程。">
+  <meta property="og:title" content="作品集 · PixelForge 像素画室">
+  <meta property="og:image" content="https://resources.pixelforge.torzsi.com/studio/rc6/1bacf12e29c69944/tidal-glasshouse.png?rev=fb2d394c870ececb">
+  <title>作品集 · PixelForge 像素画室</title>
+  <link rel="preconnect" href="https://resources.pixelforge.torzsi.com">
+  <link rel="stylesheet" href="../assets/site.css">
+  <script src="../assets/atelier.js" defer></script>
+  <script type="module" src="../assets/player.js"></script>
+</head>
+<body><a class="skip" href="#main">跳到正文</a>
+<header class="site-header"><div class="shell header-row">
+  <a class="brand" href="../" aria-label="PixelForge 像素画室首页"><span class="brand-mark" aria-hidden="true"></span>PixelForge<span class="studio-name">像素画室</span></a>
+  <nav aria-label="主导航"><a href="./" aria-current="page">作品集</a><a href="../../pixelforge-ai/">文档</a><a class="nav-install" href="../../pixelforge-ai/install/">安装 CLI</a></nav>
+</div></header><main id="main" class="shell collection">
+<div class="collection-head"><h1>作品集</h1><p>六套作品均附可编辑工程。</p></div>
+<nav class="collection-nav" aria-label="作品目录"><a href="#tidal-glasshouse">温室</a><a href="#alpine-courier">邮差</a><a href="#observatory-machine">风候仪</a><a href="#tide-survey-icons">科考道具</a><a href="#port-keeper">守灯人</a><a href="#nezha">哪吒</a></nav>
+<article id="tidal-glasshouse" class="chapter" aria-labelledby="tidal-glasshouse-title">
+  <header class="work-heading">
+    <h2 id="tidal-glasshouse-title">潮汐温室</h2>
+    <p class="work-english" lang="en">Tidal Glasshouse</p>
+  </header>
+  <figure class="viewer view-scene" data-viewer aria-label="潮汐温室">
+  <a class="art-stage" data-enlarge href="https://resources.pixelforge.torzsi.com/studio/rc6/1bacf12e29c69944/tidal-glasshouse.png?rev=fb2d394c870ececb" aria-label="放大查看潮汐温室">
+    <img src="https://resources.pixelforge.torzsi.com/studio/rc6/1bacf12e29c69944/tidal-glasshouse.png?rev=fb2d394c870ececb" alt="潮汐温室全景，穿过水道的木桥连接暖灯照亮的玻璃温室" fetchpriority="high">
+    <span class="expand-icon" aria-hidden="true">放大</span>
+  </a>
+  <figcaption><span class="view-choices" role="group" aria-label="潮汐温室视图"><a data-choice data-description="潮汐温室全景，穿过水道的木桥连接暖灯照亮的玻璃温室" data-metric="416 × 288 px" href="https://resources.pixelforge.torzsi.com/studio/rc6/1bacf12e29c69944/tidal-glasshouse.png?rev=fb2d394c870ececb" aria-current="true">全景</a>
+<a data-choice data-description="温室立面，圆顶玻璃、铁架和暖灯门廊" data-metric="128 × 96 px 原稿" href="https://resources.pixelforge.torzsi.com/studio/rc6/1bacf12e29c69944/glasshouse-facade-preview.png?rev=d440a94c29c332e9" >建筑</a>
+<a data-choice data-description="温室场景使用的岸线、水纹、建筑与植被图块" data-metric="32 × 32 px / 块" href="https://resources.pixelforge.torzsi.com/studio/rc6/1bacf12e29c69944/tiles.png?rev=7aaadd3a70acea9e" >图块</a></span><span data-metric-label class="metric">416 × 288 px</span></figcaption>
+</figure>
+  <div class="chapter-text">
+    <p>玻璃、铁件和门灯分层绘制。立面拆成 12 块，可以和岸线、芦苇、木桥重新拼成一张地图。</p>
+    <p class="fact-line">51 个图块 · 13 × 9 格地图 · 5 层</p>
+    <a class="button button-dark" href="https://resources.pixelforge.torzsi.com/studio/rc6/1bacf12e29c69944/tidal-glasshouse.zip?rev=355c8aa45718fe66" download>下载场景工程 <span aria-hidden="true">↓</span></a>
+  </div>
+</article>
+<article id="alpine-courier" class="chapter" aria-labelledby="alpine-courier-title">
+  <header class="work-heading">
+    <h2 id="alpine-courier-title">雪岭邮差</h2>
+    <p class="work-english" lang="en">Alpine Post Courier</p>
+  </header>
+  <div class="player studio-player" role="group" aria-labelledby="alpine-courier-title" data-player data-atlas="https://resources.pixelforge.torzsi.com/studio/rc6/1bacf12e29c69944/alpine-courier.atlas.json?rev=9ed144f1b22a93c2">
+
+      <div class="player-stage"><img class="player-fallback" src="https://resources.pixelforge.torzsi.com/studio/rc6/1bacf12e29c69944/courier-front.png?rev=3b617c1fc479b2ee" width="256" height="256" alt="雪岭邮差行走静帧" loading="lazy"><canvas hidden role="img" aria-label="雪岭邮差行走逐帧预览"></canvas></div>
+      <div class="player-controls" hidden><div class="clip-controls"><label>朝向<select data-clip><option value="walk_down">向下</option><option value="walk_left">向左</option><option value="walk_right">向右</option><option value="walk_up">向上</option></select></label></div>
+        <div class="transport"><button type="button" data-play>播放</button><button type="button" data-step="-1" aria-label="上一帧">←</button><button type="button" data-step="1" aria-label="下一帧">→</button><output data-frame aria-label="当前帧与时长"></output></div></div>
+      <p class="player-error" role="status" hidden>动画加载失败。请下载工程包，在本地播放器中查看。</p>
+    </div>
+  <div class="chapter-text">
+    <p>侧身时，邮包从背后露出来。两脚交错时，身体和邮包一同抬高一格。围巾尾有独立图层，可以单独调它的摆动。</p>
+    <p class="fact-line">64 × 64 px · 20 帧 · 5 个图层</p>
+    <a class="button button-dark" href="https://resources.pixelforge.torzsi.com/studio/rc6/1bacf12e29c69944/alpine-courier.zip?rev=36818f595463fd65" download>下载角色工程 <span aria-hidden="true">↓</span></a>
+  </div>
+</article>
+<article id="observatory-machine" class="chapter" aria-labelledby="observatory-machine-title">
+  <header class="work-heading">
+    <h2 id="observatory-machine-title">星芒风候仪</h2>
+    <p class="work-english" lang="en">Aster Wind Observatory</p>
+  </header>
+  <div class="player studio-player" role="group" aria-labelledby="observatory-machine-title" data-player data-atlas="https://resources.pixelforge.torzsi.com/studio/rc6/1bacf12e29c69944/aster-wind-observatory.atlas.json?rev=7dcbcd0efe1c2e3c">
+
+      <div class="player-stage"><img class="player-fallback" src="https://resources.pixelforge.torzsi.com/studio/rc6/1bacf12e29c69944/aster-wind-observatory-native.png?rev=d07de7f08c0a67a4" width="96" height="96" alt="风候仪动作静帧" loading="lazy"><canvas hidden role="img" aria-label="风候仪动作逐帧预览"></canvas></div>
+      <div class="player-controls" hidden><div class="clip-controls"><label>状态<select data-clip><option value="power_on">启动</option><option value="sampling">循环采样</option><option value="dormant">待机</option></select></label></div>
+        <div class="transport"><button type="button" data-play>播放</button><button type="button" data-step="-1" aria-label="上一帧">←</button><button type="button" data-step="1" aria-label="下一帧">→</button><output data-frame aria-label="当前帧与时长"></output></div></div>
+      <p class="player-error" role="status" hidden>动画加载失败。请下载工程包，在本地播放器中查看。</p>
+    </div>
+  <div class="chapter-text">
+    <p>启动时风杯加速，指针扫过刻度。进入采样循环后，玻璃筒里的气泡持续上升。</p>
+    <p class="fact-line">96 × 96 px · 12 帧 · 3 个状态</p>
+    <a class="button button-dark" href="https://resources.pixelforge.torzsi.com/studio/rc6/1bacf12e29c69944/observatory-machine.zip?rev=fa0b682eec2099fc" download>下载机关工程 <span aria-hidden="true">↓</span></a>
+  </div>
+</article>
+<article id="tide-survey-icons" class="chapter" aria-labelledby="tide-survey-icons-title">
+  <header class="work-heading">
+    <h2 id="tide-survey-icons-title">潮汐科考道具</h2>
+    <p class="work-english" lang="en">Tide Survey Kit</p>
+  </header>
+  <figure class="viewer view-icons" data-viewer aria-label="科考道具配色">
+  <a class="art-stage" data-enlarge href="https://resources.pixelforge.torzsi.com/studio/rc6/1bacf12e29c69944/tide-survey-icons.png?rev=9c6383834cd008cf" aria-label="放大查看科考道具配色">
+    <img src="https://resources.pixelforge.torzsi.com/studio/rc6/1bacf12e29c69944/tide-survey-icons.png?rev=9c6383834cd008cf" alt="暖铜配色的罗盘、采样瓶、采样钳、潮汐图、浮标、放大镜、样品箱和贝壳" loading="lazy">
+    <span class="expand-icon" aria-hidden="true">放大</span>
+  </a>
+  <figcaption><span class="view-choices" role="group" aria-label="科考道具配色视图"><a data-choice data-description="暖铜配色的罗盘、采样瓶、采样钳、潮汐图、浮标、放大镜、样品箱和贝壳" data-metric="8 枚 · 32 × 32 px" href="https://resources.pixelforge.torzsi.com/studio/rc6/1bacf12e29c69944/tide-survey-icons.png?rev=9c6383834cd008cf" aria-current="true">日间</a>
+<a data-choice data-description="八枚科考图标的蓝紫暮潮配色" data-metric="8 枚 · 32 × 32 px" href="https://resources.pixelforge.torzsi.com/studio/rc6/1bacf12e29c69944/tide-survey-icons-dusk.png?rev=ec04be5b6aff8c42" >暮潮</a></span><span data-metric-label class="metric">8 枚 · 32 × 32 px</span></figcaption>
+</figure>
+  <div class="chapter-text">
+    <p>八件用具共用 15 个不透明色。换成暮潮配色，罗盘指针和放大镜上的反光仍落在原来的像素上。</p>
+    <p class="fact-line">32 × 32 px · 8 件道具 · 2 套配色</p>
+    <a class="button button-dark" href="https://resources.pixelforge.torzsi.com/studio/rc6/1bacf12e29c69944/tide-survey-icons.zip?rev=f0ca8f15dae3e782" download>下载图标工程 <span aria-hidden="true">↓</span></a>
+  </div>
+</article>
+
+    <article class="case-study" id="port-keeper" aria-labelledby="keeper-heading">
+      <header class="case-heading">
+        <div>
+          <h2 id="keeper-heading">港口守灯人</h2>
+          <p>转到背面切换暴风披风，可以看清它盖住了肩背的哪些像素。</p>
+        </div>
+        <a class="button button-dark" href="../assets/port-keeper.zip" download>下载角色交付包 <span aria-hidden="true">↓</span></a>
+      </header>
+      <div class="case-body">
+        <div class="player" role="group" aria-labelledby="keeper-heading" data-player data-atlas="../assets/keeper-sheet.atlas.json" data-variant="../assets/keeper-storm-sheet.atlas.json">
+
+          <div class="player-stage">
+            <span class="sprite player-fallback"><img src="../assets/keeper-sheet.png" width="320" height="256" alt="港口守灯人面朝下方的站姿"></span>
+            <canvas role="img" aria-label="港口守灯人逐帧预览" hidden></canvas>
+          </div>
+          <div class="player-controls" hidden>
+            <div class="clip-controls">
+              <label>朝向
+                <select data-clip>
+                  <option value="walk_down">下</option>
+                  <option value="walk_left">左</option>
+                  <option value="walk_right">右</option>
+                  <option value="walk_up">上</option>
+                </select>
+              </label>
+              <label>服装
+                <select data-outfit>
+                  <option value="base">基础服装</option>
+                  <option value="variant">暴风披风</option>
+                </select>
+              </label>
+            </div>
+            <div class="transport">
+              <button type="button" data-play>播放</button>
+              <button type="button" data-step="-1" aria-label="上一帧">←</button>
+              <button type="button" data-step="1" aria-label="下一帧">→</button>
+              <output data-frame aria-label="当前帧与时长"></output>
+            </div>
+          </div>
+          <p class="player-error" role="status" hidden>播放器暂时无法载入。可以下载交付包，在本地查看原始图集。</p>
+        </div>
+        <div class="case-details">
+          <dl class="case-facts">
+            <div><dt>原始帧尺寸</dt><dd>64 × 64</dd></div>
+            <div><dt>动作覆盖</dt><dd>4 向 · 每向 1 闲置 + 4 行走帧</dd></div>
+            <div><dt>换装方式</dt><dd>独立披风层 · 原四层逐帧比对一致</dd></div>
+            <div><dt>交付内容</dt><dd>角色、披风、道具、局部修改工程与图集</dd></div>
+          </dl>
+          <h3>重放记录</h3>
+          <p>用 rc.6 重放后，四张精灵表的 SHA-256 均与原件一致。动作观感、轴心与引擎接入仍需在目标项目中验收。</p>
+          <div class="case-links">
+            <a href="../assets/keeper-validation.json">结构校验报告 <span aria-hidden="true">↗</span></a>
+            <a href="https://github.com/starcloud530/pixelforge-demos/tree/main/demos/demo-zombie">制作与重放脚本 <span aria-hidden="true">↗</span></a>
+            <a href="../../pixelforge-ai/export/">引擎导入指南 <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="case-evidence" id="outfit">
+        <figure class="sheet-proof">
+          <div class="sheet-stage"><img src="../assets/keeper-sheet.png" width="320" height="256" loading="lazy" alt="守灯人基础图集，每行一个朝向，五列依次为站姿和四个行走帧"></div>
+          <figcaption><strong>四向图集</strong><span>5 列 × 4 行，PNG 与 JSON 同包交付</span></figcaption>
+        </figure>
+        <figure class="sheet-proof">
+          <div class="outfit-stage">
+            <span class="sprite" style="--sprite-y:-75%"><img src="../assets/keeper-sheet.png" width="320" height="256" loading="lazy" alt="基础服装背面"></span>
+            <span aria-hidden="true">→</span>
+            <span class="sprite" style="--sprite-y:-75%"><img src="../assets/keeper-storm-sheet.png" width="320" height="256" loading="lazy" alt="加上暴风披风后的背面"></span>
+          </div>
+          <figcaption><strong>分层换装</strong><span>同一角色，只新增披风层</span></figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="case-study" id="nezha" aria-labelledby="nezha-heading">
+      <header class="case-heading">
+        <div>
+          <h2 id="nezha-heading">哪吒逐帧动作</h2>
+          <p>前脚落定，枪尖刺出，红绫稍后才回摆。</p>
+        </div>
+        <a class="button button-dark" href="../assets/nezha-attack.zip" download>下载动作交付包 <span aria-hidden="true">↓</span></a>
+      </header>
+      <div class="case-body">
+        <div class="player player-warm" role="group" aria-labelledby="nezha-heading" data-player data-atlas="../assets/nezha-attack.atlas.json">
+
+          <div class="player-stage">
+            <img class="player-fallback nezha-fallback" src="../assets/nezha-thrust.png" width="512" height="512" loading="lazy" alt="哪吒刺出的关键姿势">
+            <canvas role="img" aria-label="哪吒攻击逐帧预览" hidden></canvas>
+          </div>
+          <div class="player-controls" hidden>
+            <div class="clip-controls">
+              <label>阶段
+                <select data-clip>
+                  <option value="attack_right">完整动作</option>
+                  <option value="ready">准备</option>
+                  <option value="charge">蓄力</option>
+                  <option value="thrust">刺出</option>
+                  <option value="recover">收势</option>
+                </select>
+              </label>
+            </div>
+            <div class="transport">
+              <button type="button" data-play>播放</button>
+              <button type="button" data-step="-1" aria-label="上一帧">←</button>
+              <button type="button" data-step="1" aria-label="下一帧">→</button>
+              <output data-frame aria-label="当前帧与时长"></output>
+            </div>
+          </div>
+          <p class="player-error" role="status" hidden>播放器暂时无法载入。可以下载交付包，在本地查看原始图集。</p>
+        </div>
+        <div class="case-details">
+          <dl class="case-facts">
+            <div><dt>原始帧尺寸</dt><dd>128 × 128</dd></div>
+            <div><dt>动作覆盖</dt><dd>朝右普攻 · 12 帧 · 1070 ms</dd></div>
+            <div><dt>工程分层</dt><dd>红绫、下肢与风火轮、身体、手臂与枪</dd></div>
+            <div><dt>交付内容</dt><dd>源工程、6 × 2 精灵表、atlas JSON、透明 APNG</dd></div>
+          </dl>
+          <div class="case-links">
+            <a href="../assets/nezha-validation.json">结构校验报告 <span aria-hidden="true">↗</span></a>
+            <a href="https://github.com/starcloud530/pixelforge-demos/tree/main/demos/nezha-frame-attack">姿势与重放脚本 <span aria-hidden="true">↗</span></a>
+            <a href="../../pixelforge-ai/showcase/">本地播放与导出教程 <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
+    </article>
+</main><dialog class="lightbox" aria-labelledby="light-title"><div class="lightbar"><strong id="light-title" data-light-title></strong><div><button type="button" data-zoom aria-pressed="false">放大 2×</button><button type="button" data-close>关闭 ×</button></div></div><p class="light-message" role="status" hidden><span data-image-status></span> <a data-original hidden>打开原图</a></p>
+<div class="light-scroll"><div class="zoom-surface"><img alt=""></div></div></dialog><footer class="site-footer"><div class="shell footer-row"><strong>PixelForge 像素画室</strong><p>AI 辅助创作 · 示例美术 CC BY 4.0 · PixelForge / starcloud530</p><a href="../../pixelforge-ai/licensing/">许可说明</a></div></footer></body></html>

@@ -1,69 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>PixelForge — 用 AI Agent 创作可编辑像素动画</title>
-<meta name="description" content="用 AI Agent 创作角色、逐帧动画与游戏像素资产。查看哪吒攻击动画，下载可编辑工程，导出精灵表与图集。"/>
-<style>
-:root{--bg:#fff;--ink:#111;--muted:#555;--line:#e8e8e8;--brand:#111;--soft:#f6f6f4;}
-*{box-sizing:border-box}body{margin:0;font-family:Georgia,"Songti SC","Noto Serif SC",serif;color:var(--ink);background:var(--bg);line-height:1.55}
-.sans{font-family:system-ui,-apple-system,Segoe UI,sans-serif}
-a{color:var(--ink)}
-.top{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid var(--line);font-family:system-ui,sans-serif;font-size:14px}
-.top a{text-decoration:none;color:var(--muted)}.top .brand{font-weight:700;color:var(--ink)}
-.hero{max-width:720px;margin:0 auto;padding:56px 20px 28px;text-align:center}
-.hero h1{font-size:clamp(32px,5vw,48px);line-height:1.15;margin:0 0 16px;letter-spacing:-.02em}
-.hero p{font-size:18px;color:var(--muted);margin:0 auto 24px;max-width:38ch;font-family:system-ui,sans-serif}
-.btn{display:inline-block;background:#111;color:#fff!important;text-decoration:none;padding:14px 22px;border-radius:8px;font-family:system-ui,sans-serif;font-weight:600;font-size:15px}
-.btn:hover{background:#333}
-.proof-row{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:28px;font-family:system-ui,sans-serif;font-size:12px;color:var(--muted)}
-.hero-art{margin:28px auto 0;width:min(280px,70vw)}
-.hero-art img{width:100%;image-rendering:pixelated;background:#0b0b0b;border-radius:12px}
-section{max-width:720px;margin:0 auto;padding:36px 20px;border-top:1px solid var(--line)}
-h2{font-size:26px;margin:0 0 12px;letter-spacing:-.01em}
-p.lead,section p{font-family:system-ui,sans-serif;font-size:16px;color:#333}
-.pain{background:var(--soft);border-radius:12px;padding:18px;font-family:system-ui,sans-serif}
-.benefits{display:grid;gap:14px}
-.b{padding:14px 0;border-bottom:1px solid var(--line);font-family:system-ui,sans-serif}
-.b strong{display:block;font-size:16px;margin-bottom:4px}
-.b span{color:var(--muted);font-size:15px}
-.steps{counter-reset:s;list-style:none;padding:0;margin:0;font-family:system-ui,sans-serif}
-.steps li{counter-increment:s;padding:14px 0 14px 48px;position:relative;border-bottom:1px solid var(--line)}
-.steps li::before{content:counter(s);position:absolute;left:0;top:14px;width:32px;height:32px;border-radius:50%;background:#111;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700}
-.steps code{font-size:13px;background:#f0f0f0;padding:2px 6px;border-radius:4px}
-.evidence{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-@media(max-width:560px){.evidence{grid-template-columns:1fr}}
-.evidence figure{margin:0;font-family:system-ui,sans-serif;font-size:12px;color:var(--muted)}
-.evidence img{width:100%;image-rendering:pixelated;background:#111;border-radius:8px;margin-bottom:6px}
-.faq details{font-family:system-ui,sans-serif;border-bottom:1px solid var(--line);padding:12px 0}
-.faq summary{cursor:pointer;font-weight:600}
-.final{text-align:center;padding-bottom:48px}
-.final .btn{margin-top:8px}
-.honest{max-width:720px;margin:0 auto;padding:24px 20px 48px;border-top:1px solid var(--line);font-family:system-ui,sans-serif;font-size:13px;color:var(--muted)}
-.honest ul{padding-left:18px}
-.hero-art{width:min(384px,80vw)}.hero-art figure{margin:0}.hero-art figcaption{font:13px system-ui,sans-serif;color:var(--muted);margin-top:10px}.secondary{display:inline-block;margin:12px 16px}.poses{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.poses img{width:100%;image-rendering:pixelated;background:#171822;border-radius:8px}.poses figure{margin:0}.poses figcaption{font:12px system-ui,sans-serif;text-align:center;color:var(--muted)}@media(max-width:420px){.poses{grid-template-columns:repeat(2,1fr)}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="浏览我们的像素场景、四向角色、逐帧机关与背包道具。下载可编辑源工程，用开源 PixelForge CLI 接着画。">
+  <meta property="og:title" content="PixelForge 像素画室 · 原创作品与开源工具">
+  <meta property="og:image" content="https://resources.pixelforge.torzsi.com/studio/rc6/1bacf12e29c69944/tidal-glasshouse.png?rev=fb2d394c870ececb">
+  <title>PixelForge 像素画室 · 原创作品与开源工具</title>
+  <link rel="preconnect" href="https://resources.pixelforge.torzsi.com">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/atelier.js" defer></script>
+
 </head>
-<body>
-<header class="top sans"><a class="brand" href="./">PixelForge</a><nav aria-label="主导航"><a href="gallery/">作品</a> · <a href="https://starcloud530.github.io/pixelforge-ai/">文档</a> · <a href="https://github.com/starcloud530/pixelforge-ai">GitHub</a></nav></header>
-<main>
-<section class="hero" style="border:0">
-<h1>让你的像素角色<br/>动起来。</h1>
-<p>与 AI Agent 一起创作角色、编排逐帧动作。每一帧、每一层、每一种颜色，都留在可继续修改的像素工程里。</p>
-<a class="btn" href="https://starcloud530.github.io/pixelforge-ai/install/">下载 PixelForge</a><a class="secondary sans" href="gallery/">查看作品 →</a>
-<div class="hero-art"><figure><img src="assets/nezha-attack.gif" width="384" height="384" alt="哪吒持火尖枪蓄力、刺出、收势，红绫随动作回摆的像素攻击动画"/><figcaption>哪吒 · 火尖枪攻击 · 12 帧逐帧动画</figcaption></figure></div>
-</section>
-<section><h2>从一个角色，到一套动作</h2><p>双髻、红肚兜、混天绫、风火轮。用关键姿势安排蓄力、出枪与回弹，再逐帧调整身体、脚步和红绫。</p>
-<div class="poses"><figure><img src="assets/nezha-ready.png" width="128" height="128" loading="lazy" alt="哪吒准备关键帧"/><figcaption>准备</figcaption></figure><figure><img src="assets/nezha-charge.png" width="128" height="128" loading="lazy" alt="哪吒蓄力关键帧"/><figcaption>蓄力</figcaption></figure><figure><img src="assets/nezha-thrust.png" width="128" height="128" loading="lazy" alt="哪吒刺出关键帧"/><figcaption>刺出</figcaption></figure><figure><img src="assets/nezha-recover.png" width="128" height="128" loading="lazy" alt="哪吒收势关键帧"/><figcaption>收势</figcaption></figure></div>
-<p><a href="gallery/">查看动画与工程下载 →</a></p></section>
-<section><h2>创作、调整、交付</h2><div class="benefits">
-<div class="b"><strong>和你的 Agent 一起画</strong><span>通过 Codex、Claude Code、Cursor 等 Agent 调用本地 CLI，从造型与配色推进到动作编排。</span></div>
-<div class="b"><strong>把每次修改留在工程里</strong><span>索引色、图层与帧时长独立可编辑。调整装备颜色、修正关键帧，继续迭代同一份作品。</span></div>
-<div class="b"><strong>边播放，边打磨节奏</strong><span>本地动画播放器支持播放、暂停与逐帧查看，快速检查蓄力、出招和收势。</span></div>
-<div class="b"><strong>带进你的游戏</strong><span>导出 PNG 序列、精灵表与 atlas JSON；APNG 用于透明动画预览。</span></div>
-</div></section>
-<section><h2>开始你的第一段动画</h2><ol class="steps"><li><a href="https://starcloud530.github.io/pixelforge-ai/install/">安装 PixelForge</a>，选择适合你的系统的安装包。</li><li>让 Agent 读取内置创作技能，创建角色并编排动作。</li><li>播放检查、调整细节，再导出游戏需要的图集。</li></ol><p><a href="https://starcloud530.github.io/pixelforge-ai/showcase/">从哪吒示例开始 →</a></p></section>
-<section class="final"><h2>下一位角色，由你来创作。</h2><a class="btn" href="https://starcloud530.github.io/pixelforge-ai/install/">开始创作</a><p><a href="https://starcloud530.github.io/pixelforge-ai/">阅读文档</a> · <a href="https://github.com/starcloud530/pixelforge-demos/tree/main/demos/nezha-frame-attack">查看哪吒制作流程</a></p></section>
-</main><footer class="honest"><p>PixelForge · AI Agent 驱动的像素创作工具</p><p>代码 MIT / Apache-2.0 · 示例美术 CC BY 4.0，PixelForge / starcloud530</p><p><a href="https://starcloud530.github.io/pixelforge-ai/licensing/">许可与商业使用</a> · <a href="https://github.com/starcloud530/pixelforge-ai/releases">下载与更新记录</a></p></footer>
-</body></html>
+<body><a class="skip" href="#main">跳到正文</a>
+<header class="site-header"><div class="shell header-row">
+  <a class="brand" href="./" aria-label="PixelForge 像素画室首页"><span class="brand-mark" aria-hidden="true"></span>PixelForge<span class="studio-name">像素画室</span></a>
+  <nav aria-label="主导航"><a href="gallery/" >作品集</a><a href="../pixelforge-ai/">文档</a><a class="nav-install" href="../pixelforge-ai/install/">安装 CLI</a></nav>
+</div></header>
+<main id="main" class="shell">
+  <section class="cover" aria-labelledby="feature-title">
+    <header class="work-heading">
+      <h1 id="feature-title">潮汐温室</h1>
+      <p class="work-english" lang="en">Tidal Glasshouse</p>
+    </header>
+    <figure class="viewer view-scene" data-viewer aria-label="潮汐温室">
+  <a class="art-stage" data-enlarge href="https://resources.pixelforge.torzsi.com/studio/rc6/1bacf12e29c69944/tidal-glasshouse.png?rev=fb2d394c870ececb" aria-label="放大查看潮汐温室">
+    <img src="https://resources.pixelforge.torzsi.com/studio/rc6/1bacf12e29c69944/tidal-glasshouse.png?rev=fb2d394c870ececb" alt="潮汐温室全景，穿过水道的木桥连接暖灯照亮的玻璃温室" fetchpriority="high">
+    <span class="expand-icon" aria-hidden="true">放大</span>
+  </a>
+  <figcaption><span class="view-choices" role="group" aria-label="潮汐温室视图"><a data-choice data-description="潮汐温室全景，穿过水道的木桥连接暖灯照亮的玻璃温室" data-metric="416 × 288 px" href="https://resources.pixelforge.torzsi.com/studio/rc6/1bacf12e29c69944/tidal-glasshouse.png?rev=fb2d394c870ececb" aria-current="true">全景</a>
+<a data-choice data-description="温室立面，圆顶玻璃、铁架和暖灯门廊" data-metric="128 × 96 px 原稿" href="https://resources.pixelforge.torzsi.com/studio/rc6/1bacf12e29c69944/glasshouse-facade-preview.png?rev=d440a94c29c332e9" >建筑</a>
+<a data-choice data-description="温室场景使用的岸线、水纹、建筑与植被图块" data-metric="32 × 32 px / 块" href="https://resources.pixelforge.torzsi.com/studio/rc6/1bacf12e29c69944/tiles.png?rev=7aaadd3a70acea9e" >图块</a></span><span data-metric-label class="metric">416 × 288 px</span></figcaption>
+</figure>
+    <div class="cover-copy">
+      <p class="feature-note">我们把岛上最暖的颜色留给了门灯。沿木桥走近，石板、芦苇和水纹都拼自同一套图块。</p>
+      <a class="ink-link" href="gallery/#tidal-glasshouse">查看场景工程 <span aria-hidden="true">→</span></a>
+      <div class="palette-note"><div class="swatches" role="img" aria-label="潮汐温室选用的七种索引色"><span style="--swatch:#173849" title="#173849"></span><span style="--swatch:#418089" title="#418089"></span><span style="--swatch:#425c49" title="#425c49"></span><span style="--swatch:#58a097" title="#58a097"></span><span style="--swatch:#8ec8a5" title="#8ec8a5"></span><span style="--swatch:#e6b269" title="#e6b269"></span><span style="--swatch:#ffe6a8" title="#ffe6a8"></span></div><span>场景用色</span></div>
+    </div>
+  </section>
+  <section class="work-section" aria-labelledby="works-title">
+    <div class="section-line"><h2 id="works-title">画室选作</h2><a href="gallery/">全部作品 <span aria-hidden="true">↗</span></a></div>
+    <div class="works-grid">
+      <a class="work-card courier" href="gallery/#alpine-courier">
+  <div class="work-stage"><img loading="lazy" src="https://resources.pixelforge.torzsi.com/studio/rc6/1bacf12e29c69944/courier-front.png?rev=3b617c1fc479b2ee" alt="戴酒红毛帽、背帆布邮包的雪岭邮差"></div>
+  <div class="work-caption"><h3>雪岭邮差</h3><span class="card-arrow" aria-hidden="true">↗</span></div>
+  <p>Alpine Post Courier <span>／ 四向角色</span></p>
+</a>
+      <a class="work-card machine" href="gallery/#observatory-machine">
+  <div class="work-stage"><img loading="lazy" src="https://resources.pixelforge.torzsi.com/studio/rc6/1bacf12e29c69944/aster-wind-observatory-native.png?rev=d07de7f08c0a67a4" alt="青铜风杯、嵌入式指针和玻璃采样筒"></div>
+  <div class="work-caption"><h3>星芒风候仪</h3><span class="card-arrow" aria-hidden="true">↗</span></div>
+  <p>Aster Wind Observatory <span>／ 机关动画</span></p>
+</a>
+      <a class="work-card icons" href="gallery/#tide-survey-icons">
+  <div class="work-stage"><img loading="lazy" src="https://resources.pixelforge.torzsi.com/studio/rc6/1bacf12e29c69944/tide-survey-icons.png?rev=9c6383834cd008cf" alt="八件潮汐科考用具组成的图集"></div>
+  <div class="work-caption"><h3>潮汐科考道具</h3><span class="card-arrow" aria-hidden="true">↗</span></div>
+  <p>Tide Survey Kit <span>／ 背包图标</span></p>
+</a>
+    </div>
+  </section>
+  <section class="studio-note" aria-labelledby="tool-heading">
+    <div><h2 id="tool-heading">用 PixelForge 接着画</h2><p>这六套作品都用本地 CLI 绘制。打开随附的源工程，可以改一层披风、调一帧动作，再导出自己的精灵表。</p>
+    <div class="actions"><a class="button button-dark" href="../pixelforge-ai/install/">安装 PixelForge</a><a class="ink-link" href="../pixelforge-ai/">阅读文档</a></div></div>
+    <div class="tool-notes"><a href="gallery/#outfit"><span>港口守灯人</span>查看分层换装 →</a><a href="gallery/#nezha"><span>哪吒逐帧动作</span>查看动作分解 →</a><a href="../pixelforge-ai/export/"><span>导出与导入</span>精灵表与图集 →</a></div>
+  </section>
+</main><dialog class="lightbox" aria-labelledby="light-title"><div class="lightbar"><strong id="light-title" data-light-title></strong><div><button type="button" data-zoom aria-pressed="false">放大 2×</button><button type="button" data-close>关闭 ×</button></div></div><p class="light-message" role="status" hidden><span data-image-status></span> <a data-original hidden>打开原图</a></p>
+<div class="light-scroll"><div class="zoom-surface"><img alt=""></div></div></dialog><footer class="site-footer"><div class="shell footer-row"><strong>PixelForge 像素画室</strong><p>AI 辅助创作 · 示例美术 CC BY 4.0 · PixelForge / starcloud530</p><a href="../pixelforge-ai/licensing/">许可说明</a></div></footer></body></html>
