@@ -3,37 +3,46 @@ name: Pages
 on:
   push:
     branches: [main]
+  pull_request:
+    paths:
+      - "site/**"
+      - "demos/**"
+      - "scripts/build_pages.py"
+      - "LICENSE-ASSETS.md"
+      - ".github/workflows/pages.yml"
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages-demos
+  group: pages-demos-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build site and case downloads
+        run: python3 scripts/build_pages.py "$RUNNER_TEMP/pixelforge-pages"
+      - name: Upload
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ runner.temp }}/pixelforge-pages
+
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
-      - name: Prepare showcase media
-        run: |
-          cp demos/nezha-frame-attack/final/nezha-attack.gif site/assets/nezha-attack.gif
-          cp demos/nezha-frame-attack/final/nezha-attack-sheet.png site/assets/nezha-attack-sheet.png
-          cp demos/nezha-frame-attack/final/poses/00-ready.png site/assets/nezha-ready.png
-          cp demos/nezha-frame-attack/final/poses/02-charge.png site/assets/nezha-charge.png
-          cp demos/nezha-frame-attack/final/poses/05-thrust.png site/assets/nezha-thrust.png
-          cp demos/nezha-frame-attack/final/poses/08-recover.png site/assets/nezha-recover.png
-      - name: Upload
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
