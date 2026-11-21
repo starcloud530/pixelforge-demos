@@ -45,6 +45,7 @@ PIXELFORGE=/path/to/pixelforge python3 demos/nezha-frame-attack/validate.py --ro
 - `final/nezha-attack.pxf.json`：12 帧可编辑工程；`nezha-attack-sheet.png` 与 atlas 为 6×2 图集。
 - `final/poses/`：准备、蓄力、出枪、收势关键帧。
 - `validate.py`：检查图层/帧/色板、下肢确有变化、脚踝与轮子的像素连接、枪杆连续性、标签、导出时长、图集及文件哈希。
+- `CAPABILITIES.md`：CLI 操作、逐帧数据、提交能确认的造型来源，以及上述检查各自证明的范围。
 
 结构和连续性检查不能给动作的自然度打分。完整观看 GIF/APNG，结合关键帧审阅蓄力、刺出、回弹与红绫跟随；`aestheticApproval` 保持 false，最终以人工审阅为准。角色脚下是风火轮，不把火焰的最低像素当作脚底接触点。轮子与特效仍为简化表现，不是完整物理解算。此示例只有朝右普通攻击，不声称覆盖八向攻击。
 
