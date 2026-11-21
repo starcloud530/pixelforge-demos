@@ -4,6 +4,7 @@ import argparse
 import shutil
 from pathlib import Path
 from zipfile import ZIP_DEFLATED, ZipFile
+from render_site import render_site
 
 ROOT = Path(__file__).resolve().parents[1]
 KEEPER = ROOT / "demos/demo-zombie"
@@ -49,8 +50,9 @@ def write_bundle(destination, source, paths, readme):
 
 
 def build(destination):
-    shutil.copytree(ROOT / "site", destination, dirs_exist_ok=True)
     assets = destination / "assets"
+    shutil.copytree(ROOT / "site/assets", assets, dirs_exist_ok=True)
+    render_site(destination)
 
     media = {
         "keeper-sheet.png": KEEPER / "a/keeper-sheet.png",

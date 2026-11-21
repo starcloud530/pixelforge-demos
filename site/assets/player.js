@@ -38,7 +38,8 @@ async function mountPlayer(player) {
   function stop() {
     window.clearTimeout(timer);
     timer = null;
-    playButton.textContent = "播放";
+    playButton.dataset.playing = "false";
+    playButton.setAttribute("aria-label", player.dataset.playLabel);
     frameOutput.setAttribute("aria-live", "polite");
   }
 
@@ -85,7 +86,8 @@ async function mountPlayer(player) {
       position = 0;
       draw();
     }
-    playButton.textContent = "暂停";
+    playButton.dataset.playing = "true";
+    playButton.setAttribute("aria-label", player.dataset.pauseLabel);
     frameOutput.setAttribute("aria-live", "off");
     advance();
   });

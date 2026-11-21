@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:image" content="{{ media:tidal-glasshouse.png }}">
+  <link rel="canonical" href="{{ canonical }}">
+  <link rel="alternate" hreflang="en" href="{{ canonicalEn }}">
+  <link rel="alternate" hreflang="zh" href="{{ canonicalZh }}">
+  <link rel="alternate" hreflang="x-default" href="{{ canonicalEn }}">
+  <link rel="preconnect" href="https://resources.pixelforge.torzsi.com">
+  <link rel="stylesheet" href="{{ assets }}/site.css">
+  <script src="{{ assets }}/language.js" defer></script>
+  <script src="{{ assets }}/atelier.js" defer></script>
+  {{ playerScript }}
+</head>
+<body>
+<a class="skip" href="#main">{{ skip }}</a>
+<header class="site-header"><div class="shell header-row">
+  <a class="brand" href="{{ homeUrl }}" aria-label="{{ brandHome }}"><span class="brand-mark" aria-hidden="true"></span>PixelForge <span class="studio-name">{{ studio }}</span></a>
+  <nav aria-label="{{ navigation }}">
+    <a href="{{ galleryUrl }}" {{ galleryCurrent }} aria-label="{{ gallery }}" data-hint>{{ icon:gallery }}</a><a href="{{ docsUrl }}" aria-label="{{ docs }}" data-hint>{{ icon:book }}</a>
+    <a class="language-link" data-language="{{ otherLang }}" href="{{ alternate }}" hreflang="{{ otherLang }}" lang="{{ otherLang }}">{{ icon:globe }} {{ otherName }}</a>
+    <a class="nav-install" href="{{ docsUrl }}install/">{{ install }} <span aria-hidden="true">↗</span></a>
+  </nav>
+</div></header>
+{{ body }}
+<dialog class="lightbox" aria-labelledby="light-title" data-fit="{{ fit }}" data-zoom-label="{{ zoomIn }}" data-loading="{{ loading }}" data-error="{{ imageError }}">
+  <div class="lightbar"><strong id="light-title" data-light-title></strong><div><button type="button" data-zoom aria-pressed="false" aria-label="{{ zoomIn }}" data-hint>{{ icon:zoom-in }}{{ icon:zoom-out }}</button><button type="button" data-close aria-label="{{ close }}" data-hint>{{ icon:close }}</button></div></div>
+  <p class="light-message" role="status" hidden><span data-image-status></span> <a data-original hidden>{{ openOriginal }}</a></p>
+  <div class="light-scroll"><div class="zoom-surface"><img alt=""></div></div>
+</dialog>
+<footer class="site-footer"><div class="shell footer-row"><strong>{{ brand }}</strong><p>{{ credit }}</p><a href="{{ docsUrl }}licensing/">{{ license }}</a></div></footer>
+</body></html>
