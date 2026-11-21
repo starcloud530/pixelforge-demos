@@ -7,7 +7,7 @@ on:
     paths:
       - "site/**"
       - "demos/**"
-      - "scripts/build_pages.py"
+      - "scripts/**"
       - "LICENSE-ASSETS.md"
       - ".github/workflows/pages.yml"
   workflow_dispatch:

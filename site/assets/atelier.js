@@ -15,21 +15,21 @@ function showImage() {
 
 enlarged.addEventListener("load", showImage);
 enlarged.addEventListener("error", () => {
-  statusText.textContent = "未能加载图片。";
+  statusText.textContent = lightbox.dataset.error;
   original.hidden = false;
 });
 
 function resetZoom() {
   surface.classList.remove("magnified");
   zoom.setAttribute("aria-pressed", "false");
-  zoom.textContent = "放大 2×";
+  zoom.setAttribute("aria-label", lightbox.dataset.zoomLabel);
   scroller.scrollTo(0, 0);
 }
 
 zoom.addEventListener("click", () => {
   const magnified = surface.classList.toggle("magnified");
   zoom.setAttribute("aria-pressed", String(magnified));
-  zoom.textContent = magnified ? "适合窗口" : "放大 2×";
+  zoom.setAttribute("aria-label", magnified ? lightbox.dataset.fit : lightbox.dataset.zoomLabel);
   scroller.scrollTo((scroller.scrollWidth - scroller.clientWidth) / 2, (scroller.scrollHeight - scroller.clientHeight) / 2);
 });
 lightbox.querySelector("[data-close]").addEventListener("click", () => lightbox.close());
@@ -63,7 +63,7 @@ for (const viewer of document.querySelectorAll("[data-viewer]")) {
     enlarged.hidden = true;
     original.href = stage.href;
     original.hidden = true;
-    statusText.textContent = "正在载入图片…";
+    statusText.textContent = lightbox.dataset.loading;
     message.hidden = false;
     enlarged.src = stage.href;
     enlarged.alt = picture.alt;
@@ -72,5 +72,21 @@ for (const viewer of document.querySelectorAll("[data-viewer]")) {
     lightbox.querySelector("[data-light-title]").textContent = viewer.getAttribute("aria-label") + " · " + selected.textContent;
     lightbox.showModal();
     lightbox.querySelector("[data-close]").focus();
+  });
+}
+
+const filters = document.querySelector(".filters");
+if (filters) {
+  const cards = document.querySelectorAll("[data-category]");
+  filters.hidden = false;
+  filters.addEventListener("click", event => {
+    const selected = event.target.closest("button[data-filter]");
+    if (!selected) return;
+    for (const button of filters.querySelectorAll("button")) {
+      button.setAttribute("aria-pressed", String(button === selected));
+    }
+    for (const card of cards) {
+      card.hidden = selected.dataset.filter !== "all" && selected.dataset.filter !== card.dataset.category;
+    }
   });
 }

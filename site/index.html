@@ -1,67 +1,61 @@
-<!doctype html>
-<html lang="zh-CN">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="浏览我们的像素场景、四向角色、逐帧机关与背包道具。下载可编辑源工程，用开源 PixelForge CLI 接着画。">
-  <meta property="og:title" content="PixelForge 像素画室 · 原创作品与开源工具">
-  <meta property="og:image" content="https://resources.pixelforge.torzsi.com/studio/rc6/1bacf12e29c69944/tidal-glasshouse.png?rev=fb2d394c870ececb">
-  <title>PixelForge 像素画室 · 原创作品与开源工具</title>
-  <link rel="preconnect" href="https://resources.pixelforge.torzsi.com">
-  <link rel="stylesheet" href="assets/site.css">
-  <script src="assets/atelier.js" defer></script>
-
-</head>
-<body><a class="skip" href="#main">跳到正文</a>
-<header class="site-header"><div class="shell header-row">
-  <a class="brand" href="./" aria-label="PixelForge 像素画室首页"><span class="brand-mark" aria-hidden="true"></span>PixelForge<span class="studio-name">像素画室</span></a>
-  <nav aria-label="主导航"><a href="gallery/" >作品集</a><a href="../pixelforge-ai/">文档</a><a class="nav-install" href="../pixelforge-ai/install/">安装 CLI</a></nav>
-</div></header>
-<main id="main" class="shell">
-  <section class="cover" aria-labelledby="feature-title">
-    <header class="work-heading">
-      <h1 id="feature-title">潮汐温室</h1>
-      <p class="work-english" lang="en">Tidal Glasshouse</p>
-    </header>
-    <figure class="viewer view-scene" data-viewer aria-label="潮汐温室">
-  <a class="art-stage" data-enlarge href="https://resources.pixelforge.torzsi.com/studio/rc6/1bacf12e29c69944/tidal-glasshouse.png?rev=fb2d394c870ececb" aria-label="放大查看潮汐温室">
-    <img src="https://resources.pixelforge.torzsi.com/studio/rc6/1bacf12e29c69944/tidal-glasshouse.png?rev=fb2d394c870ececb" alt="潮汐温室全景，穿过水道的木桥连接暖灯照亮的玻璃温室" fetchpriority="high">
-    <span class="expand-icon" aria-hidden="true">放大</span>
-  </a>
-  <figcaption><span class="view-choices" role="group" aria-label="潮汐温室视图"><a data-choice data-description="潮汐温室全景，穿过水道的木桥连接暖灯照亮的玻璃温室" data-metric="416 × 288 px" href="https://resources.pixelforge.torzsi.com/studio/rc6/1bacf12e29c69944/tidal-glasshouse.png?rev=fb2d394c870ececb" aria-current="true">全景</a>
-<a data-choice data-description="温室立面，圆顶玻璃、铁架和暖灯门廊" data-metric="128 × 96 px 原稿" href="https://resources.pixelforge.torzsi.com/studio/rc6/1bacf12e29c69944/glasshouse-facade-preview.png?rev=d440a94c29c332e9" >建筑</a>
-<a data-choice data-description="温室场景使用的岸线、水纹、建筑与植被图块" data-metric="32 × 32 px / 块" href="https://resources.pixelforge.torzsi.com/studio/rc6/1bacf12e29c69944/tiles.png?rev=7aaadd3a70acea9e" >图块</a></span><span data-metric-label class="metric">416 × 288 px</span></figcaption>
-</figure>
-    <div class="cover-copy">
-      <p class="feature-note">我们把岛上最暖的颜色留给了门灯。沿木桥走近，石板、芦苇和水纹都拼自同一套图块。</p>
-      <a class="ink-link" href="gallery/#tidal-glasshouse">查看场景工程 <span aria-hidden="true">→</span></a>
-      <div class="palette-note"><div class="swatches" role="img" aria-label="潮汐温室选用的七种索引色"><span style="--swatch:#173849" title="#173849"></span><span style="--swatch:#418089" title="#418089"></span><span style="--swatch:#425c49" title="#425c49"></span><span style="--swatch:#58a097" title="#58a097"></span><span style="--swatch:#8ec8a5" title="#8ec8a5"></span><span style="--swatch:#e6b269" title="#e6b269"></span><span style="--swatch:#ffe6a8" title="#ffe6a8"></span></div><span>场景用色</span></div>
+<main id="main">
+  <section class="exhibit" aria-labelledby="feature-title">
+    <div class="shell exhibit-inner">
+      <div class="exhibit-copy">
+        <h1 id="feature-title">{{ heroLine }}<em>{{ heroAccent }}</em></h1>
+        <p>{{ heroCopy }}</p>
+        <a class="exhibit-action" href="#collection">{{ browse }} <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="exhibit-art">
+        <div class="exhibit-caption"><span>{{ featuredMedium }}</span><b>{{ sceneName }}</b></div>
+        {{ sceneViewer }}
+      </div>
     </div>
   </section>
-  <section class="work-section" aria-labelledby="works-title">
-    <div class="section-line"><h2 id="works-title">画室选作</h2><a href="gallery/">全部作品 <span aria-hidden="true">↗</span></a></div>
+  <section class="shell work-section" id="collection" aria-labelledby="works-title">
+    <div class="collection-bar"><h2 id="works-title">{{ worksTitle }}</h2><a class="ink-link" href="{{ galleryUrl }}">{{ collectionLink }} <span aria-hidden="true">↗</span></a></div>
+    <div class="filters" role="group" aria-label="{{ filterLabel }}" hidden>
+      <button type="button" data-filter="all" aria-pressed="true">{{ all }}</button>
+      <button type="button" data-filter="scenes" aria-pressed="false">{{ scenes }}</button>
+      <button type="button" data-filter="characters" aria-pressed="false">{{ characters }}</button>
+      <button type="button" data-filter="animation" aria-pressed="false">{{ motions }}</button>
+      <button type="button" data-filter="icons" aria-pressed="false">{{ icons }}</button>
+    </div>
     <div class="works-grid">
-      <a class="work-card courier" href="gallery/#alpine-courier">
-  <div class="work-stage"><img loading="lazy" src="https://resources.pixelforge.torzsi.com/studio/rc6/1bacf12e29c69944/courier-front.png?rev=3b617c1fc479b2ee" alt="戴酒红毛帽、背帆布邮包的雪岭邮差"></div>
-  <div class="work-caption"><h3>雪岭邮差</h3><span class="card-arrow" aria-hidden="true">↗</span></div>
-  <p>Alpine Post Courier <span>／ 四向角色</span></p>
-</a>
-      <a class="work-card machine" href="gallery/#observatory-machine">
-  <div class="work-stage"><img loading="lazy" src="https://resources.pixelforge.torzsi.com/studio/rc6/1bacf12e29c69944/aster-wind-observatory-native.png?rev=d07de7f08c0a67a4" alt="青铜风杯、嵌入式指针和玻璃采样筒"></div>
-  <div class="work-caption"><h3>星芒风候仪</h3><span class="card-arrow" aria-hidden="true">↗</span></div>
-  <p>Aster Wind Observatory <span>／ 机关动画</span></p>
-</a>
-      <a class="work-card icons" href="gallery/#tide-survey-icons">
-  <div class="work-stage"><img loading="lazy" src="https://resources.pixelforge.torzsi.com/studio/rc6/1bacf12e29c69944/tide-survey-icons.png?rev=9c6383834cd008cf" alt="八件潮汐科考用具组成的图集"></div>
-  <div class="work-caption"><h3>潮汐科考道具</h3><span class="card-arrow" aria-hidden="true">↗</span></div>
-  <p>Tide Survey Kit <span>／ 背包图标</span></p>
-</a>
+      <a class="work-card courier" data-category="characters" href="{{ galleryUrl }}#alpine-courier">
+        <div class="work-stage"><img loading="lazy" src="{{ media:courier-front.png }}" alt=""></div>
+        <div class="work-caption"><h3>{{ courierName }}</h3><span aria-hidden="true">↗</span></div>
+        <div class="work-meta"><span>{{ courierCard }}</span><span>64 × 64</span></div>
+      </a>
+      <a class="work-card machine" data-category="animation" href="{{ galleryUrl }}#observatory-machine">
+        <div class="work-stage"><img loading="lazy" src="{{ media:aster-wind-observatory-native.png }}" alt=""></div>
+        <div class="work-caption"><h3>{{ machineName }}</h3><span aria-hidden="true">↗</span></div>
+        <div class="work-meta"><span>{{ machineCard }}</span><span>96 × 96</span></div>
+      </a>
+      <a class="work-card icons" data-category="icons" href="{{ galleryUrl }}#tide-survey-icons">
+        <div class="work-stage"><img loading="lazy" src="{{ media:tide-survey-icons.png }}" alt=""></div>
+        <div class="work-caption"><h3>{{ iconsName }}</h3><span aria-hidden="true">↗</span></div>
+        <div class="work-meta"><span>{{ iconsCard }}</span><span>32 × 32</span></div>
+      </a>
+      <a class="work-card scene" data-category="scenes" href="{{ galleryUrl }}#tidal-glasshouse">
+        <div class="work-stage"><img loading="lazy" src="{{ media:tidal-glasshouse.png }}" alt=""></div>
+        <div class="work-caption"><h3>{{ sceneName }}</h3><span aria-hidden="true">↗</span></div>
+        <div class="work-meta"><span>{{ sceneCard }}</span><span>416 × 288</span></div>
+      </a>
+      <a class="work-card keeper" data-category="characters" href="{{ galleryUrl }}#port-keeper">
+        <div class="work-stage"><img loading="lazy" src="{{ assets }}/keeper-sheet.png" alt=""></div>
+        <div class="work-caption"><h3>{{ keeperName }}</h3><span aria-hidden="true">↗</span></div>
+        <div class="work-meta"><span>{{ keeperCard }}</span><span>64 × 64</span></div>
+      </a>
+      <a class="work-card nezha" data-category="animation" href="{{ galleryUrl }}#nezha">
+        <div class="work-stage"><img loading="lazy" src="{{ assets }}/nezha-thrust.png" alt=""></div>
+        <div class="work-caption"><h3>{{ nezhaName }}</h3><span aria-hidden="true">↗</span></div>
+        <div class="work-meta"><span>{{ nezhaCard }}</span><span>128 × 128</span></div>
+      </a>
     </div>
   </section>
-  <section class="studio-note" aria-labelledby="tool-heading">
-    <div><h2 id="tool-heading">用 PixelForge 接着画</h2><p>这六套作品都用本地 CLI 绘制。打开随附的源工程，可以改一层披风、调一帧动作，再导出自己的精灵表。</p>
-    <div class="actions"><a class="button button-dark" href="../pixelforge-ai/install/">安装 PixelForge</a><a class="ink-link" href="../pixelforge-ai/">阅读文档</a></div></div>
-    <div class="tool-notes"><a href="gallery/#outfit"><span>港口守灯人</span>查看分层换装 →</a><a href="gallery/#nezha"><span>哪吒逐帧动作</span>查看动作分解 →</a><a href="../pixelforge-ai/export/"><span>导出与导入</span>精灵表与图集 →</a></div>
+  <section class="shell studio-note" aria-labelledby="tool-heading">
+    <div><h2 id="tool-heading">{{ openTool }}</h2><p>{{ toolCopy }}</p></div>
+    <div class="actions"><a class="button button-dark" href="{{ docsUrl }}install/">{{ installTool }} ↗</a><a class="ink-link" href="{{ docsUrl }}">{{ readDocs }}</a></div>
   </section>
-</main><dialog class="lightbox" aria-labelledby="light-title"><div class="lightbar"><strong id="light-title" data-light-title></strong><div><button type="button" data-zoom aria-pressed="false">放大 2×</button><button type="button" data-close>关闭 ×</button></div></div><p class="light-message" role="status" hidden><span data-image-status></span> <a data-original hidden>打开原图</a></p>
-<div class="light-scroll"><div class="zoom-surface"><img alt=""></div></div></dialog><footer class="site-footer"><div class="shell footer-row"><strong>PixelForge 像素画室</strong><p>AI 辅助创作 · 示例美术 CC BY 4.0 · PixelForge / starcloud530</p><a href="../pixelforge-ai/licensing/">许可说明</a></div></footer></body></html>
+</main>
